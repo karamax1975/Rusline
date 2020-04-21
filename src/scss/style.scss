@@ -1,0 +1,134 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../scss/owl.carousel.css";
+@import "../scss/reset.css";
+@import "./color.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./top_menu.scss";
+@import "./index.scss";
+
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+@font-face{
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url('../fonts/SourceSansPro-Light.ttf');
+  font-weight: 300; 
+}
+@font-face{
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url('../fonts/SourceSansPro-Regular.ttf');
+  font-weight: 400; 
+}
+@font-face{
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url('../fonts/SourceSansPro-SemiBold.ttf');
+  font-weight: 600; 
+}
+
+
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+
+  p {
+    margin-bottom: 0;
+  }
+  :hover{
+    transition: ease-out .2s !important;
+  }
+
+  .container {
+    max-width: 1246px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 0 15px;
+    border-radius: 2px;
+    line-height: 100%;
+    border: 1px solid;
+    outline: none;
+  }
+  .button.bright {
+    border-color: $rusline_red;
+    color: $rusline_red;
+    background: $white;
+  }
+  .button.bright:hover{
+    color: $rusline_red__hover;
+    border-color: $rusline_red__hover;
+    
+  }
+  .button.bright:active{
+    color: $rusline_red__active;
+    border-color: $rusline_red__active;
+  }
+
+  .button.small {
+    height: 30px;
+  }
+
+  .button.big {
+    padding: 0;
+  }
+
+  .button.index.white:hover {
+    background: rgba(51, 51, 51, 0.2);
+    background-blend-mode: multiply;
+    transition: ease-out 0.2s;
+  }
+
+  .button.index {
+    color: $white;
+    background: none;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+  .button.txt_icon {
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  .button.red {
+    border-color: $rusline_red;
+    background: $rusline_red;
+  }
+
+  .button.widget {
+    padding: 6px 8px;
+  }
+  .button.icon {
+    padding: 0;
+  }
+
+  .button.red svg {
+    fill: $white;
+  }
+
+  .button.red:hover {
+    background: $rusline_red__hover;
+    border-color: $rusline_red__hover;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 0;
+  }
+
+  .p2 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .p3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}

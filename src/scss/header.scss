@@ -1,0 +1,96 @@
+@import './color.scss';
+
+header {
+    padding: 24px 0;
+    position: relative;
+    z-index: 9999;
+
+    .header_wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .brandname {
+            display: block;
+            width: 224px;
+            height: 78px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            *div {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                margin-left: 15px;
+            }
+
+            .account {
+                margin-left: 30px;
+            }
+            *div:hover{
+                transition: ease-out .2s;
+            }
+
+
+
+
+
+            .hamburger {
+                margin-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 4px 0;
+
+                span {
+                    display: block;
+                    height: 2px;
+                    width: 30px;
+                    border-radius: 2px;
+                    background: $white;
+                }
+            }
+            .hamburger:hover{
+                span{
+                    width: 25px;
+                    transition: ease-out .2s;
+                }
+            }
+        }
+    }
+
+}
+
+
+.header__index {
+    .brandname {
+        background: url('../img/RusLine-logo__white.svg') no-repeat center;
+    }
+
+    nav {
+        .account svg {
+            fill: $white;
+        }
+
+        .language-selection svg {
+            fill: $white;
+        }
+
+        .sand-blind svg {
+            fill: $white;
+        }
+
+        *div:hover {
+            background: rgba(51, 51, 51, 0.2);
+            background-blend-mode: multiply;
+        }
+    }
+
+}

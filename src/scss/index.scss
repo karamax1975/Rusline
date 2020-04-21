@@ -1,0 +1,450 @@
+@import './color.scss';
+
+body {
+
+    a:focus,
+    button:focus {
+        outline: none !important;
+    }
+
+
+}
+
+
+.index-widget {
+    position: relative;
+    z-index: 9999;
+    margin-top: 74px;
+
+    // ----------------------- button widget
+    .widget-button {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            padding: 0;
+            border: none;
+            height: 48px;
+            border-radius: 3px 3px 0px 0px;
+            padding: 7px 16px 16px 16px;
+            background: none;
+            outline: none;
+
+            .button-wrapper {
+                position: relative;
+                height: 27px;
+
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 25px;
+                color: $white;
+            }
+        }
+
+        button.active {
+            .button-wrapper::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                bottom: -4px;
+                left: 0;
+                background: $white;
+            }
+        }
+
+        button:hover {
+            background: rgba(51, 51, 51, 0.2);
+            background-blend-mode: multiply;
+            transition: ease-out .2s;
+        }
+
+        button svg {
+            margin-right: 8px;
+        }
+
+        .buy-ticket-button svg {
+            stroke: $white;
+        }
+
+        .check-in-button svg {
+            fill: $white;
+            margin-top: -5px;
+        }
+
+        .order-search-button svg {
+            fill: $white;
+            margin-top: -5px;
+        }
+
+    }
+
+    .special-offers button {
+        display: flex;
+
+        .icon {
+            stroke: $white;
+            margin-right: 8px;
+            margin-top: 2px;
+        }
+
+        .drop-arrow {
+            margin-left: 8px;
+            margin-right: 0;
+            margin-top: 11px;
+            stroke: $white;
+        }
+    }
+
+    .active .drop-arrow {
+        transform: scaleY(-1);
+    }
+
+    // ------------- inputs widget
+    .widget-content {
+        .offer.hidden {
+            display: none;
+        }
+
+        form {
+            display: flex;
+        }
+
+        .offer {
+            display: block;
+            justify-content: space-between;
+
+            *.false-input,
+            .exchange {
+                display: flex;
+                align-items: center;
+                border-radius: 2px;
+                height: 80px;
+                background: $white;
+                border: solid 1px $white;
+                margin-right: 1px;
+                padding: 0 15px;
+                cursor: pointer;
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 100%;
+                    color: $gray3;
+
+                }
+            }
+
+            .false-input:hover,
+            .exchange:hover {
+                border-color: $rusline_red;
+                transition: ease-out .2s;
+            }
+
+            .departure-city,
+            .arrival-city {
+                width: 245px;
+            }
+
+            .exchange {
+                width: 64px;
+                justify-content: center;
+
+                svg {
+                    fill: $rusline_red;
+                }
+            }
+
+            .data,
+            .passengers {
+                width: 192px;
+                justify-content: space-between;
+            }
+
+            .data {
+
+                svg {
+                    fill: $gray5;
+                }
+            }
+
+            .passengers {
+                svg {
+                    stroke: $rusline_red;
+                    stroke-width: 1.5;
+                }
+            }
+
+            button {
+                fill: $white;
+                width: 80px;
+            }
+        }
+
+
+        .registration,
+        .search-orders {
+            .false-input {
+                width: 567px;
+            }
+
+        }
+
+        .ad {
+            padding: 5px 15px;
+            background: rgba(51, 51, 51, 0.4);
+            background-blend-mode: multiply;
+            border-radius: 2px;
+            margin-top: 9px;
+
+            span {
+                color: $white;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            a {
+                color: $white;
+                text-decoration: underline !important;
+            }
+
+            a:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+}
+
+.slide-show-index {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+
+    .item {
+        position: relative;
+        width: 100%;
+        height: calc(100vh-80px);
+        background: silver;
+
+        .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .content {
+            position: relative;
+            top: 395px;
+            padding-right: 0;
+            // max-width: 41.66667%;
+
+            .content-drop-down {
+                position: relative;
+
+                .drop-down-title {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    color: $white;
+                    cursor: pointer;
+
+                    h3 {
+                        font-weight: 300;
+                        font-size: 40px;
+                        line-height: 100%;
+                        margin-bottom: 0;
+
+                    }
+
+                    svg {
+                        margin-top: 5px;
+                        margin-left: 8px;
+                        stroke: $white;
+                        stroke-width: 1.5;
+                        width: 15px;
+                        height: 10px;
+                    }
+                }
+
+                .drop-down-title.active {
+                    svg {
+                        transform: scaleY(-1);
+                    }
+                }
+
+                .drop-down-list {
+                    position: absolute;
+                    z-index: 100;
+                    width: 100%;
+                    margin-top: 7px;
+
+                    .drop-down-item {
+                        padding: 8px 0;
+                        cursor: pointer;
+
+                        h4 {
+                            color: $white;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 100%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .drop-down-list.hidden {
+                    display: none;
+                }
+
+            }
+
+            .content-list {
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+
+                .content-item {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 400;
+                    padding: 15px 5px;
+                    border-top: 1px dashed $white;
+
+                    .item-text,
+                    .item-price {
+                        position: relative;
+                        z-index: 99;
+                    }
+                    .item-text.img{
+                        display: flex;
+                        align-items: center;
+                        .img{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 20px;
+                        line-height: 100%;
+                        margin-bottom: 8px;
+                    }
+
+                    .item-price {
+                        width: 125px;
+                        margin-left: 30px;
+                        text-align: right;
+                        font-size: 20px;
+                        line-height: 100%;
+                    }
+                }
+                .content-item.thick{
+                    padding: 8px 5px;
+                }
+
+                .content-item:last-child {
+                    border-bottom: 1px dashed $white;
+                }
+
+                .content-item:hover{
+                    background: rgba(51, 51, 51, 0.2);
+                    background-blend-mode: multiply;
+                }
+            }
+
+            .content-list.hidden {
+                display: none;
+            }
+        }
+    }
+
+    .slide-citys {
+        background: url('../img/moskow.jpg') no-repeat top;
+    }
+
+    .seat-selection {
+        background: url('../img/seat_selection.jpg') no-repeat top;
+
+        .content-item {
+            // padding: 8px 0 !important;
+            h4 {
+                margin-bottom: 0 !important;
+            }
+            .p3{
+                margin-top: 8px;
+            }
+
+            .item-price {
+                width: 177px !important;
+            }
+
+            .item-price-wrapper {
+                margin-bottom: 5px;
+            }
+
+            .item-price-wrapper:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    .extra-baggage {
+        background: url('../img/extra_baggage.jpg') no-repeat top;
+        .item-text .img{
+            border-radius: 0 !important;
+        }
+    }
+
+    .food-on-board {
+        background: url('../img/food_on_board.jpg') no-repeat top;
+        .drop-down-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                color: $white;
+                text-decoration: underline;
+            }
+            a:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    .slide-show-index__dots {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 60px;
+        width: 695px;
+        height: 12px;
+        left: calc((100%-1246px)/2+15px);
+
+        .owl-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: solid 1px $white;
+        }
+
+        .owl-dot.active {
+            background: $white;
+        }
+    }
+}
