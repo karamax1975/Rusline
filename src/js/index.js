@@ -22,9 +22,11 @@ function showIndexDropDown() {
   const dropDownList = document.querySelector(".drop-down-list");
   const contentList = document.querySelector(".content-list");
   dropDownList.classList.add("hidden");
-
+  
   const listCity = document.querySelectorAll(".drop-down-item .city");
+  
   let event = false;
+
 
   function ChanceCity() {
     listCity.forEach((item) => {
@@ -34,7 +36,7 @@ function showIndexDropDown() {
       if (event) {
         item.addEventListener("click", () => {
           let titleCity = document.querySelector(
-            ".promo-city .drop-down-title h3"
+            ".slide-citys .drop-down-title h3"
           );
           titleCity.textContent = nameCity; // перестало работать после добавления слайдов х.з.
 

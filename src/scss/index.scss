@@ -239,7 +239,7 @@ body {
 
         .content {
             position: relative;
-            top: 395px;
+            top: 399px;
             padding-right: 0;
             // max-width: 41.66667%;
 
@@ -249,7 +249,7 @@ body {
                 .drop-down-title {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
                     color: $white;
                     cursor: pointer;
 
@@ -285,8 +285,11 @@ body {
 
                     .drop-down-item {
                         padding: 8px 0;
+                        margin-left: 5px;
                         cursor: pointer;
-
+                        :hover{
+                            opacity: .7;
+                        }
                         h4 {
                             color: $white;
                             font-weight: 400;
@@ -305,7 +308,6 @@ body {
 
             .content-list {
                 color: $white;
-
                 a {
                     color: $white;
                 }
@@ -322,7 +324,6 @@ body {
                     font-weight: 400;
                     padding: 15px 5px;
                     border-top: 1px dashed $white;
-
                     .item-text,
                     .item-price {
                         position: relative;
@@ -343,6 +344,9 @@ body {
                         font-size: 20px;
                         line-height: 100%;
                         margin-bottom: 8px;
+                        .city_arr{
+                            fill: $white;
+                        }
                     }
 
                     .item-price {
@@ -373,7 +377,17 @@ body {
         }
     }
 
+    @keyframes fade{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
     .slide-citys {
+        animation-duration: 1s;
+        animation-name:fade;
         background: url('../img/moskow.jpg') no-repeat top;
     }
 
