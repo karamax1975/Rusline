@@ -1,96 +1,160 @@
-@import './color.scss';
+@import "./color.scss";
 
 header {
-    padding: 24px 0;
-    position: relative;
-    z-index: 9999;
+  padding: 24px 0;
+  position: relative;
+  z-index: 9999;
 
-    .header_wrapper {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+  .header_wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
-        .brandname {
-            display: block;
-            width: 224px;
-            height: 78px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-
-            *div {
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 2px;
-                margin-left: 15px;
-            }
-
-            .account {
-                margin-left: 30px;
-            }
-            *div:hover{
-                transition: ease-out .2s;
-            }
-
-
-
-
-
-            .hamburger {
-                margin-left: 30px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                padding: 4px 0;
-
-                span {
-                    display: block;
-                    height: 2px;
-                    width: 30px;
-                    border-radius: 2px;
-                    background: $white;
-                }
-            }
-            .hamburger:hover{
-                span{
-                    width: 25px;
-                    transition: ease-out .2s;
-                }
-            }
-        }
-    }
-
-}
-
-
-.header__index {
     .brandname {
-        background: url('../img/RusLine-logo__white.svg') no-repeat center;
+      display: block;
+      width: 224px;
+      height: 78px;
     }
 
     nav {
-        .account svg {
-            fill: $white;
-        }
+      display: flex;
+      align-items: center;
 
-        .language-selection svg {
-            fill: $white;
-        }
+      *div {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        margin-left: 15px;
+      }
 
-        .sand-blind svg {
-            fill: $white;
-        }
+      .account {
+        margin-left: 30px;
+      }
+      *div:hover {
+        transition: ease-out 0.2s;
+      }
 
-        *div:hover {
-            background: rgba(51, 51, 51, 0.2);
-            background-blend-mode: multiply;
+      .hamburger {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 4px 0;
+
+        span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          border-radius: 2px;
+          background: $white;
         }
+      }
+      .hamburger:hover {
+        span {
+          width: 25px;
+          transition: ease-out 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.header__index {
+  .brandname {
+    background: url("../img/RusLine-logo__white.svg") no-repeat center;
+  }
+
+  nav {
+    .account svg {
+      fill: $white;
     }
 
+    .language-selection svg {
+      fill: $white;
+    }
+
+    .sand-blind svg {
+      fill: $white;
+    }
+
+    *div:hover {
+      background: rgba(51, 51, 51, 0.2);
+      background-blend-mode: multiply;
+    }
+  }
+}
+.header_second {
+//   background: silver;
+  .brandname {
+    background: url("../img/RusLine-logo.svg") no-repeat center;
+  }
+  form {
+    display: flex;
+    margin-right: 30px;
+    .false-input{
+        border: 1px solid $gray5;
+        border-right: solid 1px $white;
+        margin-left: 0;
+        border-radius: 0 !important;
+        span {
+            font-weight: 300;
+            font-size: 14px;
+            color: $gray3;
+          }
+    }
+    .false-input:hover{
+        border: 1px solid $red;
+    }
+    
+    .departure-city, .arrival-city {
+      width: 195px;
+    }
+    .departure-city{
+        border-radius: 2px 0 0 2px !important;
+    }
+    .exchange{
+        svg{
+           fill: $red; 
+        }
+    }
+    .data{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        svg{
+            fill: $gray4;
+        }
+    }
+    .data, .passengers{
+        width: 103px;
+    }
+    .button {
+        width: 30px;
+        border-radius: 0px 2px 2px 0px;
+        svg{
+            margin-left: 1px;
+            fill: $white;
+        }
+    }
+  }
+  .button{
+      width: 30px;
+      border-color: $red;
+      background: $white;
+      svg{
+          fill: $red;
+        //   stroke:$red
+      }
+  }
+  nav {
+    .hamburger {
+      span {
+        background: red !important;
+      }
+    }
+  }
 }
