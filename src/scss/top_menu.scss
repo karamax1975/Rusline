@@ -78,41 +78,6 @@
             }
           }
         }
-
-        .hamburger-close {
-          width: 30px;
-          height: 30px;
-          border-radius: 2px;
-          background: $white;
-          border: 1px solid $gray5;
-          position: relative;
-          span {
-              position: absolute;
-            display: block;
-            width: 20px;
-            height: 2px;
-            border-radius: 2px;
-            background: $gray5;
-            top: 0;
-            left: 0;
-            margin-top: 13px;
-            margin-left: 4px;
-            
-          }
-          span:nth-child(1) {
-            transform: rotate(45deg);
-            
-          }
-          span:nth-child(2) {
-            transform: rotate(-45deg);
-            
-          }
-        }
-        .hamburger-close:hover{
-            span{
-                background: $rusline_red;
-            }
-        }
       }
     }
     .top_menu_content {

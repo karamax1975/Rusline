@@ -6,26 +6,27 @@
 @import "./footer.scss";
 @import "./top_menu.scss";
 @import "./index.scss";
+@import "./additional_menu.scss";
+@import "./add-menu__drop_menu.scss";
+@import "./pages_style.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
 // @font-face{
 //   font-family: 'Source Sans Pro', sans-serif;
 //   src: url('../fonts/SourceSansPro-Light.ttf');
-//   font-weight: 300; 
+//   font-weight: 300;
 // }
 // @font-face{
 //   font-family: 'Source Sans Pro', sans-serif;
 //   src: url('../fonts/SourceSansPro-Regular.ttf');
-//   font-weight: 400; 
+//   font-weight: 400;
 // }
 // @font-face{
 //   font-family: 'Source Sans Pro', sans-serif;
 //   src: url('../fonts/SourceSansPro-SemiBold.ttf');
-//   font-weight: 600; 
+//   font-weight: 600;
 // }
-
-
 
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -33,14 +34,16 @@ body {
   p {
     margin-bottom: 0;
   }
-  :hover{
-    transition: ease-out .2s !important;
+  :hover {
+    transition: ease-out 0.2s !important;
   }
 
   .container {
     max-width: 1246px;
   }
-
+  a:hover{
+    text-decoration: none;
+  }
   .button {
     font-size: 14px;
     padding: 0 15px;
@@ -54,12 +57,11 @@ body {
     color: $rusline_red;
     background: $white;
   }
-  .button.bright:hover{
+  .button.bright:hover {
     color: $rusline_red__hover;
     border-color: $rusline_red__hover;
-    
   }
-  .button.bright:active{
+  .button.bright:active {
     color: $rusline_red__active;
     border-color: $rusline_red__active;
   }
@@ -112,6 +114,12 @@ body {
     background: $rusline_red__hover;
     border-color: $rusline_red__hover;
   }
+  h2 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 100%;
+    margin-bottom: 0;
+  }
 
   h4 {
     font-weight: 400;
@@ -125,10 +133,49 @@ body {
     font-size: 16px;
     line-height: 20px;
   }
+  .p1{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: $gray2;
+  }
 
   .p3 {
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
+  }
+
+  .hamburger-close {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background: $white;
+    border: 1px solid $gray5;
+    position: relative;
+    span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 2px;
+      background: $gray5;
+      top: 0;
+      left: 0;
+      margin-top: 13px;
+      margin-left: 4px;
+    }
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+  }
+  .hamburger-close:hover {
+    span {
+      background: $rusline_red;
+    }
   }
 }

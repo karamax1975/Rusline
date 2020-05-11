@@ -1,169 +1,242 @@
-@import './color.scss';
+@import "./color.scss";
 
+.footer_index {
+  background: $white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .footer-wrapper {
+    p {
+      color: $black;
+    }
+    .support {
+      div {
+        span {
+          color: $gray2;
+        }
+      }
+      svg{
+        fill: $gray3 !important;
+      }
+    }
+    .support:hover{
+        background: $gray6;
+    }
 
-footer.index {
-    background: $white;
+    form{
+        input{
+            border: 1px solid $gray5;
+        }
+    }
+
 
     .social {
-        svg {
-            fill: $gray3;
-        }
+      svg {
+        fill: $gray3;
+      }
+      a:hover{
+        border: none;
+        background: $gray6;
+      }
+    }
+
+
+    .map-site {
+      svg {
+        fill: $gray3;
+      }
+      span{
+        color: $gray2;
+      }
     }
     .map-site{
-        svg{
-            fill: $gray3;
+        border: none;
+    }
+    .map-site:hover{
+        background: $gray6;
+        border: none;
+        transition: ease-out 0.2s;
+        
+    }
+    .apps{
+        a:hover{
+            background: $gray6;
         }
     }
+  }
 }
 
+// ------------------------
+
+.footer {
+  background: $gray1;
+  margin-top: 60px;
+  .footer-wrapper {
+    p {
+      color: $white;
+    }
+    .support {
+        border: 1px solid $gray1;  
+      svg {
+        fill: $white;
+      }
+      span {
+        color: $white;
+      }
+    }
+    .support:hover{
+        border: 1px solid $gray3;
+    }
+    form{
+        input{
+            border: 1px solid $white;
+        }
+    }
+    .social {
+        a:hover{
+            border: 1px solid $gray3;
+        }
+      svg {
+        fill: $white;
+      }
+    }
+    .map-site{
+        border: 1px solid $gray1;
+        svg{
+            fill: $white;
+        }
+        span{
+            color: $white;
+        }
+    }
+    .map-site:hover{
+        background: none;
+        border: solid 1px $gray3;
+    }
+    .apps{
+        a{
+            border: 1px solid $gray1;
+        }
+        a:hover{
+            border: 1px solid $gray3;
+        }
+    }
+  }
+}
+// ----------------------
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 9999;
+  width: 100%;
+  z-index: 9999;
 
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .footer-wrapper {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    .support {
+      display: flex;
+      cursor: pointer;
+      position: relative;
+      padding: 8px 15px;
+      border-radius: 2px;
+
+      div {
+        span {
+          display: block;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .support svg {
+      margin-top: 3px;
+      margin-right: 15px;
+    }
+
+    form {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+
+      input {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        width: 250px;
+        padding: 5px 15px;
+        border-radius: 2px 0px 0px 2px;
+      }
+
+      input::placeholder {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: $gray3;
+      }
+
+      button {
+        border-radius: 0px 2px 2px 0px;
+        width: 30px;
+        svg{
+            margin-top: -4px;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+
+      a {
+        height: 30px;
+        width: 30px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        border-radius: 2px;
+        margin-right: 8px;
+      }
 
-        p {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 100%;
-            color: $black;
-        }
-
-        .support {
-            display: flex;
-            cursor: pointer;
-            position: relative;
-
-            div {
-                span {
-                    display: block;
-                    font-weight: 300;
-                    font-size: 14px;
-                    line-height: 100%;
-                    color: $gray2;
-                }
-            }
-
-        }
-
-        .support:hover::before {
-            content: '';
-            position: absolute;
-            height: 38px;
-            width: 177px;
-            top: -5px;
-            left: -15px;
-            background: $gray6;
-            z-index: -1;
-            border-radius: 2px;
-            transition: ease-out .2s;
-        }
-
-        .support svg {
-            fill: $gray3;
-            margin-top: 3px;
-            margin-right: 15px;
-        }
-
-        form {
-            padding: 24px 0;
-            display: flex;
-            align-items: center;
-
-            input {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 100%;
-                width: 250px;
-                padding: 5px 15px;
-                border: 1px solid $gray5;
-                border-radius: 2px 0px 0px 2px;
-            }
-
-            input::placeholder {
-                font-weight: 300;
-                font-size: 14px;
-                line-height: 100%;
-                color: $gray3;
-            }
-
-            button {
-                border-radius: 0px 2px 2px 0px;
-                width: 30px;
-
-
-            }
-
-
-        }
-
-        .social {
-            display: flex;
-
-            a {
-                height: 30px;
-                width: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 2px;
-                margin-right: 8px;
-            }
-
-            a:last-child {
-                margin-right: 0;
-            }
-            a:hover{
-                background: $gray6;
-                transition: ease-out .2s;
-            }
-
-        }
-
-        .map-site {
-            border: none;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            font-weight: 300;
-            color: $gray2;
-            font-size: 14px;
-            // border: 1px solid $white;
-            svg{
-                margin-right: 12px;
-            }
-
-        }
-        .map-site:hover{
-            // border: 1px solid $gray6;
-            background: $gray6;
-            transition: ease-out .2s;
-        }
-        .apps{
-            display: flex;
-            a{
-                width: 30px;
-                height: 30px;
-                display: block;
-                text-align: center;
-                border-radius: 2px;
-                margin-right: 8px;
-            }
-            a:hover{
-                background: $gray6;
-                transition: ease-out .2s;
-            }
-            a:last-child {
-                margin-right: 0;
-            }
-        }
-
+      a:last-child {
+        margin-right: 0;
+      }
     }
+
+    .map-site {
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 14px;
+      svg {
+        margin-right: 12px;
+      }
+    }
+    .apps {
+      display: flex;
+      a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        text-align: center;
+        border-radius: 2px;
+        margin-right: 8px;
+
+      }
+      a:hover {
+        transition: ease-out 0.2s;
+      }
+      a:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
