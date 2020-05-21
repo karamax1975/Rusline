@@ -50,7 +50,6 @@ header {
           height: 2px;
           width: 30px;
           border-radius: 2px;
-          background: $white;
         }
       }
       .hamburger:hover {
@@ -85,6 +84,11 @@ header {
       background: rgba(51, 51, 51, 0.2);
       background-blend-mode: multiply;
     }
+    .hamburger{
+      .hamburger_white{
+        background: $white;
+      }
+    }
   }
 }
 .header_second {
@@ -106,7 +110,7 @@ header {
           }
     }
     .false-input:hover{
-        border: 1px solid $red;
+        border: 1px solid $rusline_red;
     }
     
     .departure-city, .arrival-city {
@@ -117,7 +121,7 @@ header {
     }
     .exchange{
         svg{
-           fill: $red; 
+           fill: $rusline_red; 
         }
     }
     .data{
@@ -142,17 +146,17 @@ header {
   }
   .button{
       width: 30px;
-      border-color: $red;
+      border-color: $rusline_red;
       background: $white;
       svg{
-          fill: $red;
-        //   stroke:$red
+          fill: $rusline_red;
+
       }
   }
   nav {
     .hamburger {
-      span {
-        background: red !important;
+      .hamburger_red {
+        background: $rusline_red;
       }
     }
   }

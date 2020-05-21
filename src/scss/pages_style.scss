@@ -1,117 +1,435 @@
-.page_top {
-    align-items: center;
-  .headline {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    color: $black;
-    margin-top: 30px;
-    h2{
-        margin-bottom: 20px;
-    }
-  }
-  .bread-crumbs{
-      span {
-        a{
-            font-weight: 300;
-            font-size: 12px;
-            line-height: 100%;
-            color: $black;
-            position: relative;
-          }
-          a:hover{
-              color: $red;
-          }
-          a:hover:before{
-              content: '';
-              position: absolute;
-              bottom: -2px;
-              left: 0;
-              width: 100%;
-              height: 1px;
-              background: $red;
-          }
-      }
-      svg{
-          fill:$red;
-          margin: 0 5px;
-      }
-  }
-}
-.list-of-squares{
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: space-between;
-    .square-item{
-        width: 301px;
-        height: 301px;
-        margin-bottom: 3px;
-        margin-right: 3px;
-        border-radius: 2px;
-        overflow: hidden;
-        border: 1px solid $white;
-        position: relative;
-        a{  
-            color: $white;
-            height: 100%;
-            width: 100%;
-            display: block;
-            padding: 30px;
-            position: relative;
-        }
-        a::before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background: linear-gradient(360deg, rgba(0,0,0,.6), rgba(255,255,255,0) 50%);
-            
-        }
-        img{
-           position: absolute;
-           top: 0;
-           left: 0;
-           z-index: -1;
-        }
- 
-        h4{
-            padding-top: 180px;
-            position: relative;
-            z-index: 2;
-        }
-        p{
-            position: relative;
-            z-index: -2;
-            color: $gray2;
-            font-size: 16px;
-            line-height: 120%;
-        }
-    }
-    .square-item:hover{
-        a::before{
-            background: linear-gradient(360deg, rgba(0,0,0,.5), rgba(0,0,0,.5) 100%);
-            
-        }
-        a::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 101px;
-            top: 201px;
-            left: 0;
-            background: url('../img/quard_hover.jpg') no-repeat center;
-        }
-        h4{
-            z-index: -2;
-        }
-        p{  
-            position: absolute;
-            z-index: 2;
-            top: 215px;
-        }
-    }
+b {
+  color: $rusline_red;
+  font-weight: 300;
 }
 
+.page_top {
+  margin-top: 30px;
+  align-items: flex-start;
+  .headline {
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .bread-crumbs {
+    margin-top: 18px;
+    span {
+      a {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 100%;
+        color: $black;
+        position: relative;
+      }
+      a:hover {
+        color: $rusline_red;
+        border-bottom: solid 1px $rusline_red;
+      }
+    }
+    svg {
+      fill: $rusline_red;
+      margin: 0 5px;
+    }
+  }
+}
+.list-of-squares {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  .square-item {
+    width: 301px;
+    height: 301px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid $white;
+    position: relative;
+    a {
+      color: $white;
+      height: 100%;
+      width: 100%;
+      display: block;
+      padding: 30px;
+      position: relative;
+    }
+    a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(255, 255, 255, 0) 50%
+      );
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    h4 {
+      padding-top: 180px;
+      position: relative;
+      z-index: 2;
+    }
+    p {
+      position: relative;
+      z-index: -2;
+      color: $gray2;
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+  .square-item:hover {
+    a::before {
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5) 100%
+      );
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 101px;
+      top: 201px;
+      left: 0;
+      background: url("../img/quard_hover.jpg") no-repeat center;
+    }
+    h4 {
+      z-index: -2;
+    }
+    p {
+      position: absolute;
+      z-index: 2;
+      top: 215px;
+    }
+  }
+}
+
+// ------------------------------------
+.banner_top {
+  img {
+    max-width: 100%;
+  }
+}
+// ---------------------------------------
+.subtitle {
+  margin-bottom: 30px;
+  color: $gray2;
+}
+
+// ---------------------------------------
+.important {
+  padding-left: 15px;
+  border-left: 1px solid $rusline_red;
+  margin-bottom: 30px;
+  h3 {
+    color: $rusline_red;
+    margin-bottom: 8px;
+    b {
+      font-weight: 300;
+    }
+  }
+}
+.important.gray {
+  h3 {
+    color: $gray2;
+  }
+}
+// --------------------------------------------
+.tabs-list {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  .tab {
+    padding: 15px 30px;
+    background: $white;
+    border: solid 1px $gray6;
+    text-align: center;
+    cursor: pointer;
+    margin: -1px -1px 0 0;
+    line-height: 15px;
+
+    span {
+      color: $black;
+    }
+  }
+  .tab:first-child {
+    border-radius: 2px 0 0 2px;
+  }
+  .tab:last-child {
+    border-radius: 0 2px 2px 0;
+  }
+  .active {
+    background: $rusline_red;
+    border: solid 1px $rusline_red;
+    position: relative;
+    span {
+      color: $white;
+    }
+    b {
+      color: $white;
+    }
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 3px;
+    bottom: -3px;
+    left: 50%;
+    background: url("../img/tabs-activ_tr.svg") no-repeat center;
+  }
+}
+// ---------------------------------------------
+.tabs-content-list {
+  .content-item {
+    overflow: hidden;
+    height: 0;
+  }
+  .content-item.active {
+    height: auto;
+  }
+}
+
+// ---------------------------------------------
+.text-list li {
+  position: relative;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: $gray2;
+  margin-left: 24px;
+  margin-bottom: 8px;
+}
+.text-list li:last-child {
+  margin-bottom: 30px;
+}
+.text-list li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: $rusline_red;
+  border-radius: 50%;
+  left: -12px;
+  top: 0.5rem;
+}
+// -------------------------------------------------
+.text-ul {
+  // margin-bottom: 30px;
+  li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $gray2;
+    margin-bottom: 8px;
+  }
+}
+
+// --------------------------------
+b {
+  color: $rusline_red;
+}
+.note {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: $gray2;
+  // ----------------------------------------
+}
+.span-link {
+  color: $rusline_red;
+  border-bottom: solid 1px $rusline_red;
+}
+
+.span-link:hover {
+  transition: ease-out 0.2s;
+  border-bottom: solid 1px none;
+  color: $rusline_red;
+}
+// -----------------------------------------------------
+
+.back {
+  a {
+    display: flex;
+    align-items: center;
+    color: $rusline_red;
+  }
+  span {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+  }
+  .back_arrow {
+    margin-right: 8px;
+    width: 50px;
+    height: 10px;
+    background: url("../img/back-arrow.svg") no-repeat center;
+  }
+  margin-top: 30px;
+}
+// ------------------------------------------------------
+
+.alert-text {
+  display: flex;
+  .alert-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    margin-top: -5px;
+  }
+  .text-red {
+    color: $rusline_red;
+  }
+  .text-gray {
+    color: $gray2;
+  }
+}
+// -------------------
+body {
+  position: relative;
+}
+.back-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+// -----------------
+
+.content-6col {
+  margin-top: 60px;
+
+  .title {
+    display: flex;
+    .col6_img {
+      width: 61px;
+      height: 60px;
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h2 {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 100%;
+      color: $black;
+    }
+  }
+  .content {
+    margin-left: 85px;
+    h3 {
+      margin-top: 15px;
+    }
+    .content-row {
+      padding: 15px 0;
+      border-bottom: 1px dashed $gray5;
+      display: flex;
+      align-items: center;
+      .p2 {
+        color: $gray2;
+      }
+      .col-left {
+        width: 297px;
+        margin-right: 32px;
+      }
+    }
+    .no-border-down {
+      border-bottom: none;
+    }
+  }
+}
+.text-link {
+  color: $rusline_red;
+  position: relative;
+  border-bottom: solid 1px $rusline_red;
+}
+
+.text-link:hover {
+  color: $rusline_red;
+  border-bottom: solid 1px none;
+  transition: ease-out 0.2s;
+}
+
+// ----------------------------
+.img-fluid {
+  width: 100%;
+  // height: auto;
+}
+// ---------------------------
+.article {
+  h3 {
+    margin-bottom: 15px;
+  }
+}
+// --------------------------
+.phone-icon {
+  position: relative;
+  margin-left: 23px;
+}
+.phone-icon::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 1px;
+  left: -23px;
+  top: 3px;
+}
+.phone-icon::after {
+  content: "";
+  width: 7px;
+  height: 8px;
+  position: absolute;
+  left: -19px;
+  top: 7px;
+  background: url("../img/phone-icon__white.svg") no-repeat center;
+}
+// -----------------------
+.number-list {
+  counter-reset: counter;
+  li {
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    margin-left: 30px;
+    color: $gray2;
+  }
+  li::before {
+    content: counter(counter) '.';
+    counter-increment: counter;
+    margin: 0 10px;
+    position: absolute;
+    left: -30px;
+    color: $rusline_red;
+  }
+  p{
+    margin-left: 30px;
+    color: $gray2;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}
+// -------------------

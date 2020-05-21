@@ -2,6 +2,8 @@ import jQuery from "jquery";
 import popper from "popper.js";
 import bootstrap from "bootstrap";
 
+import tabs from './tabs';
+
 function showTabWidget() {
   const widgetButton = document.querySelectorAll(".nav-widget button");
   const widgetContent = document.querySelectorAll(".offer");
