@@ -3,7 +3,7 @@
 header {
   padding: 24px 0;
   position: relative;
-  z-index: 9999;
+  z-index: 100;
 
   .header_wrapper {
     display: flex;
@@ -92,6 +92,7 @@ header {
   }
 }
 .header_second {
+  background: $white;
   .brandname {
     background: url("../img/RusLine-logo.svg") no-repeat center;
   }

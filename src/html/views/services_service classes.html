@@ -1,0 +1,207 @@
+<% var data = { title: "Классы обслуживания" }; %> <%=
+_.template(require('./../includes/header_2.html').default)(data) %> <%=
+_.template(require('./../includes/top_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu_services.html').default)() %>
+
+<section class="seat-class">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Классы обслуживания</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">Сервисы</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span
+          ><a href="./services_service classes.html"
+            >Классы обслуживания</a
+          ></span
+        >
+      </section>
+    </div>
+  </div>
+
+  <div class="container ">
+    <div class="row">
+      <div class="col-lg-4">
+        <p class="p1">
+          Авиакомпания «РусЛайн» предлагает своим пассажирам на регулярных
+          рейсах усовершенствованную систему сервисного обслуживания.
+          <br /><br />
+          Мы знаем, что наши пассажиры предъявляют разные требования к процессу
+          полета: кому-то необходим сервис высокого уровня на борту самолета,
+          другим - важно просто добраться до места назначения, заплатив
+          минимальную сумму за билет. Надеемся, наши самолеты станут для Вас не
+          только способом передвижения, но и местом для отдыха!
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <section class="tabs-plain-class">
+          <div class="title">
+            <p class="p1"> Каждый может выбрать максимально подходящий для него набор услуг, путешествуя в эконом-премиум- или экономическом классе и, соответственно, стоимость авиабилета.</p>
+            <img src="./img/airLine_red.png" alt="plane_red" />
+            <div class="buttons_nav">
+                <button class="button_back"></button>
+                <h3 class="black">Bombardier CRJ 100/200</h3>
+                <button class="button_next"></button>
+            </div>
+            <div class="tabs-list">
+                <div class="tab"><span>Премиум-эконом</span></div>
+                <div class="tab"><span>Эконом-класс</span></div>
+            </div>
+          </div>
+          <!-- tabs -->
+          <div class="premium-class class-content">
+            <div class="places-list">
+                <div class="places_row mb20">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row left mb20">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+              <ul class="text-list">
+                <h3 class="mb15">Перед вылетом</h3>
+                <li>Бесплатная норма провоза багажа: 1 место - 30 кг.</li>
+                <li>Максимально допустимый вес ручной клади 10 кг. (с размерами не превышающими 55*40*25 см), которые не входят в норму бесплатного провоза багажа.</li>
+                <li>Регистрация пассажиров на стойках бизнес класса.</li>
+                <li>Прохождение досмотра в аэропорту вылета без очереди.</li>
+                <li>Обслуживание в бизнес-залах (при наличии таких возможностей в аэропорту вылета).</li>
+                <li>Доставка пассажиров отдельным транcпортом до воздушного судна.</li>
+              </ul>
+              <ul class="text-list">
+                <h3 class="mb15">На борту</h3>
+                <li>Рассадка пассажиров в передней части самолета (первые 2 ряда кресел).</li>
+                <li>Предоставление питания бизнес класса, прохладительных напитков на борту самолета.</li>
+              </ul>
+              <ul class="text-list">
+                <h3 class="mb15">После полета</h3>
+                <li>Доставка пассажиров отдельным транспорта до терминала.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="econom-class class-content">
+            <div class="places-list">
+                <div class="places_row mb20">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="places_group mr50">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="places_group mr50">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row left">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places_row">
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="places_group">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <ul class="text-list">
+                    <h3 class="mb15">Перед вылетом:</h3>
+                    <li>Бесплатная норма провоза багажа: 1 место весом до 20 кг. <b>*</b></li>
+                    <li>Максимально допустимый вес ручной клади от 5 до 10 кг. в зависимости от <a class="text-link" href="#">выбранного тарифа.</a></li>
+                </ul>
+                <ul class="text-list">
+                    <h3 class="mb15">В полете</h3>
+                    <li>Пресса на борту.</li>
+                    <li>Прохладительные напитки.</li>
+                </ul>
+                <span class="note">
+                  <b>*</b>для группы тарифов "Лайт" багаж не включен в стоимость.
+                </span>
+            </div>
+            
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+  <img class="plain-sxem" src="./img/plain_sxem.svg" alt="plain-sxem">
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

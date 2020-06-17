@@ -2,7 +2,7 @@ import jQuery from "jquery";
 import popper from "popper.js";
 import bootstrap from "bootstrap";
 
-import tabs from './tabs';
+import tabs from "./tabs";
 
 function showTabWidget() {
   const widgetButton = document.querySelectorAll(".nav-widget button");
@@ -93,22 +93,117 @@ function additionalMenu() {
     document.querySelector(".add-menu__drop_menu")
   ) {
     const additionalMenu = document.querySelector(".additional-menu");
-    const dropMenu= document.querySelector('.add-menu__drop_menu');
-    additionalMenu.addEventListener('click', (e)=>{
-      if(e.target.classList.contains('additional-menu_item')){
-        console.log(dropMenu)
-        dropMenu.classList.remove('hidden');
+    const dropMenu = document.querySelector(".add-menu__drop_menu");
+    additionalMenu.addEventListener("click", (e) => {
+      if (e.target.classList.contains("additional-menu_item")) {
+        console.log(dropMenu);
+        dropMenu.classList.remove("hidden");
       }
-      
-    })
-    dropMenu.addEventListener('click', (e)=>{
-      if(!e.target.classList.contains('add-menu__drop_menu'))
-      dropMenu.classList.add('hidden');
-    })
-    
+    });
+    dropMenu.addEventListener("click", (e) => {
+      if (!e.target.classList.contains("add-menu__drop_menu"))
+        dropMenu.classList.add("hidden");
+    });
   }
 }
 
+// ===================== modal window ==============
+
+function modalWindow(target, modal) {
+  if (modal && target) {
+    // цель - массив элементов а не единичный элемент
+    if (target.length !== undefined) {
+      let modalElements = []; // список элементов в модальном окне
+
+      // ---- в модальном окне есть список элементов
+      modal.childNodes.forEach((item) => {
+        if (item.tagName == "DIV" && item.className == "modal-list") {
+          // получаю элементы в списке
+          item.childNodes.forEach((item) => {
+            if (item.tagName == "DIV") modalElements.push(item);
+          });
+        }
+      });
+
+      // -------------------------------
+
+      target.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          const body = document.querySelector("body");
+
+          if (index < modalElements.length) {
+            // если длинна масива с целями меньше длинны массива элементов в модальном окне (на случай несовпадения количества)
+            modal.classList.add("active"); // модальное окно активно
+            body.style.overflow = "hidden";
+
+            modalElements[index].classList.add("active"); // элемент в модальном окне активен
+
+            // получаю кнопоку закрытия в активном модальном окне
+            const buttonClose = modalElements[index].querySelector(
+              ".hamburger-close"
+            );
+            buttonClose.addEventListener("click", () => {
+              modalElements[index].classList.remove("active");
+              modal.classList.remove("active");
+              body.style.overflow = "auto";
+            });
+
+            // ---------- закрытие окна при клике в фон модального окна
+            modal.addEventListener("click", (e) => {
+              if (e.target.contains(modalElements[index])) {
+                // клик не в элемент модального окна
+                modal.classList.remove("active");
+                body.style.overflow = "auto";
+                modalElements.forEach((item) => {
+                  // закрываю все элементы
+                  item.classList.remove("active");
+                });
+              }
+            });
+          }
+        });
+      });
+    } else console.log("Element"); // цель - единичный элемент
+  }
+}
+
+modalWindow(
+  document.querySelectorAll(".food-item"),
+  document.querySelector(".modal-window")
+);
+
+// ------------------dropdown-list_item---------------------
+
+function dropdownList_item(list) {
+  if (list) {
+    const listItems = [];
+    list.childNodes.forEach((item) => {
+      if (item.tagName == "DIV") {
+        listItems.push(item);
+      }
+    });
+
+    listItems.forEach((item,index) => {
+      item.addEventListener("click", (e) => {
+        const content = item.querySelector('.item_content');
+
+        if(!content.contains(e.target)){
+          
+          listItems.forEach((item,j)=>{
+            if(j!=index)
+            item.classList.remove('active');
+          }) 
+  
+  
+          item.classList.toggle("active");
+        }
+
+      });
+    });
+  }
+}
+
+dropdownList_item(document.querySelector(".dropdown-list"));
 showTabWidget();
 showIndexDropDown();
 openHamburgerMenu();

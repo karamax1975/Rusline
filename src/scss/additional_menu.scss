@@ -1,5 +1,7 @@
 .additional-menu {
   background: $gray6;
+  position: relative;
+  z-index: 100;
   .additional-menu_list {
     margin: 0;
     padding: 15px 0;

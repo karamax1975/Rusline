@@ -11,6 +11,9 @@
 @import "./pages_style.scss";
 @import './add_margin.scss';
 
+// 
+@import './tabs-class.scss'; // Сервисы / Классы обслуживания
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
 // @font-face{
@@ -31,6 +34,7 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  position: relative;
 
   p {
     margin-bottom: 0;
@@ -136,6 +140,14 @@ body {
     font-weight: 300;
     font-size: 30px;
     line-height: 100%;
+    a{
+      color: $rusline_red;
+      border-bottom: 1px solid $rusline_red;
+    }
+    :hover{
+      color: $rusline_red;
+      border-bottom: none;
+    }
   }
   h3 {
     font-weight: 300;
@@ -177,6 +189,9 @@ body {
   }
   .red{
     color: $rusline_red;
+  }
+  .black{
+    color: $black;
   }
 
   .hamburger-close {

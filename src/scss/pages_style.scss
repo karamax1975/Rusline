@@ -202,28 +202,32 @@ b {
 }
 
 // ---------------------------------------------
-.text-list li {
-  position: relative;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-  color: $gray2;
-  margin-left: 24px;
-  margin-bottom: 8px;
-}
-.text-list li:last-child {
+.text-list {
   margin-bottom: 30px;
+  li {
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $gray2;
+    margin-left: 24px;
+    margin-bottom: 8px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background: $rusline_red;
+    border-radius: 50%;
+    left: -12px;
+    top: 0.5rem;
+  }
 }
-.text-list li::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  background: $rusline_red;
-  border-radius: 50%;
-  left: -12px;
-  top: 0.5rem;
-}
+
 // -------------------------------------------------
 .text-ul {
   // margin-bottom: 30px;
@@ -281,6 +285,31 @@ b {
   margin-top: 30px;
 }
 // ------------------------------------------------------
+
+.buttons_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    margin: 0 15px;
+  }
+}
+.button_back,
+.button_next {
+  width: 50px;
+  height: 10px;
+  border: none;
+  background: url("../img/back-arrow.svg") no-repeat center;
+}
+.button_back:hover,
+.button_next:hover {
+  background: url("../img/back-arrow_hover.svg") no-repeat center;
+}
+.button_next {
+  transform: scaleX(-1);
+}
+
+// ----------------
 
 .alert-text {
   display: flex;
@@ -416,14 +445,14 @@ body {
     color: $gray2;
   }
   li::before {
-    content: counter(counter) '.';
+    content: counter(counter) ".";
     counter-increment: counter;
     margin: 0 10px;
     position: absolute;
     left: -30px;
     color: $rusline_red;
   }
-  p{
+  p {
     margin-left: 30px;
     color: $gray2;
     font-weight: 300;
@@ -433,3 +462,310 @@ body {
   }
 }
 // -------------------
+// info-tile
+.info_tile {
+  background: $gray6;
+  border-radius: 2px;
+  padding: 15px;
+  user-select: none;
+  min-height: 98px;
+  margin-bottom: 15px;
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 8px;
+  }
+}
+
+// -----------------------
+.screen {
+  border: solid 1px #f2f2f2;
+}
+
+// ----------------------
+// food squares
+
+.food-item {
+  border: solid 1px $gray6;
+  width: 301px;
+  height: 301px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid $gray6;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: 2;
+  }
+  .food-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .food-img::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    background: silver;
+    top: 50%;
+    z-index: 10;
+    background: linear-gradient(
+      360deg,
+      #ffffff 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .content {
+    position: relative;
+    z-index: 99 !important;
+    margin: 30px;
+    .description {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      color: $gray2;
+    }
+    .price-wrapper {
+      margin-top: 15px;
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: 400;
+      color: $rusline_red;
+    }
+  }
+}
+.food-item:hover {
+  border: solid 1px $rusline_red;
+}
+
+// ================================== modal window ==================================
+
+.modal-window {
+  display: none;
+  position: relative;
+}
+
+.modal-window.active {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 101;
+  .modal-list {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // ---- food -------
+  .modal_food-item.active {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    min-height: 378px;
+    background: $white;
+    border-radius: 2px;
+    display: flex;
+    .hamburger-close {
+      position: absolute;
+      border: none;
+      right: 10px;
+      top: 10px;
+    }
+    .food-item_img {
+      flex: 1 0 40%;
+      background: silver;
+      overflow: hidden;
+      position: relative;
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+      }
+    }
+  }
+  .modal_food-item {
+    display: none;
+  }
+  .food-item_text-content {
+    width: 100%;
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 15px;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: flex-end;
+      .price {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        margin-bottom: 15px;
+        color: $rusline_red;
+      }
+      .power {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: $gray2;
+      }
+    }
+  }
+  // -----------------------
+}
+
+// ========= Раскрывающийся список ===================
+.dropdown-list {
+  .dropdown-list_item{
+    border-top: 1px dashed $gray5;
+    .item_title {
+      position: relative;
+      padding: 14px 0;
+
+      cursor: pointer;
+  
+      h4 {
+        padding-left: 18px;
+        color: $black;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+      }
+      h4::before {
+        background: url("../img/array__red.svg") no-repeat center;
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .item_title:hover{
+      h4{
+        color:$rusline_red;
+        transition: ease-out .2s;
+        
+      }
+    }
+    .item_content{
+      position: relative;
+      overflow: hidden; 
+      height: 0;
+      padding: 0 18px;
+      transition: ease-out .3s;
+      .content_shadow {
+        position: absolute;
+        height: 24px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        .left {
+          width: 23px;
+          background: linear-gradient(151.56deg, #f2f2f2 8.38%, #ffffff 59.37%);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+        .right {
+          width: 23px;
+          background: linear-gradient(151.56deg, #f3f3f3 8.38%, #ffffff 59.37%);
+        }
+        .center {
+          flex: 2;
+          background: linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
+        }
+      }
+    }
+  }
+  .dropdown-list_item:last-child{
+    border-bottom: 1px dashed $gray5;
+  }
+
+  .dropdown-list_item.active{
+    .item_title{
+      border-bottom: none;
+      h4 {
+        color: $rusline_red;
+      }
+    }
+    .item_content {
+      padding: 30px 18px;
+      position: relative;
+      height: auto;
+      top:0;
+      transition: ease-out .3s;
+    }
+  }
+
+}
+
+// =================== table ======================
+
+.wrapper9{
+  max-width: 75%;
+}
+
+table {
+  width: 100%;
+  span{
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 15px;
+  }
+  tr {
+    th {
+      padding: 15px 0 15px 15px;
+      border-bottom: 1px dashed $rusline_red;
+      span {
+        border-right: solid 1px $rusline_red;
+        display: block;
+        font-weight: 400;
+      }
+    }
+    th:last-child {
+      span {
+        border-right: none;
+      }
+    }
+  }
+  td {
+    padding: 15px;
+    padding: 15px 0 15px 15px;
+    border-bottom: 1px dashed $gray5;
+    span{
+      font-weight: 300;
+      color: $gray2;
+      border-right: solid 1px $gray5;
+    }
+  }
+  td:last-child {
+    span {
+      border-right: none;
+    }
+  }
+}

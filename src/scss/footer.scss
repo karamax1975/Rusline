@@ -1,5 +1,6 @@
 @import "./color.scss";
 
+
 .footer_index {
   background: $white;
   position: fixed;
@@ -71,6 +72,8 @@
 .footer {
   background: $gray1;
   margin-top: 60px;
+  position: relative;
+  z-index: 100;
   .footer-wrapper {
     p {
       color: $white;
