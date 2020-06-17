@@ -36,6 +36,11 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
 
+  
+  .page-content{
+    min-height: calc(100vh - 344px);
+  }
+
   p {
     margin-bottom: 0;
   }

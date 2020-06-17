@@ -204,7 +204,7 @@ b {
 // ---------------------------------------------
 .text-list {
   margin-bottom: 30px;
-  li {
+  li, p {
     position: relative;
     font-weight: 300;
     font-size: 16px;
@@ -213,10 +213,10 @@ b {
     margin-left: 24px;
     margin-bottom: 8px;
   }
-  li:last-child {
+  li:last-child, p:last-child {
     margin-bottom: 0;
   }
-  li::before {
+  li::before, p::before {
     content: "";
     width: 5px;
     height: 5px;
@@ -226,6 +226,9 @@ b {
     left: -12px;
     top: 0.5rem;
   }
+}
+.ml12{
+  margin-left: 12px;
 }
 
 // -------------------------------------------------
@@ -409,11 +412,12 @@ body {
   }
 }
 // --------------------------
-.phone-icon {
+.phone-icon, .mail-icon, .file-icon {
   position: relative;
-  margin-left: 23px;
+  left: 23px;
+  margin-right: 23px;
 }
-.phone-icon::before {
+.phone-icon::before, .mail-icon::before, .file-icon::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -423,19 +427,42 @@ body {
   left: -23px;
   top: 3px;
 }
-.phone-icon::after {
+.file-icon{
+  border-bottom: 1px solid #ff2a00;
+  cursor: pointer;
+}
+.phone-icon::after, .mail-icon::after, .file-icon::after {
   content: "";
+  position: absolute;
+  top: 7px;
+}
+.phone-icon::after{
+  background: url("../img/phone-icon__white.svg") no-repeat center;
+  left: -19px;
   width: 7px;
   height: 8px;
-  position: absolute;
-  left: -19px;
-  top: 7px;
-  background: url("../img/phone-icon__white.svg") no-repeat center;
+}
+.mail-icon::after{
+  background: url("../img/mail-icon__white.svg") no-repeat center;
+  width: 8px;
+  height: 7px;
+  left: -20px;  
+}
+.file-icon::after{
+  background: url("../img/file-icon__white.svg") no-repeat center;
+  width: 6px;
+  height: 6px;
+  left: -19px;  
+}
+.file-icon:hover{
+  border-bottom: none;
+  color: $rusline_red !important;
+  transition: ease-out .2s;
 }
 // -----------------------
 .number-list {
   counter-reset: counter;
-  li {
+  li{
     position: relative;
     font-weight: 300;
     font-size: 16px;
@@ -638,14 +665,14 @@ body {
 
 // ========= Раскрывающийся список ===================
 .dropdown-list {
-  .dropdown-list_item{
+  .dropdown-list_item {
     border-top: 1px dashed $gray5;
     .item_title {
       position: relative;
       padding: 14px 0;
 
       cursor: pointer;
-  
+
       h4 {
         padding-left: 18px;
         color: $black;
@@ -664,19 +691,18 @@ body {
         transform: translateY(-50%);
       }
     }
-    .item_title:hover{
-      h4{
-        color:$rusline_red;
-        transition: ease-out .2s;
-        
+    .item_title:hover {
+      h4 {
+        color: $rusline_red;
+        transition: ease-out 0.2s;
       }
     }
-    .item_content{
+    .item_content {
       position: relative;
-      overflow: hidden; 
+      overflow: hidden;
       height: 0;
       padding: 0 18px;
-      transition: ease-out .3s;
+      transition: ease-out 0.3s;
       .content_shadow {
         position: absolute;
         height: 24px;
@@ -701,12 +727,12 @@ body {
       }
     }
   }
-  .dropdown-list_item:last-child{
+  .dropdown-list_item:last-child {
     border-bottom: 1px dashed $gray5;
   }
 
-  .dropdown-list_item.active{
-    .item_title{
+  .dropdown-list_item.active {
+    .item_title {
       border-bottom: none;
       h4 {
         color: $rusline_red;
@@ -716,22 +742,21 @@ body {
       padding: 30px 18px;
       position: relative;
       height: auto;
-      top:0;
-      transition: ease-out .3s;
+      top: 0;
+      transition: ease-out 0.3s;
     }
   }
-
 }
 
 // =================== table ======================
 
-.wrapper9{
+.wrapper9 {
   max-width: 75%;
 }
 
 table {
   width: 100%;
-  span{
+  span {
     display: block;
     font-size: 16px;
     line-height: 20px;
@@ -757,7 +782,7 @@ table {
     padding: 15px;
     padding: 15px 0 15px 15px;
     border-bottom: 1px dashed $gray5;
-    span{
+    span {
       font-weight: 300;
       color: $gray2;
       border-right: solid 1px $gray5;
@@ -767,5 +792,74 @@ table {
     span {
       border-right: none;
     }
+  }
+}
+
+// ====================== LogBook ============================
+
+.year-nav {
+  border-bottom: 1px dashed $gray5;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  span {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    margin-right: 30px;
+    color: $black;
+    cursor: pointer;
+  }
+  span:last-child {
+    margin-right: 0;
+  }
+  span.active {
+    color: $rusline_red;
+  }
+  span:hover {
+    color: $rusline_red;
+  }
+}
+.magazine-list{
+  display: none;
+}
+.magazine-list.active{
+  display: flex;
+  
+}
+.magazine-item {
+  margin-bottom: 30px;
+  .magazine-item_preview {
+    border: 1px solid $gray6;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .magazine-item_preview.new::after{
+    content: '';
+    width: 91px;
+    height: 91px;
+    background: url('../img/new_lable.png') no-repeat center;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    color: $gray2;
+    margin-top: 15px;
+  }
+}
+.magazine-item:hover{
+  .magazine-item_preview{
+    border-color: $rusline_red;
+  }
+  h4{
+    color: $rusline_red;
   }
 }

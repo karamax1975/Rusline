@@ -203,6 +203,54 @@ function dropdownList_item(list) {
   }
 }
 
+// ================= magazine tabs =======================
+
+function magazineTabs(yearsList, previewsArr){
+  if(yearsList && previewsArr){
+    
+    // Получаю массив лет
+    const arrYear = [];
+    yearsList.childNodes.forEach(item=>{
+      if(item.tagName=="SPAN"){
+        arrYear.push(item);
+      }
+    })
+    
+    if(arrYear.length==previewsArr.length){
+      
+      // устанавливаю последний год активным
+      arrYear[arrYear.length-1].classList.add('active');
+      // устанавливаю последний список превью активным
+      previewsArr[previewsArr.length-1].classList.add('active');
+
+
+      // обработчик нажатий на года
+      arrYear.forEach((item,index)=>{
+        item.addEventListener('click', ()=>{
+          
+
+          // неактивные все года и превью 
+          arrYear.forEach((item, index)=>{
+            item.classList.remove('active');
+            previewsArr[index].classList.remove('active');
+          })
+
+          // активные выделенный год и соответственно превью
+          item.classList.add('active');
+          previewsArr[index].classList.add('active');
+        })
+      })
+
+
+    }
+    
+
+  }
+}
+
+
+
+magazineTabs(document.querySelector('.year-nav'), document.querySelectorAll('.magazine-list'))
 dropdownList_item(document.querySelector(".dropdown-list"));
 showTabWidget();
 showIndexDropDown();
