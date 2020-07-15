@@ -114,7 +114,11 @@ const config = {
       {
         from: "./src/uploads",
         to: "./uploads"
-      }
+      },
+      {
+        from: "./src/js",
+        to: "./js"
+      },
     ])
   ].concat(htmlPlugins)
 };

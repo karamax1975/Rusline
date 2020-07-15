@@ -1,0 +1,45 @@
+<% var data = { title: "Классы обслуживания" }; %> <%=
+_.template(require('./../includes/header_2.html').default)(data) %> <%=
+_.template(require('./../includes/top_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu_services.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9 mb50">
+        <h1>Авиабилеты по ВПД МО РФ</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">Сервисы</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="./services_service classes.html">ВПД МО РФ</a></span>
+      </section>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="text-list">
+          <a href="#" class="p2 file-icon red">Инструкция по оформлению.</a>
+          <br><br>
+          <a href="#" class="p2 file-icon red">Список агентств на территории РФ, в которых осуществляется продажа авиабилетов, багажа и грузов по ВПД на рейсы авиакомпании РусЛайн.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

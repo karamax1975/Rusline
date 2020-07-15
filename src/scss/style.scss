@@ -9,10 +9,11 @@
 @import "./additional_menu.scss";
 @import "./add-menu__drop_menu.scss";
 @import "./pages_style.scss";
-@import './add_margin.scss';
+@import "./add_margin.scss";
+@import "./map-flight.scss";
 
-// 
-@import './tabs-class.scss'; // Сервисы / Классы обслуживания
+//
+@import "./tabs-class.scss"; // Сервисы / Классы обслуживания
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
@@ -36,9 +37,9 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
 
-  
-  .page-content{
-    min-height: calc(100vh - 344px);
+  .page-content {
+    min-height: calc(100vh - 254px);
+    padding-bottom: 60px;
   }
 
   p {
@@ -81,7 +82,8 @@ body {
   }
 
   .button.big {
-    padding: 0;
+    height: 44px;
+    padding: 15px 30px;
   }
 
   .button.index.white:hover {
@@ -107,6 +109,9 @@ body {
   .button.red {
     border-color: $rusline_red;
     background: $rusline_red;
+    span {
+      color: $white;
+    }
   }
 
   .button.widget {
@@ -124,6 +129,118 @@ body {
     background: $rusline_red__hover;
     border-color: $rusline_red__hover;
   }
+
+  .middle-input {
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid $white;
+    flex: 2;
+    color: $black !important;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    
+  }
+  .middle-input::placeholder{
+    color: $black;
+  }
+  .middle-input:focus {
+    border-color: $rusline_red;
+  }
+
+  // ------------ checkbox
+
+  .checkbox {
+    position: relative;
+    cursor: pointer;
+    input {
+      display: none;
+    }
+    span {
+      position: relative;
+      left: 24px;
+      user-select:none;
+      display: block;
+    }
+    input:checked + span::before{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      
+      border-radius: 1px;
+      left: -20px;
+      top:3px
+    }
+  }
+  .checkbox.red{
+    input:checked + span::before{
+      background: $rusline_red;
+    }
+  }
+  .checkbox.red::before{
+    border: 1px solid $rusline_red;
+  }
+  .checkbox::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 1px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+// ---------------- reset button
+
+.reset-button {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  span{
+    display: block;
+  }
+  .reset-button-icon{
+    width: 16px;
+    height: 16px;
+    border: solid 1px;
+    overflow: hidden;
+    position: relative;
+    span{
+      width: 150%;
+      height: 1px;
+      position: relative;
+    }
+    span:nth-child(1){
+      transform: rotateZ(45deg);
+      top: 7px;
+      left: -3px; 
+    }
+    span:nth-child(2){
+      transform: rotateZ(-45deg);
+      top: 40%;
+      left: -25%;
+    }
+  }
+  .reset-button_label{
+    margin-left: 8px;
+    border-bottom: 1px solid;
+  }
+}
+.reset-button:hover{
+  .reset-button_label{
+    border: none;
+  }
+}
+.reset-button.red{
+  .reset-button-icon{
+    border-color: $rusline_red;
+    span{
+      background: $rusline_red;
+    }
+  }
+}
 
   h1,
   h2,
@@ -145,11 +262,11 @@ body {
     font-weight: 300;
     font-size: 30px;
     line-height: 100%;
-    a{
+    a {
       color: $rusline_red;
       border-bottom: 1px solid $rusline_red;
     }
-    :hover{
+    :hover {
       color: $rusline_red;
       border-bottom: none;
     }
@@ -189,13 +306,13 @@ body {
     font-size: 16px;
     line-height: 120%;
   }
-  .gray2{
+  .gray2 {
     color: $gray2;
   }
-  .red{
+  .red {
     color: $rusline_red;
   }
-  .black{
+  .black {
     color: $black;
   }
 

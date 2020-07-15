@@ -426,6 +426,7 @@ body {
   border-radius: 1px;
   left: -23px;
   top: 3px;
+  
 }
 .file-icon{
   border-bottom: 1px solid #ff2a00;
@@ -725,6 +726,15 @@ body {
           background: linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
         }
       }
+    }
+    .item_content:before{
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 6px;
+      top: 0;
+      background: url('../img/tr.svg') no-repeat center;
+      z-index: 2;
     }
   }
   .dropdown-list_item:last-child {

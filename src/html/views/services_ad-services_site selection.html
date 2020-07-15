@@ -4,6 +4,7 @@ _.template(require('./../includes/top_menu.html').default)() %> <%=
 _.template(require('./../includes/add_menu.html').default)() %> <%=
 _.template(require('./../includes/add_menu_services.html').default)() %>
 
+<section class="page-content">
 <div class="banner_top">
   <img src="./img/select-to-site_banner.jpg" alt="Site selection" />
 </div>
@@ -142,5 +143,6 @@ _.template(require('./../includes/add_menu_services.html').default)() %>
 <picture class="back-img">
   <img src="./img/airplane.svg" alt="airplane-background">
 </picture>
+</section>
 
 <%= _.template(require('./../includes/footer_2.html').default)(data) %>
