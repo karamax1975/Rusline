@@ -1,7 +1,7 @@
 import jQuery from "jquery";
 import popper from "popper.js";
 import bootstrap from "bootstrap";
-import mapFly from './map_fly';
+import mapFly from "./map_fly";
 
 import tabs from "./tabs";
 
@@ -95,11 +95,52 @@ function additionalMenu() {
   ) {
     const additionalMenu = document.querySelector(".additional-menu");
     const dropMenu = document.querySelector(".add-menu__drop_menu");
+
     additionalMenu.addEventListener("click", (e) => {
       if (e.target.classList.contains("additional-menu_item")) {
-        console.log(dropMenu);
         dropMenu.classList.remove("hidden");
+
+        // Получаю текст из элементов меню
+        let textTitleMenu = e.target.textContent;
+
+        const arrSectionMenu = document.querySelectorAll(".section-menu");
+
+        function closeAllSectionMenu(arr) {
+          arr.forEach((item) => {
+            item.style.display = "none";
+          });
+        }
+
+        switch (textTitleMenu) {  // Чисто для прототипа
+          case "Специальные предложения":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[0].style.display = "flex";
+            break;
+          case "Сервисы":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[1].style.display = "flex";
+            break;
+          case "Пассажирам":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[2].style.display = "flex";
+            break;
+          case "О нас":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[3].style.display = "flex";
+            break;
+          case "Для бизнеса":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[4].style.display = "flex";
+            break;
+            case "Пресс-центр":
+              closeAllSectionMenu(arrSectionMenu);
+              arrSectionMenu[5].style.display = "flex";
+              break;
+          default:
+            break;
+        }
       }
+    // По любому клику внутри меню - оно закрывается
     });
     dropMenu.addEventListener("click", (e) => {
       if (!e.target.classList.contains("add-menu__drop_menu"))
@@ -184,21 +225,17 @@ function dropdownList_item(list) {
       }
     });
 
-    listItems.forEach((item,index) => {
+    listItems.forEach((item, index) => {
       item.addEventListener("click", (e) => {
-        const content = item.querySelector('.item_content');
+        const content = item.querySelector(".item_content");
 
-        if(!content.contains(e.target)){
-          
-          listItems.forEach((item,j)=>{
-            if(j!=index)
-            item.classList.remove('active');
-          }) 
-  
-  
+        if (!content.contains(e.target)) {
+          listItems.forEach((item, j) => {
+            if (j != index) item.classList.remove("active");
+          });
+
           item.classList.toggle("active");
         }
-
       });
     });
   }
@@ -206,52 +243,44 @@ function dropdownList_item(list) {
 
 // ================= magazine tabs =======================
 
-function magazineTabs(yearsList, previewsArr){
-  if(yearsList && previewsArr){
-    
+function magazineTabs(yearsList, previewsArr) {
+  if (yearsList && previewsArr) {
     // Получаю массив лет
     const arrYear = [];
-    yearsList.childNodes.forEach(item=>{
-      if(item.tagName=="SPAN"){
+    yearsList.childNodes.forEach((item) => {
+      if (item.tagName == "SPAN") {
         arrYear.push(item);
       }
-    })
-    
-    if(arrYear.length==previewsArr.length){
-      
-      // устанавливаю последний год активным
-      arrYear[arrYear.length-1].classList.add('active');
-      // устанавливаю последний список превью активным
-      previewsArr[previewsArr.length-1].classList.add('active');
+    });
 
+    if (arrYear.length == previewsArr.length) {
+      // устанавливаю последний год активным
+      arrYear[arrYear.length - 1].classList.add("active");
+      // устанавливаю последний список превью активным
+      previewsArr[previewsArr.length - 1].classList.add("active");
 
       // обработчик нажатий на года
-      arrYear.forEach((item,index)=>{
-        item.addEventListener('click', ()=>{
-          
-
-          // неактивные все года и превью 
-          arrYear.forEach((item, index)=>{
-            item.classList.remove('active');
-            previewsArr[index].classList.remove('active');
-          })
+      arrYear.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          // неактивные все года и превью
+          arrYear.forEach((item, index) => {
+            item.classList.remove("active");
+            previewsArr[index].classList.remove("active");
+          });
 
           // активные выделенный год и соответственно превью
-          item.classList.add('active');
-          previewsArr[index].classList.add('active');
-        })
-      })
-
-
+          item.classList.add("active");
+          previewsArr[index].classList.add("active");
+        });
+      });
     }
-    
-
   }
 }
 
-
-
-magazineTabs(document.querySelector('.year-nav'), document.querySelectorAll('.magazine-list'))
+magazineTabs(
+  document.querySelector(".year-nav"),
+  document.querySelectorAll(".magazine-list")
+);
 dropdownList_item(document.querySelector(".dropdown-list"));
 showTabWidget();
 showIndexDropDown();
