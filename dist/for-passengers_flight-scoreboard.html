@@ -1,5 +1,4 @@
  
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -357,16 +356,12 @@
   </div>
 </section>
  
-<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
 
 <section class="page-content">
-<div class="banner_top">
-  <img src="./img/extra-info.jpg" alt="Information" />
-</div>
 <div class="container">
   <div class="row page_top">
     <div class="headline col-lg-9">
-      <h1 class="title">Подробная информация о рейсе </h1>
+      <h1>Табло рейсов</h1>
     </div>
     <section class="bread-crumbs col-lg-3">
       <span><a href="./index.html">Главная</a></span>
@@ -381,122 +376,57 @@
           d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
         />
       </svg>
-      <span><a href="./additional_services.html">Допол...</a></span>
+      <span><a href="#">Пассажирам</a></span>
       <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
         <path
           d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
         />
       </svg>
-      <span><a href="#">Подробная инфор...</a></span>
+      <span><a href="for-passengers_flight-scoreboard.html">Табло рейсов</a></span>
     </section>
     <div class="col-lg-9">
-      <h2 class="subtitle">
-        «Любить Летать» – информационная услуга, доступная пассажирам к покупке во время бронирования авиабилета на <a href="#">www.rusline.aero</a>.
-      </h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-9">
-      <!-- -->
-      <section>
-        <p class="p1 mb30">Услуга заключается в предоставлении расширенной информации по рейсу авиакомпании «РусЛайн», на который приобретены билеты пассажиром.</p>
-        <h3 class="mb15">Порядок покупки услуги «Любить.Летать»:</h3>
-        <div class="important mb30">
-          <p class="p3 red mb8">1. После выбора рейса перейдите на страницу ввода данных о пассажире.</p>
-          <p class="p3 mb15">2. В информационном блоке «Хотите узнать больше интересной информации о вашем рейсе?» выберите услугу, отметив ее галочкой:</p>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="info_tile">
-                <img src="./img/love-fly_icon1.svg" alt="weather">
-                <span class="tile-text">Точное время в пути с учетом погодных условий</span>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="info_tile">
-                <img src="./img/love-fly_icon2.svg" alt="weather">
-                <span class="tile-text">Прогноз турбулентности на маршруте</span>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="info_tile">
-                <img src="./img/love-fly_icon4.svg" alt="weather">
-                <span class="tile-text">Что мы будем пролетать и в какое время</span>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="info_tile">
-                <img src="./img/love-fly_icon5.svg" alt="weather">
-                <span class="tile-text">Рекомендации по выбору места с учетом красот под крылом</span>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="info_tile">
-                <img src="./img/love-fly_icon3.svg" alt="weather">
-                <span class="tile-text">Интересные факты о вашем самолете</span>
-              </div>
-            </div>
+      <h2 class="mb30">С помощью этого сервиса Вы можете отследить статус любого рейса «RusLine».</h2>
+      <p class="p1 mb30">Для этого задайте дату (по умолчанию стоит сегодня) и любой из трех параметров для поиска: № рейса, город вылета или город прилета.</p>
+      <!-- form -->
+      <section class="flight-board">
+        <div class="flight-board-filters-list mb30">
+          <div class="filter-item yesterday">
+            <span>Вчера</span>
+            <span class="date">01-03-2020</span>
           </div>
-          <p class="p3 mb8">3. К общей стоимости заказа авиабилетов будет добавлена стоимость услуги «Любить.Летать» - 100 рублей.</p>
-          <p class="p3">4. После оплаты общей стоимости заказа на указанную пассажиром электронную почту придет письмо об оформлении авиабилета.</p>
+          <div class="filter-item today">
+            <span>Сегодня</span>
+            <span class="date">02-03-2020</span>
+          </div>
+          <div class="filter-item tomorrow">
+            <span>Завтра</span>
+            <span class="date">03-03-2020</span>
+          </div>
         </div>
-        <p class="p1 mb30">В данном письме будет содержаться также блок с информацией о покупке услуги «Любить.Летать» с уникальной ссылкой на страницу с расширенной информацией о предстоящем перелете:
-        </p>
-        <div class="screen mb30">
-          <table class="wrapper" style="border-collapse: collapse; font-family: &lsquo;Open Sans&rsquo;,Helvetica,Arial,sans-serif; font-size: 18px; line-height: 20px; color: #6d6e71; width: 700px; margin: 0 auto; user-select: none;" cellspacing="0" cellpadding="0" align="center">
-            <tbody>
-            <tr>
-            <td>
-            <table style="margin: 20px; width: 660px;">
-            <tbody>
-            <tr style="background: url('https://www.rusline.aero/bitrix/templates/rusline_n/for_mails/top.png') no-repeat; height: 41px; background-size: contain;">
-            <td colspan="2"></td>
-            </tr>
-            <tr>
-            <td width="70%" style="padding: 10px 20px 10px 0px; color: #414042;">Вы заказали услугу <span style="color: red;">Любить.Летать.</span> Чтобы узнать подробную информацию о Вашем рейсе, пожалуйста, перейдите <b style="color: blue;">по ссылке</b></td>
-            <td width="30%" style="padding-top: 10px; padding-bottom: 10px;">
-            <p style="color: white; margin-top: 0px; display: block; padding: 10px 25px 10px 15px; border-radius: 4px; background: red url('https://www.rusline.aero/bitrix/templates/rusline_n/for_mails/plain.svg') 159px center no-repeat; text-align: center;"><span style="color: #ffffff;"><span style="color: #ffffff;">Узнать всю информацию</span></span></p>
-            </td>
-            </tr>
-            <tr style="background: url('https://www.rusline.aero/bitrix/templates/rusline_n/for_mails/bottom.png') no-repeat; height: 41px; background-size: contain;">
-            <td colspan="2"></td>
-            </tr>
-            </tbody>
-            </table>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-        </div>
-        <div class="important mb30">
-          <h3 class="red">ВАЖНО!</h3>
-          <p class="p1">Расширенная информация о предстоящем перелете будет доступна по предоставленной ссылке только за 24 часа до предполагаемого времени прилета рейса, после загрузки специальных метеорологических данных в систему. В более раннее время по предоставленной ссылке будет доступна только общая информация об услуге «Любить.Летать». Для обновления информации о предстоящем рейсе перезагрузите страницу.</p>
-        </div>
-        <div class="important mb30">
-          <h3 class="red">ВАЖНО!</h3>
-          <p class="p1">Услуга невозвратная.</p>
-        </div>
-        <!-- back -->
-        <div class="back">
-          <a href="./additional_services.html">
-            <div class="back_arrow"></div>
-            <span class="span_14">Возврат к списку услуг</span></a>
+        <div class="flight-board_forms-list">
+          <div class="form-item_tabs-list">
+            <div class="form-item_tab">Номер рейса</div>
+            <div class="form-item_tab">Город вылета</div>
+            <div class="form-item_tab">Город прилета</div>
+          </div>
+          <form class="form-item_input">
+            <input class="input-big" type="text" placeholder="РГ - номер рейса">
+            <input class="input-big" type="text" placeholder="Откуда (город/аэропорт)">
+            <input class="input-big" type="text" placeholder="Куда (город/аэропорт)">
+            <button class="reset" type="reset"></button>
+            <button class="button red" type="submit">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM12.4983 14.6165C11.2165 15.4896 9.66786 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 9.66392 15.492 11.2092 14.6227 12.4892L18.4878 15.8711C19.1112 16.4167 19.1744 17.3643 18.6289 17.9878C18.0833 18.6112 17.1357 18.6744 16.5122 18.1289L12.5122 14.6289C12.5076 14.6248 12.5029 14.6206 12.4983 14.6165Z" />
+              </svg>
+            </button>
+          </form>
         </div>
       </section>
-    </div>
-    <div class="col-lg-3">
-      <h3 class="mb15">Расширенная информация о предстоящем рейсе включает следующие разделы:</h3>
-      <ul class="text-list">
-        <li>Точное время в пути с учетом погодных условий</li>
-        <li>Прогноз турбулентности на маршруте</li>
-        <li>Над какими объектами и в какое время будет пролетать самолет</li>
-        <li>Рекомендации по выбору места с учетом красот под крылом</li>
-        <li>Интересные факты о самолете</li>
-      </ul>
     </div>
   </div>
 </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
