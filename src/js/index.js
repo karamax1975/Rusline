@@ -2,6 +2,7 @@ import jQuery from "jquery";
 import popper from "popper.js";
 import bootstrap from "bootstrap";
 import mapFly from "./map_fly";
+import flightScoreboard from './flight-scoreboard'
 
 import tabs from "./tabs";
 

@@ -1,0 +1,29 @@
+@import "./color.scss";
+
+
+.flight-board{
+    .flight-board-filters-list{
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        height: 50px;
+        .filter-item{
+            flex-grow:1;
+            border: solid 1px $gray5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            span{
+                align-items: center;
+                font-size: 16px;
+                font-weight:400;
+                color: $black;
+            }
+        }
+        .active{
+            border-color: $rusline-red;
+        }
+
+    }
+}
