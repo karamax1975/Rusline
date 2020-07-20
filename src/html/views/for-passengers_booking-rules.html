@@ -1,0 +1,48 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9">
+          <h1>Правила бронирования</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">Пассажирам</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_booking-rules.html">Правила брониро ...</a></span>
+          </section>
+      </div>
+      <div class="list-of-squares">
+        <div class="square-item rectangle">
+           <a href="for-passengers_booking-rules_online-booking.html">
+                <h4>Бронирование онлайн</h4>
+                <img src="./img/booking-bac.jpg" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente ipsam consequuntur cupiditate officiis repellat fugit distinctio! Nam in cumque laboriosam doloremque culpa, rem assumenda praesentium illum, ipsam adipisci debitis?</p>
+           </a>
+        </div>
+        <div class="square-item rectangle">
+            <a href="#">
+                 <h4>Бронирование групповой перевозки</h4>
+                 <img src="./img/booking-bac2.jpg" alt="">
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente ipsam consequuntur cupiditate officiis repellat fugit distinctio! Nam in cumque laboriosam doloremque culpa, rem assumenda praesentium illum, ipsam adipisci debitis?</p>
+            </a>
+         </div>
+
+    </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

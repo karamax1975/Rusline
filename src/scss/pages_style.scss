@@ -3,6 +3,16 @@ b {
   font-weight: 300;
 }
 
+figure {
+  figcaption {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: $gray2;
+    margin-top: 8px;
+  }
+}
+
 .page_top {
   margin-top: 30px;
   align-items: flex-start;
@@ -102,7 +112,8 @@ b {
       height: 101px;
       top: 201px;
       left: 0;
-      background: url("../img/quard_hover.jpg") no-repeat center;
+      background: url("../img/patern-gray.svg") no-repeat;
+      background-size: 100%;
     }
     h4 {
       z-index: -2;
@@ -112,6 +123,22 @@ b {
       z-index: 2;
       top: 215px;
     }
+  }
+  .square-item.rectangle {
+    width: 606px;
+    a::after {
+      background: url("../img/patern-red.svg") no-repeat;
+      background-size: 100%;
+    }
+    p {
+      color: $white;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .square-item.rectangle:last-child {
+    margin-right: 0;
   }
 }
 
@@ -204,7 +231,8 @@ b {
 // ---------------------------------------------
 .text-list {
   margin-bottom: 30px;
-  li, p {
+  li,
+  p {
     position: relative;
     font-weight: 300;
     font-size: 16px;
@@ -213,10 +241,12 @@ b {
     margin-left: 24px;
     margin-bottom: 8px;
   }
-  li:last-child, p:last-child {
+  li:last-child,
+  p:last-child {
     margin-bottom: 0;
   }
-  li::before, p::before {
+  li::before,
+  p::before {
     content: "";
     width: 5px;
     height: 5px;
@@ -227,7 +257,7 @@ b {
     top: 0.5rem;
   }
 }
-.ml12{
+.ml12 {
   margin-left: 12px;
 }
 
@@ -412,12 +442,16 @@ body {
   }
 }
 // --------------------------
-.phone-icon, .mail-icon, .file-icon {
+.phone-icon,
+.mail-icon,
+.file-icon {
   position: relative;
   left: 23px;
   margin-right: 23px;
 }
-.phone-icon::before, .mail-icon::before, .file-icon::before {
+.phone-icon::before,
+.mail-icon::before,
+.file-icon::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -426,44 +460,45 @@ body {
   border-radius: 1px;
   left: -23px;
   top: 3px;
-  
 }
-.file-icon{
+.file-icon {
   border-bottom: 1px solid #ff2a00;
   cursor: pointer;
 }
-.phone-icon::after, .mail-icon::after, .file-icon::after {
+.phone-icon::after,
+.mail-icon::after,
+.file-icon::after {
   content: "";
   position: absolute;
   top: 7px;
 }
-.phone-icon::after{
+.phone-icon::after {
   background: url("../img/phone-icon__white.svg") no-repeat center;
   left: -19px;
   width: 7px;
   height: 8px;
 }
-.mail-icon::after{
+.mail-icon::after {
   background: url("../img/mail-icon__white.svg") no-repeat center;
   width: 8px;
   height: 7px;
-  left: -20px;  
+  left: -20px;
 }
-.file-icon::after{
+.file-icon::after {
   background: url("../img/file-icon__white.svg") no-repeat center;
   width: 6px;
   height: 6px;
-  left: -19px;  
+  left: -19px;
 }
-.file-icon:hover{
+.file-icon:hover {
   border-bottom: none;
   color: $rusline_red !important;
-  transition: ease-out .2s;
+  transition: ease-out 0.2s;
 }
 // -----------------------
 .number-list {
   counter-reset: counter;
-  li{
+  li {
     position: relative;
     font-weight: 300;
     font-size: 16px;
@@ -727,13 +762,13 @@ body {
         }
       }
     }
-    .item_content:before{
+    .item_content:before {
       position: absolute;
-      content: '';
+      content: "";
       width: 12px;
       height: 6px;
       top: 0;
-      background: url('../img/tr.svg') no-repeat center;
+      background: url("../img/tr.svg") no-repeat center;
       z-index: 2;
     }
   }
@@ -754,6 +789,11 @@ body {
       height: auto;
       top: 0;
       transition: ease-out 0.3s;
+      .content {
+        img {
+          max-width: 100%;
+        }
+      }
     }
   }
 }
@@ -829,12 +869,11 @@ table {
     color: $rusline_red;
   }
 }
-.magazine-list{
+.magazine-list {
   display: none;
 }
-.magazine-list.active{
+.magazine-list.active {
   display: flex;
-  
 }
 .magazine-item {
   margin-bottom: 30px;
@@ -848,11 +887,11 @@ table {
       object-fit: cover;
     }
   }
-  .magazine-item_preview.new::after{
-    content: '';
+  .magazine-item_preview.new::after {
+    content: "";
     width: 91px;
     height: 91px;
-    background: url('../img/new_lable.png') no-repeat center;
+    background: url("../img/new_lable.png") no-repeat center;
     position: absolute;
     right: 0;
     top: 0;
@@ -865,11 +904,11 @@ table {
     margin-top: 15px;
   }
 }
-.magazine-item:hover{
-  .magazine-item_preview{
+.magazine-item:hover {
+  .magazine-item_preview {
     border-color: $rusline_red;
   }
-  h4{
+  h4 {
     color: $rusline_red;
   }
 }

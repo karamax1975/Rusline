@@ -1,0 +1,250 @@
+<% var data = { title: "Дополнительные услуги" }; %> <%=
+_.template(require('./../includes/header_2.html').default)(data) %> <%=
+_.template(require('./../includes/top_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Бронирование онлайн</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">...</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="for-passengers_booking-rules.html">Правила ...</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span
+          ><a href="for-passengers_booking-rules_online-booking.html"
+            >Бронирование ...</a
+          ></span
+        >
+      </section>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <h2 class="subtitle mb30">
+          АО Авиакомпания «РусЛайн» предоставляет услуги по онлайн-бронированию
+          и онлайн-оплате мест на рейсы «РусЛайн» на сайте авиакомпании.
+        </h2>
+        <p class="p1 mb30">
+          Прежде чем воспользоваться данной услугой ознакомьтесь с правилами
+          бронирования онлайн.
+        </p>
+        <ul class="text-list">
+          <h3 class="mb15">
+            Для покупки авиабилета необходимо выполнить следующие действия:
+          </h3>
+          <li>Задайте параметры поиска перелета;</li>
+          <li>Выберите рейсы и тарифы;</li>
+          <li>Введите данные пассажиров;</li>
+          <li>Выберите дополнительные услуги;</li>
+          <li>
+            Оплатите билет и получите маршрут-квитанцию электронного билета на
+            указанный Вами электронный адрес.
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="mb8">Оплатить билет можно банковской картой:</h3>
+        <p class="p1">
+          VISA International, Mastercard International, Diners Club
+          International, JCB International или МИР.
+        </p>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="subtitle">Порядок действий при бронировании:</h2>
+          <div class="dropdown-list">
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>1. Поиск рейса</h4>
+              </div>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="partition">
+                    <figure>
+                      <img src="../img/bron_1.jpg" alt="" />
+                      <figcaption>
+                        Рис.1 Форма поиска
+                      </figcaption>
+                    </figure>
+                    <div class="roulette">
+                      <div class="wrapper-row mb30">
+                        <div class="one">
+                          <div class="top"></div>
+                          <h3 class="red">Задайте маршрут полета</h3>
+                          <p class="p2">(откуда - куда);</p>
+                        </div>
+                        <div class="two">
+                          <div class="top"></div>
+                          <h3 class="red">Введите желаемые даты вылетов</h3>
+                          <p class="p2">
+                            «туда» и при необходимости «обратно»;
+                          </p>
+                        </div>
+                        <div class="three">
+                          <div class="top"></div>
+                          <h3 class="red">Выберите количество пассажиров</h3>
+                          <p class="p2">
+                            (взрослых, детей (от 2 до 12 лет) и детей (от 0 до 2
+                            лет), которые могут лететь с местом или без него)
+                            <br /><br />В одном заказе возможно ввести максимум
+                            9 пассажиров.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="wrapper-row center">
+                        <h3 class="red mr15">Нажмите кнопку</h3>
+                        <img src="./img/button_pre.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="partition">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p class="p1">Вам будут предложены варианты перелета по заданным параметрам поиска и представлены доступные тарифы (Рис.2).</p>
+                      </div>
+                      <div class="col-lg-8">
+                        <figure>
+                          <img src="./img/bron_2.jpg" alt="">
+                          <figcaption>Рис.2. Выдача рейсов и тарифов по вашему запросу.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="partition">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="wrapper-vertical">
+                          <p class="p1">Если по Вашему запросу ничего не будет найдено, то Вы увидите информацию (Рис.3.):</p>
+                          <p class="p1">Внизу, в календаре, указана стоимость на даты, на которые есть места и рейсы. Кликните на подходящей дате и перейдите к бронированию.</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <figure>
+                          <img src="./img/bron_3.jpg" alt="">
+                          <figcaption>Рис. 3. Поиск не дал результатов.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>2. Выбор рейса и тарифа</h4>
+              </div>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="partition">
+                    <div class="row">
+                      <div class="col-lg-4">
+                          <p class="p1">
+                            Для каждой группы тарифов дано краткое описание условий их применения (норма бесплатного провоза багажа, условия по обмену и возврату билета). (Рис.4):
+                            <br><br>
+                            Выберите тариф, который подходит именно Вам по условиям.
+                          </p>
+                        </div>
+                      <div class="col-lg-8">
+                        <figure>
+                          <img src="./img/bron_4.jpg" alt="">
+                          <figcaption>Рис. 3. Поиск не дал результатов.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="partition">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="wrapper-vertical">
+                          <p class="p1">
+                            Более полную информацию по выбранному рейсу и тарифу Вы увидите на экране ниже (рис.5):
+                          </p>
+                          <p class="p1">
+                            Ознакомьтесь по ссылке «Условия применения тарифа» с полными правилами применения выбранного тарифа и нажмите кнопку <b>«Продолжить»</b>.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <figure>
+                          <img src="./img/bron_4.jpg" alt="">
+                          <figcaption>Рис. 3. Поиск не дал результатов.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>3. Ввод данных пассажиров</h4>
+              </div>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content"></div>
+              </div>
+            </div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>4. Дополнительные услуги</h4>
+              </div>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content"></div>
+              </div>
+            </div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>5. Оплата и получение билета</h4>
+              </div>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>
