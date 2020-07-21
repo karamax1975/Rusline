@@ -1,0 +1,137 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9 mb50">
+          <h1>Инструкция по оплате через сервис Paylate</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">...</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">...</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_paylate payment.html">Оплата Paylate</a></span>
+          </section>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class="mb15">1. Забронируйте билет на сайте авиакомпании «РусЛайн».</h3>
+          <p class="p1">
+            При оформлении заказа в качестве способа оплаты выберите «PAYLATE – оплата авиабилета в кредит» и нажмите <b>«Забронировать»</b>.
+            <br><br>
+            Заём предоставляется клиентам авиакомпании «РусЛайн» компанией ООО «МКК «Кредит Лайн» - Сервис «PAYLATE - Доверительная оплата». С условиями и правилами предоставления займа можно ознакомиться на <a class="text-link" href="https://paylate.ru/about">сайте paylate.ru в разделе «О сервисе»</a>.
+          </p>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <figure>
+            <img class="img_border" src="./img/paylate_1.svg" alt="stape 1">
+          </figure>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-4">
+          <ul class="text-list">
+            <h3 class="mb15">2. Для создания кредитной заявки Вам необходимо заполнить три раздела в открывшихся формах:</h3>
+            <li>Паспортные данные;</li>
+            <li>Личные данные;</li>
+            <li>Финансовые данные.</li>
+          </ul>
+          <p class="p1">Для перехода на следующую страницу нажмите кнопку <b>«Далее»</b>.</p>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <figure>
+            <img class="img_border" src="./img/paylate_2.svg" alt="stape 1">
+            <figcaption>Форма ввода паспортных данных (личные данные)</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <figure>
+            <img class="img_border" src="./img/paylate_3.svg" alt="stape 1">
+            <figcaption>Форма ввода паспортных данных (данные о владельце)</figcaption>
+          </figure>
+          <figure>
+            <img class="img_border" src="./img/paylate_4.svg" alt="stape 1">
+            <figcaption>Форма ввода паспортных данных (данные о паспорте)</figcaption>
+          </figure>
+          <figure>
+            <img class="img_border" src="./img/paylate_5.svg" alt="stape 1">
+            <figcaption>Форма ввода паспортных данных (данные о адресе владельца)</figcaption>
+          </figure>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class="mb15">3. Если Вы впервые пользуетесь сервисом PayLate, то потребуется ввести дополнительные данные.
+          </h3>
+          <p class="p1">Загрузите отсканированные либо сфотографированные страницы Вашего паспорта.
+            Необходимо предоставить разворот второй и третьей страницы (с фотографией) и разворот с последним штампом о прописке.
+          <br><br>
+          Дополнительно может быть запрошено Ваше селфи с паспортом и второй документ (водительское удостоверение или СНИЛС).
+          <br><br>
+          Нажмите <b>«Отправить заявку»</b> и введите код из SMS-сообщения, которое автоматически отправляется на Ваш мобильный телефон.
+          </p>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <figure>
+            <img class="img_border" src="./img/paylate_6.svg" alt="stape 1">
+          </figure>
+          <figure>
+            <img class="img_border" src="./img/paylate_7.svg" alt="stape 1">
+          </figure>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class="mb15">4. Дождитесь решения по Вашей заявке.</h3>
+          <p class="p1">При отрицательном решении, Вы получите соответствующее уведомление.</p>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <div class="important">
+            <h3 class="red">Внимание!</h3>
+            <p class="p1">
+              Вы можете оплатить заказ чужой банковской картой или заказы другого лица своей банковской картой. Но использование чужой банковской карты без согласия ее законного владельца незаконно. Предупреждаем вас об ответственности за мошеннические действия с пластиковыми картами.
+              <br><br>
+              В случае обращения владельца карты о несанкционированном списании денежных средств заказ уже оформленной перевозки будет аннулирован.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="back">
+            <a href="for-passengers_booking-rules_payment-methods.html">
+              <div class="back_arrow"><span>Вернуться назад</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

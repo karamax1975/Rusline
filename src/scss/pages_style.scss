@@ -11,6 +11,10 @@ figure {
     color: $gray2;
     margin-top: 8px;
   }
+  img{
+    border: 1px solid $gray6;
+    border-radius: 2px;
+  }
 }
 
 .page_top {
@@ -82,6 +86,7 @@ figure {
       top: 0;
       left: 0;
       z-index: -1;
+      transition: 1s;
     }
 
     h4 {
@@ -122,6 +127,10 @@ figure {
       position: absolute;
       z-index: 2;
       top: 215px;
+    }
+    img {
+      transform: scale(1.2);
+      transition: 1s;
     }
   }
   .square-item.rectangle {
@@ -298,24 +307,49 @@ b {
 }
 // -----------------------------------------------------
 
+// .back {
+//   a {
+//     display: flex;
+//     align-items: center;
+//     color: $rusline_red;
+//   }
+//   span {
+//     font-weight: 300;
+//     font-size: 14px;
+//     line-height: 100%;
+//   }
+//   .back_arrow {
+//     margin-right: 8px;
+//     width: 50px;
+//     height: 10px;
+//     background: url("../img/back-arrow.svg") no-repeat center;
+//   }
+//   margin-top: 30px;
+// }
 .back {
+  position: relative;
   a {
-    display: flex;
-    align-items: center;
-    color: $rusline_red;
+    span {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: $rusline_red;
+      margin-left: 58px;
+    }
   }
-  span {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 100%;
-  }
-  .back_arrow {
-    margin-right: 8px;
+  span:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     height: 10px;
     background: url("../img/back-arrow.svg") no-repeat center;
   }
-  margin-top: 30px;
+  span:hover{
+    border-bottom: 1px solid $rusline_red;
+  }
 }
 // ------------------------------------------------------
 

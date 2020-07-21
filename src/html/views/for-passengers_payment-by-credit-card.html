@@ -1,0 +1,168 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9">
+          <h1>Оплата банковской картой</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">...</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">...</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_payment-by-credit-card.html">Оплата банковской картой</a></span>
+          </section>
+      </div>
+      <div class="row mb30">
+        <div class="col-lg-9">
+          <p class="p1 mb30">Оплатить Заказ может как пассажир, так и лицо, осуществляющее оформление заказа на сайте и (или) его оплату от имени пассажира. По безопасному соединению Вас перенаправят на страницу платежной системы: secure.sirena-travel.ru, где в течении 15 минут, необходимо ввести данные для проведения платежной транзакции.В рамках предоставленного лимита времени возможны 5 попыток оплаты заказа, после чего нужно воспользоваться либо другим способом оплаты, либо создать новый заказ.</p>
+          <ul class="text-list">
+            <h3 class="mb15">Введите следующие данные банковской карты, с которой будет произведен платеж:</h3>
+            <li>номер карты; </li>
+            <li>имя владельца карты; </li>
+            <li>срок действия карты; </li>
+            <li>код безопасности CVV/CVC (CVV2 для VISA или CVC2 для MasterCard). </li>
+          </ul>
+            <div class="row">
+              <div class="col-lg-4">
+                <p class="p1">
+                  Все необходимые данные есть на Вашей карте. Код CVV/CVC обычно размещен на обратной стороне карты. (рис.1)
+                  <br><br>
+                  Проверьте введенные данные и нажмите <b>«Оплатить»</b>.
+                </p>
+              </div>
+              <figure>
+                <img src="../img/card.svg" alt="">
+                <figcaption>Рис.1. Оборотная сторона карты</figcaption>
+              </figure>
+            </div>
+            <hr>
+            <h3 class="mb15">О безопасности использования карточек</h3>
+            <p class="p1">Безопасность передачи данных обеспечивается использованием протокола Secure Sockets Layer (SSL) 3.0. Обмен информации осуществляется по закрытым сетям, имеющим высшую степень защиты и прошедшим аудит PCI DSS. Сбор, обработка и хранение конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т.д.) производится в процессинговом центре, имеющем сертификат PCI DSS.</p>
+        </div>
+        <div class="col-lg-3">
+          <h3>Оплатить авиабилеты Вы можете картами международных платежных систем:</h3>
+          <div class="cards-list">
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/visa_icon.svg" alt="visa">
+                </div>
+                <span>VISA International</span>
+              </div>
+            </div>
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/master-card_icon.svg" alt="master-card">
+                </div>
+                <span>Mastercard International</span>
+              </div>
+            </div>
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/diners_icons.svg" alt="Diners Club">
+                </div>
+                <span>Diners Club International</span>
+              </div>
+            </div>
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/jcb_icons.svg" alt="JCB">
+                </div>
+                <span>JCB International</span>
+              </div>
+            </div>
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/maestro_icon.svg" alt="Maestro">
+                </div>
+                <span>Maestro</span>
+              </div>
+            </div>
+            <div class="card-col">
+              <div class="card-item">
+                <div class="card-item_icons">
+                  <img src="./img/mir_icon.svg" alt="МИР">
+                </div>
+                <span>МИР</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <h3 class="mb15">О технологии 3D Secure</h3>
+            <p class="p1 mb30">
+              Технология 3D Secure является частью программ Visa International "Verified by Visa" и MasterCard Worldwide "MasterCardSecureCode", целью которых является обеспечение безопасных и надежных методов оплаты товаров и услуг в глобальной сети Интернет.
+              Не путайте технологию 3D Secure с кодом CVV (СVС), который напечатан на карте с обратной стороны. 3D Secure - это дополнительная защита вашей карты мошеннических с ней действий. Вам необходимо узнать в банке, поддерживает ли ваша карта эту технологию. 
+              <br><br>
+              Если банк, выдавший Вам карту, поддерживает протокол 3D Secure, то при совершении платежа через Интернет, покупатель дополнительно перенаправляется на страницу сайта банка-эмитента, выдавшего карту для подтверждения платежной транзакции одноразовым паролем или специальным паролем, выданным в банке для Интернет-платежей. 
+              <br><br>
+              Одноразовый пароль можно использовать только для одной покупки. Он будет отправлен на номер мобильного телефона владельца карты SMS-сообщением. Картодержатель вводит полученный пароль на сайте в предназначенное для этого поле, таким образом, подтверждая, что именно он собирается произвести платеж. Это позволяет максимально снизить риск мошенничества по Вашей банковской карте.
+            </p>
+            <p class="p3 mb30">В случае успешной транзакции оплата произойдет в течение нескольких секунд.</p>
+            <div class="important">
+              <h3>ВАЖНО!</h3>
+              <p class="p1">
+                Вы можете оплатить заказ чужой банковской картой или заказы другого лица своей банковской картой. Но использование чужой банковской карты без согласия ее законного владельца незаконно. Предупреждаем вас об ответственности за мошеннические действия с пластиковыми картами.
+                <br><br>
+                В случае обращения владельца карты о несанкционированном списании денежных средств заказ уже оформленной перевозки будет аннулирован.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="cards-list mt40">
+              <div class="card-col">
+                <div class="card-item">
+                  <div class="card-item_wrapper">
+                    <img src="./img/master-card-s_icon.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="card-col">
+                <div class="card-item">
+                  <div class="card-item_wrapper">
+                    <img src="./img/verified-visa_icon.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="back">
+              <a href="for-passengers_booking-rules_payment-methods.html">
+                <div class="back_arrow"><span>Вернуться назад</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

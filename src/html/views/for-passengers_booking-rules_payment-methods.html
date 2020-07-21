@@ -1,0 +1,126 @@
+<% var data = { title: "Дополнительные услуги" }; %> <%=
+_.template(require('./../includes/header_2.html').default)(data) %> <%=
+_.template(require('./../includes/top_menu.html').default)() %> <%=
+_.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Способы оплаты</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">Пассажирам</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span
+          ><a href="for-passengers_booking-rules_payment-methods.html"
+            >Способы оплаты</a
+          ></span
+        >
+      </section>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="p1 mb30">Забронированный на сайте авиакомпании «РусЛайн» авиабилет предусматривает оплату следующими способами:</p>
+        <div class="dropdown-list">
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Оплата банковскими картами</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col-lg-9">
+                    <h3 class="mb15">Оплата банковскими картами – самый быстрый и доступный способ оплаты авиабилета в режиме online.</h3>
+                    <p class="p1">В случае, если успешно проведена 3DSecure-авторизация, оплата авиабилета возможна за 1 час до вылета рейса. На оплату заказа пластиковой картой дается не более 1 часа. При отсутствии подтверждения оплаты в течение этого времени заказ автоматически аннулируется.
+                      <br><br>
+                      Оплата по банковским картам производится посредством перенаправления клиента на сайт системы электронных платежей ООО «Международные процессинговые системы». В системе безопасность передачи данных обеспечивается использованием протокола SecureSocketsLayer (SSL). Дальнейшая передача информации осуществляется по закрытым банковским сетям, имеющим высшую степень защиты.
+                      <br><br>
+                      Сбор и обработка полученных конфиденциальных данных клиента (реквизиты карты, регистрационные данные и т. д.) производится в процессинговом центре. Таким образом, авиакомпания не может получить персональные данные покупателя и данные банковской карты. Маршрутная квитанция электронного билета и чек поступят на электронный адрес, указанный вами при совершении заказа, сразу после завершения процедуры оплаты. Вы также можете сохранить ее из вашего личного кабинета. 
+                    </p>
+                  </div>
+                  <div class="col-lg-3">
+                    <h3 class="mb15">Перед оплатой изучите инструкцию:</h3>
+                    <a class="p1 text-link red" href="for-passengers_payment-by-credit-card.html">Оплата авиабилета банковской картой на сайте.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Оплата в рассрочку через сервис PAYLATE (оплата в рассрочку с беспроцентным периодом)</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col-lg-9">
+                    <h3 class="mb30">Преимущества оплаты через сервис PAYLATE:</h3>
+                    <div class="benefits-list">
+                      <div class="benefit-item">
+                        <div class="benefit-item_img">
+                          <img src="./img/benefit_icon.svg" alt="">
+                        </div>
+                        <p class="p2">До 120 дней без переплаты</p>
+                      </div>
+                      <div class="benefit-item">
+                        <div class="benefit-item_img">
+                          <img src="./img/benefit_icon_1.svg" alt="">
+                        </div>
+                        <p class="p2">Моментальная сделка</p>
+                      </div>
+                      <div class="benefit-item">
+                        <div class="benefit-item_img">
+                          <img src="./img/benefit_icon_2.svg" alt="">
+                        </div>
+                        <p class="p2">Работа сервиса на территории всей РФ</p>
+                      </div>
+                      <div class="benefit-item">
+                        <div class="benefit-item_img">
+                          <img src="./img/benefit_icon_3.svg" alt="">
+                        </div>
+                        <p class="p2">Круглосуточная работа сервиса 24/7</p>
+                      </div>
+                    </div>
+                    <ul class="text-list">
+                      <h3 class="mb15">Схема работы сервиса:</h3>
+                      <li>абронируйте билет на сайте авиакомпании "РусЛайн" и выберите способ оплаты PAYLATE;</li>
+                      <li>заполните кредитную заявку и пройдите удаленную идентификацию личности;</li>
+                      <li>получите решение о выдаче займа и подтвердите Ваше согласие;</li>
+                      <li>сервис PAYLATE автоматически оплатит Ваши билеты онлайн.</li>
+                    </ul>
+                    
+                  </div>
+                  <div class="col-lg-3">
+                    <h3 class="mb15">Перед оплатой изучите инструкцию:</h3>
+                    <a class="p1 text-link red" href="for-passengers_paylate payment.html">Оплата авиабилета через сервис PAYLATE.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>
