@@ -1,0 +1,146 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container post">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <section class="bread-crumbs">
+          <span><a href="./index.html">Главная</a></span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path
+              d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+          </svg>
+          <span><a href="#">Пресс-релизы</a></span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path
+              d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+          </svg>
+          <span><a href="about_rusline.html">Пресс-релиз</a></span>
+        </section>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="row">
+      <aside class="col-lg-2">
+        <div class="post_share">
+          <div class="share-icons">
+            <a href="">
+              <img src="img/vk.svg" alt="">
+            </a>
+            <a href="">
+              <img src="img/fb.svg" alt="">
+            </a>
+            <a href="">
+              <img src="img/ok.svg" alt="">
+            </a>
+          </div>
+          <p>Поделиться в соцсетях:</p>
+        </div>
+      </aside>
+      <article class="col-lg-8">
+        <time>03.02.2020</time>
+        <h1>Авиакомпания «РусЛайн» запустит прямые рейсы из Санкт-Петербурга в Нижний Новгород</h1>
+        <h3>Авиакомпания «РусЛайн», один из ведущих игроков на рынке региональных перевозок в России, с 31 июля начнет
+          выполнение прямых рейсов из Санкт-Петербурга в Нижний Новгород.</h3>
+        <p class="p1">Полеты будут выполняться три раза в неделю, по вторникам, пятницам и воскресеньям, на современных
+          50-ти кресельных канадских самолетах Bombardier CRJ-100/200. Время в пути составит 1 час 50 минут, а стоимость
+          билетов — от 4900 рублей в одну сторону <b>*</b>.</p>
+        <p class="quote mb40">
+          «Мы рады соединить прямыми рейсами два города России с высоким туристическим потенциалом – Санкт-Петербург и
+          Нижний Новгород, которые, к тому же, исторически имеют тесные деловые связи. Пока границы закрыты, жители
+          нашей страны имеют отличную возможность посмотреть на отечественные достопримечательности, которыми безусловно
+          богаты Нижегородская и Ленинградская области, а также Северная столица России. Мы нисколько не сомневаемся в
+          популярности этого направления и считаем, что оно очень перспективно», — комментирует коммерческий директор
+          авиакомпании «РусЛайн» Александр Крутов.
+        </p>
+        <h3>Расписание (время местное):</h3>
+        <table class="mb30">
+          <tr>
+            <th class="white" style="border-top: none;">Рейс</th>
+            <th class="white" style="border-top: none;">Маршрут</th>
+            <th class="white" style="border-top: none;">Дни вылета</th>
+            <th class="white" style="border-top: none;">Вылет</th>
+            <th class="white" style="border-top: none;">Прилет</th>
+            <th class="white" style="border-top: none;">Период выполнения</th>
+          </tr>
+          <tr>
+            <td>7R-237</td>
+            <td><a class="text-link" href="">Санкт-Петербург - Нижний Новгород</a></td>
+            <td>ПТ</td>
+            <td>16:40</td>
+            <td>18:30</td>
+            <td>31.07.20 - 23.10.20</td>
+          </tr>
+          <tr>
+            <td>7R-237</td>
+            <td><a class="text-link" href="">Санкт-Петербург - Нижний Новгород</a></td>
+            <td>ВС</td>
+            <td>16:40</td>
+            <td>18:30</td>
+            <td>02.08.20 - 18.10.20</td>
+          </tr>
+          <tr>
+            <td>7R-237</td>
+            <td><a class="text-link" href="">Санкт-Петербург - Нижний Новгород</a></td>
+            <td>ВТ</td>
+            <td>16:30</td>
+            <td>18:20</td>
+            <td>04.08.20 - 20.10.20</td>
+          </tr>
+          <tr>
+            <td>7R-238</td>
+            <td><a class="text-link" href="">Нижний Новгород – Санкт-Петербург</a></td>
+            <td>ПТ</td>
+            <td>19:15</td>
+            <td>21:05</td>
+            <td>31.07.20 - 23.10.20</td>
+          </tr>
+          <tr>
+            <td>7R-238</td>
+            <td><a class="text-link" href="">Нижний Новгород – Санкт-Петербург</a></td>
+            <td>ВС</td>
+            <td>19:15</td>
+            <td>21:05</td>
+            <td>02.08.20 - 18.10.20</td>
+          </tr>
+          <tr>
+            <td>7R-238</td>
+            <td><a class="text-link" href="">Нижний Новгород – Санкт-Петербург</a></td>
+            <td>ВТ</td>
+            <td>19:05</td>
+            <td>20:55</td>
+            <td>04.08.20 - 20.10.20</td>
+          </tr>
+        </table>
+        <p class="p1 mb15">
+          Продажи открыты.
+          <br>
+          Билеты доступны во всех авиакассах, а также на сайте <a href="#" class="text-link">www.rusline.aero</a> .
+          <br><br>
+          Справочная информация по телефону <b> 8 809 505 46 69</b> (стоимость звонка от 64 до 68 руб./мин. с учетом НДС, в
+          зависимости от оператора связи, включая время ожидания и разговора с менеджером).
+        </p>
+        <span class="note"> <b>*</b> Стоимость указана с учётом всех сборов авиакомпании, возможны агентские сервисные
+          сборы, количество мест ограничено.</span>
+        <div class="blog-nav">
+          <a href="press_press-release.html">
+            <button class="button_back"></button>
+            <span>Возврат к списку пресс-релизов</span>
+          </a>
+          <a href="press_press-release_release.html">
+            <span>Следующий пресс-релиз</span>
+            <button class="button_next"></button>
+          </a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

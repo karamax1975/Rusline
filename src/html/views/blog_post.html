@@ -1,0 +1,106 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="banner_top">
+    <img src="img/post_header.jpg" alt="">
+  </div>
+<div class="container post">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <section class="bread-crumbs">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="about_rusline.html">Блог</a></span>
+      </section>
+    </div>
+  </div>
+
+<!--  -->
+  <div class="row">
+    <aside class="col-lg-2">
+      <div class="post_autor">
+        <div class="autor_photo"><img src="img/autor_rusline.svg" alt=""></div>
+        <div class="autor_name">
+          <p>Автор:</p>
+           <a class="text-link" href="">Редакция блога «РусЛайн»</a>
+        </div>
+      </div>
+      <div class="post_share">
+        <div class="share-icons">
+          <a href="">
+            <img src="img/vk.svg" alt="">
+          </a>
+          <a href="">
+            <img src="img/fb.svg" alt="">
+          </a>
+          <a href="">
+            <img src="img/ok.svg" alt="">
+          </a>
+        </div>
+        <p>Поделиться в соцсетях:</p>
+      </div>
+    </aside>
+    <article class="col-lg-8">
+      <time>20.01.2020</time>
+      <h1>Пять причин приехать <br> в Калининград</h1>
+      <h3>Прочувствовать прусский дух, попробовать Кёнигсбергский марципан, вдохнуть свежий балтийский бриз— это далеко не все, ради чего стоит посетить самую западную точку России</h3>
+      <h2>Посетить Кафедральный собор и органный концерт</h2>
+      <p class="p1">Прочувствовать прусский дух, попробовать Кёнигсбергский марципан, вдохнуть свежий балтийский бриз— это далеко не все, ради чего стоит посетить самую западную точку России</p>
+      <figure>
+        <img src="img/post_1.jpg" alt="">
+        <figcaption>Подпись</figcaption>
+      </figure>
+      <h2>Увидеть Куршскую косу</h2>
+      <p class="p1">Приехать в Калининград и не съездить на Куршскую косу — значит по-настоящему не побывать в этих краях. Куршская коса — это узкая полоска земли, обрамлённая с одной стороны Балтийским морем, с другой — Куршским заливом. Это уникальное природное место, в котором встречаются самые разные ландшафты — от густого реликтового леса до огромных песочных дюн.</p>
+      <figure>
+        <img src="img/post_2.jpg" alt="">
+      </figure>
+      <h2>Погулять по Амалиенау</h2>
+      <p class="p1">Это небольшой уютный район, застроенный виллами в начале прошлого столетия и чудом уцелевший во время войны. Здесь расположено озеро Поплавок, в тёплые дни местные жители и туристы любят кормить здесь уток и лебедей и просто спокойно прогуливаться.</p>
+      <figure>
+        <img src="img/post_3.jpg" alt="">
+      </figure>
+      <p class="p1">
+        <i>Были в этих местах или знаете другие интересные точки на карте России? Расскажите нам о них. Мы с радостью опубликуем ваши рассказы. Подробности о том, как подготовить статью в блог авиакомпании «РусЛайн», можно найти <a class="text-link" href="#">здесь</a> .</i>
+      </p>
+
+      <div class="tags">
+        <a class="text-link" href="#">#Выходные</a>
+        <a class="text-link" href="#">#КудаПоехать</a>
+        <a class="text-link" href="#">#Сочи</a>
+        <a class="text-link" href="#">#Кубань</a>
+        <a class="text-link" href="#">#ЧерноеМоре</a>
+      </div>
+
+      <div class="blog-nav">
+        <a href="blog.html">
+          <button class="button_back"></button>
+          <span>Возврат к списку постов</span>
+        </a>
+        <a href="blog_post.html">
+          <span>Следующий пост</span>
+          <button class="button_next"></button>
+        </a>
+      </div>
+
+    </article>
+  </div>
+
+</div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

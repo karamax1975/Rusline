@@ -1,0 +1,87 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1 class="mb50">Сертификаты, подтверждающие безопасность полетов</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="about_rusline.html">Авиакомпания Руслайн</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="dropdown-list">
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>IOSA</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="p1">
+                    Программа IOSA (IATA Operational Safety Audit Programme) направлена на аудит деятельности авиакомпаний на основе стандартизированных требований (IOSA Standards and Recommended Practices - ISARPs).
+                    <br><br>
+                    Программу IOSA можно рассматривать как одну из составляющих системы международного мониторинга авиационной деятельности.
+                  </p>
+                </div>
+                <div class="col-lg-8">
+                  <div class="img_wrapper">
+                    <img src="img/Sertificate_IOSA_RusLine_600.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>IATA</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="p1">
+                    IATA — основной механизм для сотрудничества между авиакомпаниями в продвижении безопасных, надёжных и экономичных воздушных перевозок — в интересах потребителей в мире.
+                  </p>
+                </div>
+                <div class="col-lg-8">
+                  <div class="img_wrapper">
+                    <img src="img/Sertificate_IATA.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

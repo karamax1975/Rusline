@@ -1,0 +1,226 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Вопросы по регистрации на рейс</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пассажирам</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="for-passengers_booking-rules.html">Правила брониро ...</a></span>
+      </section>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="dropdown-list mt40">
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>В каких аэропортах можно пройти регистрацию по электронному посадочному талону?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">При онлайн регистрации на рейсы авиакомпании "РусЛайн" Вы можете пройти посадку с электронным посадочным талоном используя QR-код. Информацию об аэропортах, в которых установлены устройства для считывания QR-кода можно найти <a href="#" class="text-link">здесь.</a></p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Какие направления доступны для веб-регистрации?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">К сожалению, не все аэропорты вылета поддерживают систему веб-регистрации. С полным списком городов, откуда можно зарегистрироваться заранее в режиме онлайн, можно найти на нашем сайте в разделе <a href="#" class="text-link">"Регистрация на рейс"</a></p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Я только что купил билет, хочу зарегистрироваться, но система не находит данные моего заказа.</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Поскольку после приобретения авиабилета требуется некоторое время для его отображения в системе регистрации, для пассажира электронная регистрация будет доступна в течение 40 минут после совершения покупки и получения маршрутной квитанции на электронный адрес.</p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Когда открывается/закрывается регистрация в аэропорту и веб-регистрация на сайте?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <ul class="text-list">
+                  <h3>Регистрация пассажиров и оформление багажа в аэропорту вылета начинается заблаговременно:</h3>
+                  <li>На международный рейс - за 3 часа,</li>
+                  <li>На внутренний рейс - за 1 час 40 минут до времени вылета воздушного судна, указанного в авиабилете.</li>
+                </ul>
+                <p class="p1">Регистрация заканчивается за 40 минут до вылета рейса.
+                  <br><br>
+                  Веб-регистрация на сайте открывается за 36 часов и заканчивается за 1 час 30 минут до вылета рейса. Вы можете ознакомиться более подробно с условиями <a href="#" class="text-link">онлайн-регистрации.</a></p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>При регистрации я выбрал место 9С, а система поменяла мне место на 13 ряд, что мне делать?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Места С приоритетны для пассажиров с младенцами, в первую очередь место 9С. Вы можете изменить место, необходимо войти в «Данные», далее нажать значок  «Изменить место».</p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Я прошел регистрацию на сайте авиакомпании, но не могу распечатать посадочный талон.</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Если у вас нет возможности распечатать посадочный талон, то вы можете сделать это на стойке регистрации в аэропорту не позднее, чем за 50 минут до вылета рейса.</p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Если я зарегистрировался через сайт, за какое время до вылета рейса мне нужно прибыть в аэропорт?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Если Вы летите без багажа, то можно прибыть в аэропорт до времени окончания посадки на борт, указанного в посадочном талоне. Если пассажир следует с багажом, ему необходимо прибыть до окончания регистрации (не позднее 50 минут до вылета рейса). 
+                  <br><br>
+                  Авиакомпания рекомендует прибыть в аэропорт за 1,5 часа до вылета рейса, указанного в билете (маршрут-квитанции) для прохождения паспортного и таможенного контроля.</p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>На основании каких документов можно зарегистрироваться в аэропорту? Обязательно ли предъявлять на регистрации в аэропорту распечатанную маршрут-квитанцию?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1 mb15">При регистрации в аэропорту пассажиру необходимо предъявить документ, удостоверяющий личность, указанный при бронировании.
+                <br><br>
+                Маршрут-квитанцию электронного билета не обязательно иметь с собой в момент регистрации на рейс.</p>
+                <ul class="text-list mb0">
+                  <h3>Маршрут-квитанция может Вам потребоваться в следующих случаях:</h3>
+                  <li>Аэропорту вылета представителям службы безопасности;</li>
+                  <li>При прилете в другое государство как подтверждение обратного вылета миграционным службам;</li>
+                  <li>Для отчета за командировку в бухгалтерию предприятия.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Могу ли я зарегистрироваться и оформить свой багаж из пункта вылета до конечного пункта при трансферном перелёте?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Багаж и регистрация трансферных пассажиров может осуществляться до конечного пункта, если в перевозке участвуют только рейсы авиакомпании «РусЛайн». Если в перевозке участвуют две или более авиакомпании, то регистрация будет зависеть от особенностей рейса и аэропорта. В данном случае лучше уточнить заранее в аэропорту вылета, смогут ли вас зарегистрировать до конечного пункта. </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="dropdown-list_item">
+            <div class="item_title">
+              <h4>Что делать при опоздании на регистрацию/посадку?</h4>
+            </div>
+            <div class="item_content">
+              <div class="content_shadow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+              <div class="content">
+                <p class="p1">Пассажиры, опоздавшие ко времени окончания регистрации или посадки (после прохождения регистрации), к полету не допускаются. Вы можете произвести обмен Вашего билета на другой рейс или дату (если тарифом не установлено ограничений для обмена) при условии, что места в Вашем заказе аннулированы до вылета рейса. Вы можете ознакомиться более подробно с правилами <a class="text-link" href="#"> обмена билета</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back mt40">
+          <a href="for-passengers_FAQ.html">
+            <div class="back_arrow"></div>
+            <span class="span_14">Вернуться назад</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="img-wrapper">
+          <img src="./img/faq_st_2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

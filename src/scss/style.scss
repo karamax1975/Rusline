@@ -13,6 +13,7 @@
 @import "./map-flight.scss";
 @import './flight-scoreboard.scss';
 @import './custom_page.scss';
+@import './blog.scss';
 
 //
 @import "./tabs-class.scss"; // Сервисы / Классы обслуживания
@@ -114,6 +115,7 @@ body {
     span {
       color: $white;
     }
+    color: $white;
   }
 
   .button.widget {
@@ -131,6 +133,7 @@ body {
     background: $rusline_red__hover;
     border-color: $rusline_red__hover;
   }
+
 
   .middle-input {
     height: 44px;
@@ -163,6 +166,11 @@ body {
       left: 24px;
       user-select:none;
       display: block;
+      padding-right: 24px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height:100%;
+      color: $gray2;
     }
     input:checked + span::before{
       content: '';
@@ -172,7 +180,9 @@ body {
       
       border-radius: 1px;
       left: -20px;
-      top:3px
+      top:4px;
+      // top:50%;
+      // transform: translateY(-50%);
     }
   }
   .checkbox.red{
@@ -190,8 +200,9 @@ body {
     height: 16px;
     border-radius: 1px;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top:0;
+    // top: 50%;
+    // transform: translateY(-50%);
   }
   
 // ---------------- reset button
@@ -359,4 +370,27 @@ body {
       background: $rusline_red;
     }
   }
+
+  // ------------------------- inputs
+  .input{
+    border: 1px solid $gray5;
+    width: 100%;
+    border-radius: 2px;
+    
+    
+  }
+  .input:focus{
+    border-color: $rusline_red;
+}
+  .input::placeholder{
+      color:$gray3;
+      font-weight: 300;
+    }
+ 
+    .input.middle{
+    height:44px;
+    padding: 15px;
+  }
+
+
 }

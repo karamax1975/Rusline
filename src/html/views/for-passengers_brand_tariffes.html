@@ -1,0 +1,429 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9">
+          <h1>Группы тарифов</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">Пассажирам</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_transportation-rules">Правила перевозки</a></span>
+          </section>
+      </div>
+      <!--  -->
+      <div class="row">
+          <div class="col-lg-9">
+           <h3 class="mb60">Авиакомпания предлагает пять групп тарифов, отличающихся набором доступных опций: нормой бесплатного провоза багажа, условиями изменения перевозки, возможностью возврата билетов и т.д. Выберите тариф, подходящий именно вам.
+          </h3>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="mb30">
+          <tr>
+            <th class="white">Предоставляемая услуга</th>
+            <th class="red" style="text-align: center;" >
+              <a href="tarifs_light_brand.html">Лайт</a>
+            </th>
+            <th class="red" style="text-align: center;">
+              <a href="tarifs_brand_classic.html">Классик</a>
+            </th>
+            <th class="red" style="text-align: center;">
+              <a href="tarifs_optimum_brand.html">Оптиум</a>
+            </th>
+            <th class="red" style="text-align: center;">
+              <a href="tarifs_opremium_brand.html">Премиум</a>
+            </th>
+            <th class="red" colspan="2" style="text-align: center;">
+              <a href="tarifs_brand_special.html">Специальные</a>
+            </th>
+          </tr>
+          <tr>
+            <td>Норма провоза ручной клади:</td>
+            <td style="text-align: center;">1 место до 5 кг <b>*</b>, 40*30*20 см</td>
+            <td style="text-align: center;">1 место до 5 кг <b>*</b>, 40*30*20 см</td>
+            <td style="text-align: center;">1 место до 10 кг, 55*40*25 см</td>
+            <td style="text-align: center;">1 место до 10 кг, 55*40*25 см</td>
+            <td style="text-align: center;">1 место до 10 кг, 40*30*20 см</td>
+            <td style="text-align: center;">1 место до 5 кг, 40*30*20 см</td>
+          </tr>
+          <tr>
+            <td>Дополнительное место ручной клади:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b> *</b></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Норма бесплатного провоза багажа<b>**</b>:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td style="text-align: center;">1 место до 20 кг</td>
+            <td style="text-align: center;">1 место до 20 кг</td>
+            <td style="text-align: center;">1 место до 20 кг</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td style="text-align: center;">1 место до 20 кг</td>
+          </tr>
+          <tr>
+            <td>Дополнительный багаж: </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper" >
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Внесение изменений в билет до вылета рейса:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+          </td>
+          <td>
+            <div class="wrapper">
+              <img src="../img/rub.svg" alt="">
+            </div>
+          </td>
+          <td>
+            <div class="wrapper">
+              <img src="../img/rub.svg" alt="">
+            </div>
+          </td>
+          <td colspan="2">
+            <div class="wrapper" >
+              <img src="../img/rub.svg" alt="">
+            </div>
+          </td>
+          </tr>
+          <tr>
+            <td>Внесение изменений в билет после вылета рейса:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Возврат билета до вылета рейса:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper" >
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Возврат билета после вылета рейса:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Предварительный выбор стандартных мест в салоне:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/yes_.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper" >
+                <img src="../img/rub.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Приоритетная регистрация:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/yes_.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Доступ в зал ожидания Бизнес класса:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b>***</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b>***</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b>***</b></span>
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/yes_.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/rub.svg" alt="">
+                <span><b>***</b></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Доставка отдельным транспортом:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/yes_.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Отдельный ассортимент питания и напитков:</td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+            <td>
+              <div class="wrapper">
+                <img src="../img/yes_.svg" alt="">
+              </div>
+            </td>
+            <td colspan="2">
+              <div class="wrapper">
+                <img src="../img/not_.svg" alt="">
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-9">
+          <span class="note mb8"><b>*</b> Одно дополнительное место ручной клади до 10 кг, габаритами до 55*40*25 см. Стоимость услуги - 1500 руб. при оформлении дополнительного места на сайте или в контакт-центре авиакомпании, при оформлении в аэропорту - 2500 руб.</span>
+          <span class="note mb8"><b>**</b> Габариты одного места багажа не должны превышать 203 см по сумме 3-х измерений.</span>
+          <span class="note"><b>***</b> Только для аэропортов "Внуково", "Бегишево".</span>
+          <div class="designation mb30">
+            <p class="p1"><b>Обозначения:</b></p>
+            <div><img src="../img/yes_.svg" alt=""><p class="p1">услуга предоставляется;</p></div>
+            <div><img src="../img/not_.svg" alt=""><p class="p1">услуга не предоставляется;</p></div>
+            <div><img src="../img/rub.svg" alt=""><p class="p1">услуга платная.</p></div>
+          </div>
+
+          <!--  -->
+          <p class="p1"><a href="tarifs_transfer_brand.html" class="text-link">Трансферные тарифы</a></p>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

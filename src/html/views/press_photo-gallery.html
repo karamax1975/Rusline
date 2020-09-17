@@ -1,0 +1,189 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Фотогалерея</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пресс-центр</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Фотогалерея</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="cards-list">
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_1_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_2_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_3_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_4_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_5_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide">
+            <img src="img/photo_6_pr.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <section class="modal-window">
+    <div class="modal-list">
+      <section class="modal-wrapper photo">
+        <section class="hamburger-close">
+          <span></span>
+          <span></span>
+        </section>
+
+        <div class="modal-item">
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_1.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal-item">
+
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_2.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-item">
+
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_3.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-item">
+
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_4.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-item">
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_5.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-item">
+          <div class="slide_frame">
+            <div class="modal-item_slide-img">
+              <img src="img/photo_6.jpg" alt="">
+            </div>
+            <div class="modal-item_slide-signature">
+              <p>Подпись</p>
+              <p>Автор фото</p>
+            </div>
+          </div>
+        </div>
+        <section class="modal-item_slide-footer">
+          <div class="slide_nav">
+            <div class="slide-nav_back"></div>
+            <div class="slide_counter">
+              <h4 class="number-slide">1</h4>
+              <h4>/</h4>
+              <h4 class="total-slide">10</h4>
+            </div>
+            <div class="slide-nav_next"></div>
+          </div>
+          <div class="slide_share">
+            <span>ПОДЕЛИТЬСЯ:</span>
+            <div class="share-icons transp">
+              <a href="#">
+                <img src="img/vk_w.svg" alt="">
+              </a>
+            </div>
+            <div class="share-icons transp">
+              <a href="#">
+                <img src="img/fb_w.svg" alt="">
+              </a>
+            </div>
+            <div class="share-icons transp">
+              <a href="#">
+                <img src="img/ok_w.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </section>
+    </div>
+  </section>
+  </div>
+</section>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

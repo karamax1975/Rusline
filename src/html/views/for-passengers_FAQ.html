@@ -1,0 +1,127 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Вопросы и ответы</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пассажирам</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="for-passengers_transportation-rules">Правила перевозки</a></span>
+      </section>
+    </div>
+    <div class="cards-list">
+      <div class="card-wrapper rectangle">
+        <div class="card-item text">
+          <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel sit suspendisse nisl, at orci
+            interdum arcu, placerat volutpat. Cursus elementum mauris, odio duis. Ipsum tortor iaculis lacus
+            vestibulum
+            integer. Ullamcorper imperdiet tincidunt vitae cursus id morbi adipiscing. Consectetur quam sit etiam
+            pharetra nunc. Nulla laoreet quis et aliquet in morbi tellus. Risus, accumsan, nibh nullam varius pretium
+            urna, massa tortor, est. Aliquam sed commodo malesuada potenti nibh et.
+            <br><br>
+            Ullamcorper imperdiet tincidunt vitae cursus id morbi adipiscing. Consectetur quam sit etiam pharetra
+            nunc.
+            Nulla laoreet quis et aliquet in morbi tellus. Risus, accumsan, nibh nullam varius pretium urna, massa
+            tortor, est. </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_Oformleniye_aviabileta.html">
+            <h4>Оформление авиабилета</h4>
+            <img src="./img/faq_1.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item promo">
+          <a href="#">
+            <h3>Будь в курсе событий</h3>
+            <div>
+              <h5>Москва → Воронеж</h5>
+              <p>новый прямой рейс с 3 февраля по понедельникам и четвергам</p>
+              <h5>от 4 500 руб →</h5>
+            </div>
+            <img src="./img/faq_promo_white.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <!-- <div class="card-wrapper">
+        <div class="card-item white">
+          <a href="#">
+            <img src="./img/faq_st.jpg" alt="">
+          </a>
+        </div>
+      </div> -->
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_Upravleniye_bronirovaniyem.html">
+            <h4>Управление бронированием</h4>
+            <img src="./img/faq_2.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item promo gray">
+          <a href="#">
+            <h3>Будь в курсе событий</h3>
+            <div>
+              <h5>Москва → Воронеж</h5>
+              <p>новый прямой рейс с 3 февраля по понедельникам и четвергам</p>
+              <h5>от 4 500 руб →</h5>
+            </div>
+            <img src="./img/faq_promo_white.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_registratsiya.html">
+            <h4>Регистрация</h4>
+            <img src="./img/faq_3.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_perevozka_otdelnykh_kategoriy_passazhirov.html">
+            <h4>Особенности условий перевозки отдельных категорий пассажиров</h4>
+            <img src="./img/faq_4.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_perevozka_Bagazh_i_ruchnaya_klad.html">
+            <h4>Багаж и ручная кладь</h4>
+            <img src="./img/faq_5.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="for-passengers_perevozka_Dopolnitelnaya_informatsiya.html">
+            <h4>Дополнительная информация</h4>
+            <img src="./img/faq_6.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

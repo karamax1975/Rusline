@@ -1,0 +1,164 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9 mb50">
+        <h1>Пресс-релизы</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пресс-центр</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пресс-релизы</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col">
+        <div class="press-filters">
+          <div class="filter">
+            <p class="p2">Показать</p>
+            <div class="select-mini">
+              <div class="select-mini_placeholder">
+                <span>за все время</span>
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none">
+                  <path d="M1 1L4.5 5L8 1" stroke-linecap="round" />
+                </svg>
+              </div>
+              <ul class="select-mini__drop hidden">
+                <li>за все время</li>
+                <li>за период</li>
+              </ul>
+            </div>
+            <div class="select-mini data">
+              <div class="select-mini_placeholder">
+                <span> c даты</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.79703 0.256534V0.874518H10V10H0V0.874518H2.20297V0.256534C2.20297 0.11476 2.31932 0 2.46306 0C2.60679 0 2.72314 0.11476 2.72314 0.256534V0.874518H3.85881V0.256534C3.85881 0.11476 3.97516 0 4.1189 0C4.26242 0 4.37898 0.11476 4.37898 0.256534V0.874518H5.57856V0.256534C5.57856 0.11476 5.69512 0 5.83864 0C5.98217 0 6.09873 0.11476 6.09873 0.256534V0.874518H7.27686V0.256534C7.27686 0.11476 7.39321 0 7.53694 0C7.68068 0 7.79703 0.11476 7.79703 0.256534ZM0.530786 9.47625H9.46921V1.39806H7.79703V2.01039C7.79703 2.15216 7.68068 2.26692 7.53694 2.26692C7.39321 2.26692 7.27686 2.15216 7.27686 2.01039V1.39806H6.09873V2.01039C6.09873 2.15216 5.98238 2.26692 5.83864 2.26692C5.6949 2.26692 5.57856 2.15216 5.57856 2.01039V1.39806H4.37898V2.01039C4.37898 2.15216 4.26263 2.26692 4.1189 2.26692C3.97516 2.26692 3.85881 2.15216 3.85881 2.01039V1.39806H2.72314V2.01039C2.72314 2.15216 2.60679 2.26692 2.46306 2.26692C2.31932 2.26692 2.20297 2.15216 2.20297 2.01039V1.39806H0.530786V9.47625ZM2.72281 4.03418H2.20264V4.54725H2.72281V4.03418ZM4.37857 4.03418H3.8584V4.54725H4.37857V4.03418ZM5.57764 4.03418H6.09781V4.54725H5.57764V4.03418ZM7.79751 4.03418H7.27734V4.54725H7.79751V4.03418ZM2.72281 7.36475H2.20264V7.87781H2.72281V7.36475ZM3.8584 7.36475H4.37857V7.87781H3.8584V7.36475ZM6.09781 7.36475H5.57764V7.87781H6.09781V7.36475ZM7.27734 7.36475H7.79751V7.87781H7.27734V7.36475ZM2.72281 5.66931H2.20264V6.18238H2.72281V5.66931ZM3.8584 5.66931H4.37857V6.18238H3.8584V5.66931ZM6.09781 5.66931H5.57764V6.18238H6.09781V5.66931ZM7.27734 5.66931H7.79751V6.18238H7.27734V5.66931Z" />
+                </svg>
+              </div>
+              <ul class="select-mini__drop hidden">
+                <li>за все время</li>
+                <li>за период</li>
+              </ul>
+            </div>
+            <div class="select-mini data">
+              <div class="select-mini_placeholder">
+                <span>по дату</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.79703 0.256534V0.874518H10V10H0V0.874518H2.20297V0.256534C2.20297 0.11476 2.31932 0 2.46306 0C2.60679 0 2.72314 0.11476 2.72314 0.256534V0.874518H3.85881V0.256534C3.85881 0.11476 3.97516 0 4.1189 0C4.26242 0 4.37898 0.11476 4.37898 0.256534V0.874518H5.57856V0.256534C5.57856 0.11476 5.69512 0 5.83864 0C5.98217 0 6.09873 0.11476 6.09873 0.256534V0.874518H7.27686V0.256534C7.27686 0.11476 7.39321 0 7.53694 0C7.68068 0 7.79703 0.11476 7.79703 0.256534ZM0.530786 9.47625H9.46921V1.39806H7.79703V2.01039C7.79703 2.15216 7.68068 2.26692 7.53694 2.26692C7.39321 2.26692 7.27686 2.15216 7.27686 2.01039V1.39806H6.09873V2.01039C6.09873 2.15216 5.98238 2.26692 5.83864 2.26692C5.6949 2.26692 5.57856 2.15216 5.57856 2.01039V1.39806H4.37898V2.01039C4.37898 2.15216 4.26263 2.26692 4.1189 2.26692C3.97516 2.26692 3.85881 2.15216 3.85881 2.01039V1.39806H2.72314V2.01039C2.72314 2.15216 2.60679 2.26692 2.46306 2.26692C2.31932 2.26692 2.20297 2.15216 2.20297 2.01039V1.39806H0.530786V9.47625ZM2.72281 4.03418H2.20264V4.54725H2.72281V4.03418ZM4.37857 4.03418H3.8584V4.54725H4.37857V4.03418ZM5.57764 4.03418H6.09781V4.54725H5.57764V4.03418ZM7.79751 4.03418H7.27734V4.54725H7.79751V4.03418ZM2.72281 7.36475H2.20264V7.87781H2.72281V7.36475ZM3.8584 7.36475H4.37857V7.87781H3.8584V7.36475ZM6.09781 7.36475H5.57764V7.87781H6.09781V7.36475ZM7.27734 7.36475H7.79751V7.87781H7.27734V7.36475ZM2.72281 5.66931H2.20264V6.18238H2.72281V5.66931ZM3.8584 5.66931H4.37857V6.18238H3.8584V5.66931ZM6.09781 5.66931H5.57764V6.18238H6.09781V5.66931ZM7.27734 5.66931H7.79751V6.18238H7.27734V5.66931Z" />
+                </svg>
+              </div>
+              <ul class="select-mini__drop hidden">
+                <li>за все время</li>
+                <li>за период</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <section class="press-list">
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>2 Сентября 2020</time>
+              <h3>Авиакомпания «РусЛайн» продлевает выполнение рейсов из Калуги в Симферополь в сентябре</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>31 Августа 2020</time>
+              <h3>Авиакомпания «РусЛайн» продлевает рейсы из Саранска в Сочи до конца октября</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>26 Августа 2020</time>
+              <h3>Загрузка рейсов из Воронежа в Сочи составляет более 85%</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>19 Августа 2020</time>
+              <h3>Брянцы смогут воспользоваться рейсами авиакомпании «РусЛайн» в Анапу и Симферополь осенью, в
+                Минеральные Воды – до конца года</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="">
+              <time>19 Августа 2020</time>
+              <h3>Авиакомпания «РусЛайн» продлевает выполнение рейсов из Тамбова в Сочи и Симферополь</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>18 Августа 2020</time>
+              <h3>Авиакомпания «РусЛайн» подарила Данилу Морозкину перелет в Краснодар за смелый поступок</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>11 Августа 2020</time>
+              <h3>Авиакомпания «РусЛайн» продлевает выполнение рейсов из Курска в Анапу и Симферополь</h3>
+            </a>
+          </div>
+          <div class="press-item">
+            <a href="press_press-release_release.html">
+              <time>6 Августа 2020</time>
+              <h3>«РусЛайн» сделает путешествия доступнее для студентов совместно с Российским Союзом Молодежи и
+                Газпромбанком</h3>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="pagination-wrapper">
+          <div class="pagination">
+            <div class="pagination-prev">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1L1 6L6 11" />
+              </svg>
+            </div>
+            <div class="pagination-page-wrapper">
+              <div class="pagination-page select">1</div>
+              <div class="pagination-page">2</div>
+              <div class="pagination-page">3</div>
+              <div class="pagination-page">4</div>
+            </div>
+            <div class="pagination-space">...</div>
+            <div class="pagination-end-page">15</div>
+            <div class="pagination-next active">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L1 11"/>
+                </svg>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- скрипт работы фильтров  > для демонстрации -->
+<script src="js/press-release.js"></script>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

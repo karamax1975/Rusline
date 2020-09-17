@@ -1,0 +1,328 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Медиакит</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пресс-центр</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="press_media-kit.html">Медиакит</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col">
+        <div class="tabs-list">
+          <div class="tab active"><span>Фирменный стиль</span></div>
+          <div class="tab"><span>Самолеты</span></div>
+        </div>
+        <div class="tabs-content-list">
+          <div class="content-item active">
+            <div class="row">
+              <div class="col-lg-4">
+                <h3 class="mb30">Палитра цветов</h3>
+                <div class="media-col">
+                  <div class="media-col__section">
+                    <div class="brand-color_sample red_rusline"></div>
+                    <div class="brand-color_description">
+                      <span>Pantone:
+                        <br>HEX:
+                        <br>RGB:
+                        <br>CMYK:
+                        <br>ORACAL 461:
+                      </span>
+                      <span>
+                        1795 C
+                        <br>#FF2A00
+                        <br>255.42.0
+                        <br>3.100.97.0
+                        <br>red 031 M
+                      </span>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="brand-color_sample brown"></div>
+                    <div class="brand-color_description">
+                      <span>Pantone:
+                        <br>HEX:
+                        <br>RGB:
+                        <br>CMYK:
+                        <br>ORACAL 461:
+                      </span>
+                      <span>
+                        7510 C
+                        <br>#D7B262
+                        <br>215.178.98
+                        <br>0.20.60.20
+                        <br>gold 091 М
+                      </span>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="brand-color_sample black"></div>
+                    <div class="brand-color_description">
+                      <span>Pantone:
+                        <br>HEX:
+                        <br>RGB:
+                        <br>CMYK:
+                        <br>ORACAL 461:
+                      </span>
+                      <span>
+                        Process Black C
+                        <br>#2B2B2A
+                        <br>43.43.42
+                        <br>0.0.0.100
+                        <br>black 070
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <h3 class="mb30">Логотип</h3>
+                <div class="media-col">
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/logo_media-kit.svg" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPEG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">SVG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">Ai</a>
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Cdr</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/logo_media-kit3.svg" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">SVG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">Ai</a>
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Cdr</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-4">
+                <h3 class="mb30">Элементы фирменного стиля</h3>
+                <div class="media-col">
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/logo_media-kit2.svg" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">SVG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">Ai</a>
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Cdr</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/logo_media-kit4.svg" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">SVG</a>
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">Ai</a>
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Cdr</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="row">
+              <div class="col">
+                <h3 class="mb30">Изображения</h3>
+                <div class="media-col">
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_1.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_4.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_2.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_3.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_5.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_6.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-col__section">
+                    <div class="img-wrapper">
+                      <img src="img/airplane_7.png" alt="">
+                    </div>
+                    <div class="brend-link">
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">JPG</a>
+                        (3,5 Mб)
+                      </p>
+                      <p class="p2 file-icon white mb8">
+                        <a href="" class="text-link">PNG</a>
+                        (5,6 Mб)
+                      </p>
+                      <p class="p2 file-icon white">
+                        <a href="" class="text-link">Png</a>
+                        (891,47 Кб)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

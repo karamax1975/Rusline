@@ -1,0 +1,163 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="banner_top">
+    <img src="./img/banner_flot.jpg" alt="">
+  </div>
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Наш флот</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="about_flot.html">Наш флот</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-lg-4">
+        <p class="p1">В настоящее время воздушный флот авиакомпании Руслайн включает в себя воздушные суда Bombardier
+          CRJ 100 ER/LR и BombardierCRJ-200 ER/LR. Наш воздушный флот является одним из самых современных и экологически
+          безопасных в Европе.</p>
+
+        <div class="feet-slide_nav-wrapper">
+          <div class="feet-slide-nav">
+            <button class="btn_prev"></button>
+            <h3 class="feet-slide-nav__title">Bombardier <br> CRJ-100 ER/LR</h3>
+            <h3 class="feet-slide-nav__title">Bombardier <br> CRJ-200 ER/LR</h3>
+            <button class="btn_next"></button>
+          </div>
+          <a href="#" class="text-link">Фотогалеря воздушных судов</a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="feet-slide_image">
+          <img src="img/airplane_1.jpg" alt="">
+          <img src="img/airplane_2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+          <div class="feet-tabs">
+            <div class="tabs-list">
+              <div class="tab active">
+                <span>Летно-технические характеристики</span>
+              </div>
+              <div class="tab">
+                <span>Схема салона</span>
+              </div>
+              <div class="tab">
+                <span>Фото интерьера</span>
+              </div>
+            </div>
+            <div class="tabs-content-list">
+              <div class="content-item active">
+                <table>
+                  <tr>
+                    <th class="white" style="border-top: none;" width="50%">Модификация</th class="white">
+                    <th class="white" style="border-top: none;">CRJ-100 ER/LR</th>
+                    <th class="white" style="border-top: none;">CRJ-200 ER/LR</th>
+                  </tr>
+                  <tr>
+                    <td>Тип воздушного судна (ВС)</td>
+                    <td colspan='2'>среднемагистральный</td>
+                  </tr>
+                  <tr>
+                    <td>Разработчик</td>
+                    <td colspan="2">Bombardier Regional Aircraft</td>
+                  </tr>
+                  <tr>
+                    <td>Экипаж</td>
+                    <td colspan="2">3-4 (2 пилота + 1-2 бортпроводника)</td>
+                  </tr>
+                  <tr>
+                    <td>Пассажировместимость</td>
+                    <td colspan="2">50 человек</td>
+                  </tr>
+                  <tr>
+                    <td>Двигатели</td>
+                    <td>GE CF34-3A1</td>
+                    <td>GE CF34-3B1 </td>
+                  </tr>
+                  <tr>
+                    <td>Вес пустого ВС</td>
+                    <td>13 650 кг</td>
+                    <td>13 830 кг</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная коммерческая загрузка</td>
+                    <td>4 540 кг</td>
+                    <td>6 120 кг</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная взлётная масса</td>
+                    <td colspan="2">24 041 кг</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная дальность полёта</td>
+                    <td>ER: 3 000 км <br> LR: 3 710 км</td>
+                    <td>ER: 3 045 км <br> LR: 3 713 км</td>
+                  </tr>
+                  <tr>
+                    <td>Нормальная крейсерская скорость</td>
+                    <td colspan="2">790 км/ч</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная крейсерская скорость</td>
+                    <td colspan="2">860 км/ч</td>
+                  </tr>
+                  <tr>
+                    <td>Взлетная дистанция</td>
+                    <td>1600 м</td>
+                    <td>1770 м</td>
+                  </tr>
+                  <tr>
+                    <td>Посадочная дистанция</td>
+                    <td>1450 м</td>
+                    <td>1480 м</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная высота полёта</td>
+                    <td colspan="2">12 500 м</td>
+                  </tr>
+                  <tr>
+                    <td>Максимальная масса заправляемого топлива</td>
+                    <td colspan="2">6 490 кг</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-item">
+                <img src="img/shema_salona.jpg" alt="">
+              </div>
+              <div class="content-item">
+                <img src="img/salon_1.jpg" alt="">
+                <br><br>
+                <img src="img/salon_2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script src="js/fleet.js"></script>
+<!-- <script src="js/tabs_.js"></script> -->
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

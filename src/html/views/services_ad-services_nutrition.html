@@ -1,573 +1,566 @@
-<% var data = { title: "Второй заголовок" }; %> 
+<% var data = { title: "Второй заголовок" }; %>
 
 <%= _.template(require('./../includes/header_2.html').default)(data) %>
-<%= _.template(require('./../includes/top_menu.html').default)() %> 
-<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
 <!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
 
 <section class="page-content">
-<div class="container">
-  <div class="row page_top">
-    <div class="headline col-lg-9">
-      <h1 class="title">Питание</h1>
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1 class="title">Питание</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">...</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="./additional_services.html">Допол...</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Питание</a></span>
+      </section>
     </div>
-    <section class="bread-crumbs col-lg-3">
-      <span><a href="./index.html">Главная</a></span>
-      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-        <path
-          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
-        />
-      </svg>
-      <span><a href="#">...</a></span>
-      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-        <path
-          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
-        />
-      </svg>
-      <span><a href="./additional_services.html">Допол...</a></span>
-      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-        <path
-          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
-        />
-      </svg>
-      <span><a href="#">Питание</a></span>
-    </section>
+
+    <div class="cards-list mb30">
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_1.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Черный чай</h4>
+              <div class="price">
+                <span class="price">150</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_2.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Зеленый чай</h4>
+              <div class="price">
+                <span class="price">150</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_3.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Кофе</h4>
+              <div class="price">
+                <span class="price">150</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_4.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Сэндвич с индейкой и сыром</h4>
+              <div class="price">
+                <span class="price">450</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_5.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Сендвич с ветчиной</h4>
+              <div class="price">
+                <span class="price">450</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_6.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Сэндвич-ролл «Цезарь»</h4>
+              <div class="price">
+                <span class="price">450</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_7.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Закуска комбинированная: рыбная, мясная, овощная</h4>
+              <div class="price">
+                <span class="price">750</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_8.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Холодная закуска легкая: рыбная, мясная, овощная</h4>
+              <div class="price">
+                <span class="price">750</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_9.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Сэндвич-ролл «Цезарь»</h4>
+              <div class="price">
+                <span class="price">750</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_10.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Холодная закуска: рыбная, мясная, сырная</h4>
+              <div class="price">
+                <span class="price">1200</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_11.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Холодная закуска: рыбная, мясная, сырная</h4>
+              <div class="price">
+                <span class="price">1200</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <div class="slide food">
+            <div class="food-img">
+              <img src="./img/food-img_12.jpg" alt="food" />
+            </div>
+            <div class="price-wrapper">
+              <h4>Холодная закуска: мясная, рыбная</h4>
+              <div class="price">
+                <span class="price">1200</span>
+                <span>₽</span>
+              </div >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-text mb8">
+      <div class="alert-icon">
+        <img src="./img/alert_icon.svg" alt="alert-text">
+      </div>
+      <p class="p2 gray2">Питание можно заказать на рейсах из аэропортов Москвы, Санкт-Петербурга, Екатеринбурга и
+        Белгорода.</p>
+    </div>
+    <div class="alert-text mb8">
+      <div class="alert-icon">
+        <img src="./img/alert_icon.svg" alt="alert-text">
+      </div>
+      <p class="p2 gray2">Услуга возврату и обмену не подлежит.</p>
+    </div>
+    <div class="alert-text mb60">
+      <div class="alert-icon">
+        <img src="./img/alert_icon.svg" alt="alert-text">
+      </div>
+      <p class="p2 gray2">АК оставляет за собой право менять состав овощей и фруктов в зависимости от сезона.</p>
+    </div>
+
+    <div class="back">
+      <a href="./additional_services.html">
+        <div class="back_arrow"></div>
+        <span class="span_14">Возврат к списку услуг</span>
+      </a>
+    </div>
   </div>
 
-  <div class="list-of-squares mb30">
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+  <section class="modal-window">
+    <div class="modal-list">
+      <section class="modal-wrapper food">
+        <section class="hamburger-close">
+          <span></span>
+          <span></span>
+        </section>
+      <div class="modal_food-item">
+
+        <div class="food-item_img">
           <img src="./img/food-img_1.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Черный чай</p>
-          <div class="price-wrapper">
-            <span class="price">150</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Черный чай</h2>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>150</span>
+              <span>₽</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+
+        <div class="food-item_img">
           <img src="./img/food-img_2.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Зеленый чай</p>
-          <div class="price-wrapper">
-            <span class="price">150</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Зеленый чай</h2>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>150</span>
+              <span>₽</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_3.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Кофе</p>
-          <div class="price-wrapper">
-            <span class="price">150</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Кофе</h2>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>150</span>
+              <span>₽</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_4.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Сэндвич с индейкой и сыром</p>
-          <div class="price-wrapper">
-            <span class="price">450</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Сэндвич с индейкой и сыром</h2>
+            <ul class="text-list">
+              <li>Сэндвич на багете со злаками с фермерским рулетом из индейки, пряным сыром и мексиканским соусом
+                сальса</li>
+              <li>Закуска овощная</li>
+              <li>Десерт фруктовый</li>
+              <li>Пирожное Бисквитное</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>450</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">845,67</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_5.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Сендвич с ветчиной</p>
-          <div class="price-wrapper">
-            <span class="price">450</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Сендвич с ветчиной</h2>
+            <ul class="text-list">
+              <li>Мягкий багет бриошь с тонко нарезанной фермерской индейкой и ароматным соусом барбекю</li>
+              <li>Закуска овощная</li>
+              <li>Десерт фруктовый</li>
+              <li>Печенье гречневое</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>450</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">807,50</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_6.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Сэндвич-ролл «Цезарь»</p>
-          <div class="price-wrapper">
-            <span class="price">450</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Сэндвич-ролл «Цезарь»</h2>
+            <ul class="text-list">
+              <li>Ролл из мексиканской лепешки с печеной куриной грудкой и соусом «Цезарь», с салатом романо и
+                пармезаном</li>
+              <li>Десерт Фруктовый</li>
+              <li>Печенье Песочное</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>450</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">896,63</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_7.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Закуска комбинированная: рыбная, мясная, овощная</p>
-          <div class="price-wrapper">
-            <span class="price">750</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Закуска комбинированная: рыбная, мясная, овощная</h2>
+            <ul class="text-list">
+              <li>Легкий тартар из подкопченой форели с сегментами свежего огурца и творожного сыра; ассорти из
+                сыровяленой индейки, варено- копченой индейки с ломтиками орехового сыра; ломтики свежего огурца,
+                болгарского перца, стебля сельдерея</li>
+              <li>Десерт Фруктовый</li>
+              <li>Печенье Песочное</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>750</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">977,80</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_8.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Холодная закуска легкая: рыбная, мясная, овощная</p>
-          <div class="price-wrapper">
-            <span class="price">750</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Холодная закуска легкая: рыбная, мясная, овощная</h2>
+            <ul class="text-list">
+              <li>Ассорти из нельмы х/к, форели х/к, масляной х/к рыбы; мясной аперитив из сыровяленой говядины,
+                копченой говядины; микс из листовых салатов, ломтики свежего огурца и половинки черри</li>
+              <li>Печенье Песочное</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>750</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data"> 914,43</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_9.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Сэндвич-ролл «Цезарь»</p>
-          <div class="price-wrapper">
-            <span class="price">750</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Сэндвич-ролл «Цезарь»</h2>
+            <ul class="text-list">
+              <li>Ролл из мексиканской лепешки с печеной куриной грудкой и соусом «Цезарь», салатом романо и парме-
+                заном</li>
+              <li>Закуска сырная</li>
+              <li>Десерт фруктовый</li>
+              <li>Пирожное бисквитное</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>750</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">1355,03</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_10.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Холодная закуска: рыбная, мясная, сырная</p>
-          <div class="price-wrapper">
-            <span class="price">1200</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Холодная закуска: рыбная, мясная, сырная</h2>
+            <ul class="text-list">
+              <li>Ломтики кеты х/к, семги с/с; ломтики варено-копченой утиной грудки, варено-копченой говядины, печеной
+                индейки в перце; ломтики двух видов сыров (подаются с крекерами)</li>
+              <li>Салат «Капрезе»</li>
+              <li>Пирожное «Медовик»</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>1200</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">1406,77</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_11.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Холодная закуска: мясная, сырная</p>
-          <div class="price-wrapper">
-            <span class="price">1200</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Холодная закуска: мясная, сырная</h2>
+            <ul class="text-list">
+              <li>Говядина в/к, сыровяленая говядина, варено-копченая утиная грудка; ассорти из сыров дор блю, камамбер,
+                гауда</li>
+              <li>Салат «Нисуаз»</li>
+              <li>Десерт фруктовый</li>
+              <li>Пирожное «Фисташка»</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>1200</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data"> 1298,40</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="food-item">
-      <a href="#">
-        <div class="food-img">
+      </div>
+      <div class="modal_food-item">
+        <div class="food-item_img">
           <img src="./img/food-img_12.jpg" alt="food" />
         </div>
-        <div class="content">
-          <p class="description">Холодная закуска: мясная, рыбная</p>
-          <div class="price-wrapper">
-            <span class="price">1200</span>
-            <span>₽</span>
+        <div class="food-item_text-content">
+          <div class="description">
+            <h2 class="red">Холодная закуска: мясная, рыбная</h2>
+            <ul class="text-list">
+              <li>Слабосоленая семга с салатом из отварного картофеля, маринованных корнишонов; ассорти из бастурмы,
+                сырокопченого карпаччо из мяса птицы, сыра проволетта</li>
+              <li>Салат «Грибной» с ветчиной</li>
+              <li>Десерт фруктовый</li>
+              <li>Пирожное «Медовик»</li>
+            </ul>
+          </div>
+          <div class="data">
+            <div class="price">
+              <span>1200</span>
+              <span>₽</span>
+            </div>
+            <div class="power">
+              <span>Энергетическая ценность на 100 г продукции —</span>
+              <span class="power-data">1482</span>
+              <span>ккал.</span>
+            </div>
           </div>
         </div>
-      </a>
+      </div>
+      </section>
+    
     </div>
-  </div>
-
-  <div class="alert-text mb8">
-    <div class="alert-icon">
-      <img src="./img/alert_icon.svg" alt="alert-text">
-    </div>
-    <p class="p2 gray2">Питание можно заказать на рейсах из аэропортов Москвы, Санкт-Петербурга, Екатеринбурга и Белгорода.</p>
-  </div>
-  <div class="alert-text mb8">
-    <div class="alert-icon">
-      <img src="./img/alert_icon.svg" alt="alert-text">
-    </div>
-    <p class="p2 gray2">Услуга возврату и обмену не подлежит.</p>
-  </div>
-  <div class="alert-text mb60">
-    <div class="alert-icon">
-      <img src="./img/alert_icon.svg" alt="alert-text">
-    </div>
-    <p class="p2 gray2">АК оставляет за собой право менять состав овощей и фруктов в зависимости от сезона.</p>
-  </div>
-
-  <div class="back">
-    <a href="./additional_services.html">
-      <div class="back_arrow"></div>
-      <span class="span_14">Возврат к списку услуг</span></a>
-  </div>
-</div>
-
-<section class="modal-window">
-  <div class="modal-list">
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_1.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Черный чай</h2>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>150</span>
-           <span>₽</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_2.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Зеленый чай</h2>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>150</span>
-           <span>₽</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_3.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Кофе</h2>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>150</span>
-           <span>₽</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_4.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Сэндвич с индейкой и сыром</h2>
-        <ul class="text-list">
-          <li>Сэндвич на багете со злаками с фермерским рулетом из индейки, пряным сыром и мексиканским соусом сальса</li>
-          <li>Закуска овощная</li>
-          <li>Десерт фруктовый</li>
-          <li>Пирожное Бисквитное</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>450</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">845,67</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_5.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Сендвич с ветчиной</h2>
-        <ul class="text-list">
-          <li>Мягкий багет бриошь с тонко нарезанной фермерской индейкой и ароматным соусом барбекю</li>
-          <li>Закуска овощная</li>
-          <li>Десерт фруктовый</li>
-          <li>Печенье гречневое</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>450</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">807,50</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_6.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Сэндвич-ролл «Цезарь»</h2>
-        <ul class="text-list">
-          <li>Ролл из мексиканской лепешки с печеной куриной грудкой и соусом «Цезарь», с салатом романо и пармезаном</li>
-          <li>Десерт Фруктовый</li>
-          <li>Печенье Песочное</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>450</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">896,63</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_7.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Закуска комбинированная: рыбная, мясная, овощная</h2>
-        <ul class="text-list">
-          <li>Легкий тартар из подкопченой форели с сегментами свежего огурца и творожного сыра; ассорти из сыровяленой индейки, варено- копченой индейки с ломтиками орехового сыра; ломтики свежего огурца, болгарского перца, стебля сельдерея</li>
-          <li>Десерт Фруктовый</li>
-          <li>Печенье Песочное</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>750</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">977,80</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_8.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Холодная закуска легкая: рыбная, мясная, овощная</h2>
-        <ul class="text-list">
-          <li>Ассорти из нельмы х/к, форели х/к, масляной х/к рыбы; мясной аперитив из сыровяленой говядины, копченой говядины; микс из листовых салатов, ломтики свежего огурца и половинки черри</li>
-          <li>Печенье Песочное</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>750</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data"> 914,43</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_9.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Сэндвич-ролл «Цезарь»</h2>
-        <ul class="text-list">
-          <li>Ролл из мексиканской лепешки с печеной куриной грудкой и соусом «Цезарь», салатом романо и парме- заном</li>
-          <li>Закуска сырная</li>
-          <li>Десерт фруктовый</li>
-          <li>Пирожное бисквитное</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>750</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">1355,03</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_10.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Холодная закуска: рыбная, мясная, сырная</h2>
-        <ul class="text-list">
-          <li>Ломтики кеты х/к, семги с/с; ломтики варено-копченой утиной грудки, варено-копченой говядины, печеной индейки в перце; ломтики двух видов сыров (подаются с крекерами)</li>
-          <li>Салат «Капрезе»</li>
-          <li>Пирожное «Медовик»</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>1200</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">1406,77</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_11.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Холодная закуска: мясная, сырная</h2>
-        <ul class="text-list">
-          <li>Говядина в/к, сыровяленая говядина, варено-копченая утиная грудка; ассорти из сыров дор блю, камамбер, гауда</li>
-          <li>Салат «Нисуаз»</li>
-          <li>Десерт фруктовый</li>
-          <li>Пирожное «Фисташка»</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>1200</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data"> 1298,40</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-    <div class="modal_food-item">
-      <div class="hamburger-close">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="food-item_img">
-        <img src="./img/food-img_12.jpg" alt="food" />
-      </div>
-      <div class="food-item_text-content">
-       <div class="description">
-        <h2 class="red">Холодная закуска: мясная, рыбная</h2>
-        <ul class="text-list">
-          <li>Слабосоленая семга с салатом из отварного картофеля, маринованных корнишонов; ассорти из бастурмы, сырокопченого карпаччо из мяса птицы, сыра проволетта</li>
-          <li>Салат «Грибной» с ветчиной</li>
-          <li>Десерт фруктовый</li>
-          <li>Пирожное «Медовик»</li>
-        </ul>
-       </div>
-       <div class="data">
-         <div class="price">
-           <span>1200</span>
-           <span>₽</span>
-         </div>
-         <div class="power">
-           <span>Энергетическая ценность на 100 г продукции —</span>
-           <span class="power-data">1482</span>
-           <span>ккал.</span>
-         </div>
-       </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </section>
 <%= _.template(require('./../includes/footer_2.html').default)(data) %>

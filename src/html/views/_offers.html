@@ -1,0 +1,117 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+<div class="container">
+  <div class="row page_top">
+    <div class="headline col-lg-9">
+      <h1>Лучшие предложения</h1>
+    </div>
+    <section class="bread-crumbs col-lg-3">
+      <span><a href="./index.html">Главная</a></span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+        <path
+          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+        />
+      </svg>
+      <span><a href="#">О нас</a></span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+        <path
+          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+        />
+      </svg>
+      <span><a href="about_rusline.html">Авиакомпания Руслайн</a></span>
+    </section>
+  </div>
+<!--  -->
+  <div class="row">
+    <div class="col-lg-9">
+      <p class="p1 red mb30">11.09.2020</p>
+      <table class="offers-table">  
+        <tr>
+          <td>
+            <b>Екатеринбург - Казань</b>, прямой рейс до шести раз в неделю	
+          </td>
+          <td>от 4 300 руб</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Екатеринбург - Тамбов</b>, прямой рейс по субботам и средам	
+          </td>
+          <td>от 7 575 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Екатеринбург - Саранск</b>, прямой рейс по четвергам и воскресеньям	
+          </td>
+          <td>от 3 000 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Екатеринбург - Нижневартовск</b>, прямой рейс по понедельникам, средам и пятницам	
+          </td>
+          <td>от 4 600 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Екатеринбург - Нарьян-Мар</b>, прямой рейс до двух раз в неделю	
+          </td>
+          <td>от 4 550 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Санкт-Петербург - Йошкар-Ола</b>, прямой рейс по средам и пятницам	
+          </td>
+          <td>от 4 500 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Санкт-Петербург - Калуга</b>, прямой рейс по понедельникам, средам и субботам
+          </td>
+          <td>от 2 500 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Санкт-Петербург - Иваново</b>, прямой рейс, ежедневно
+          </td>
+          <td>от 3 600 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Санкт-Петербург - Курск</b>, прямой рейс до четырех раз в неделю
+          </td>
+          <td>от 4 000 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Санкт-Петербург - Воронеж</b>, прямой рейс, ежедневно	
+          </td>
+          <td>3 700 руб.</td>
+          <td><a href="" class="text-link">Купить</a></td>
+        </tr>
+      </table>
+      <div class="back mt60">
+        <a href="special_offers.html">
+          <div class="back_arrow"></div>
+          <span class="span_14">Возврат к списку предложений</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

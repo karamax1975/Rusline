@@ -11,7 +11,7 @@ figure {
     color: $gray2;
     margin-top: 8px;
   }
-  img{
+  img {
     border: 1px solid $gray6;
     border-radius: 2px;
   }
@@ -52,7 +52,7 @@ figure {
   flex-wrap: wrap;
   // justify-content: space-between;
   .square-item {
-    width: 301px;
+    width: calc((100% /4) - 6px);
     height: 301px;
     margin-bottom: 3px;
     margin-right: 3px;
@@ -83,8 +83,10 @@ figure {
     }
     img {
       position: absolute;
-      top: 0;
+      // left: 50%;
+      // transform: translateX(-50%);
       left: 0;
+      top: 0;
       z-index: -1;
       transition: 1s;
     }
@@ -129,12 +131,115 @@ figure {
       top: 215px;
     }
     img {
+      // left: 50%;
+      // transform: translateX(-50%);
       transform: scale(1.2);
       transition: 1s;
+
+    }
+  }
+
+  .square-item.promo{
+    h3{
+      font-size: 30px;
+  
+    }
+    h5{
+      font-size: 20px;
+      margin: 3px 0;
+    }
+    .text-wrapper{
+      height: calc(100% - 60px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        360deg,
+        rgba(197, 197, 197, 0.6),
+        rgba(0, 0, 0, 0) 50%
+      );
+    }
+    span{
+      font-size: 16px;
+      line-height: 20px;
+
+    }
+  }
+  .square-item.graphics:hover{
+    img{
+      transform: scale(1);
+    }
+  }
+
+  .square-item.promo.white{
+    border: solid 1px $gray5;
+    h3, h5{
+      color: $rusline_red;
+      font-weight: 400;
+    }
+    span{
+      color: $black;
+      font-weight: 400;
+    }
+    
+  }
+  .square-item.red{
+    p{
+      color: $white;
+    }
+    a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        360deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0) 50%
+      );
+    }
+  }
+  .square-item.red:hover{
+    a::after {
+      background: url("../img/patern-red.svg") no-repeat;
+      background-size: 100%;
+    }
+  }
+  // только картинка и текст
+  .square-item.empty:hover{
+    a:after{
+      background: none;
+    }
+    h4{
+      z-index: 2;
+    }
+  }
+
+  .square-item.rectangle.text{
+    p{
+      color: $gray2;
+      line-height: 150%;
+      padding-right: 15px;
+    }
+  }
+  .square-item.rectangle.text:hover{
+    p{
+      position: relative;
+      top: 0;
     }
   }
   .square-item.rectangle {
-    width: 606px;
+    width: calc((100% / 2) - 9px);
     a::after {
       background: url("../img/patern-red.svg") no-repeat;
       background-size: 100%;
@@ -226,6 +331,7 @@ figure {
     background: url("../img/tabs-activ_tr.svg") no-repeat center;
   }
 }
+
 // ---------------------------------------------
 .tabs-content-list {
   .content-item {
@@ -238,8 +344,18 @@ figure {
 }
 
 // ---------------------------------------------
+
+.text {
+  li{
+    color: $gray2;
+    margin-bottom: 8px;
+  }
+}
 .text-list {
   margin-bottom: 30px;
+  h3{
+      margin-bottom: 15px;
+  }
   li,
   p {
     position: relative;
@@ -337,9 +453,9 @@ b {
       margin-left: 58px;
     }
   }
-  span:before{
+  span:before {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -347,7 +463,7 @@ b {
     height: 10px;
     background: url("../img/back-arrow.svg") no-repeat center;
   }
-  span:hover{
+  span:hover {
     border-bottom: 1px solid $rusline_red;
   }
 }
@@ -367,6 +483,7 @@ b {
   height: 10px;
   border: none;
   background: url("../img/back-arrow.svg") no-repeat center;
+  padding: 0;
 }
 .button_back:hover,
 .button_next:hover {
@@ -452,16 +569,46 @@ body {
     }
   }
 }
-.text-link {
+@mixin text-link{
   color: $rusline_red;
   position: relative;
   border-bottom: solid 1px $rusline_red;
 }
+.text-link {
+  @include text-link()
 
-.text-link:hover {
+}
+
+@mixin text-link_hover{
   color: $rusline_red;
   border-bottom: solid 1px none;
   transition: ease-out 0.2s;
+}
+.text-link:hover {
+  @include text-link_hover();
+}
+
+
+
+
+
+.link-list{
+  margin-bottom: 30px;
+  h3{
+    margin-bottom: 15px;
+  }
+  li{
+    margin-bottom: 8px;
+    a{
+      @include text-link();
+    }
+    a:hover{
+      @include text-link_hover();
+    }
+  }
+  li:last-child{
+    margin-bottom: 0;
+  }
 }
 
 // ----------------------------
@@ -476,15 +623,19 @@ body {
   }
 }
 // --------------------------
+
+
 .phone-icon,
 .mail-icon,
-.file-icon {
+.www-icon,
+.file-icon, .no-icon {
   position: relative;
   left: 23px;
   margin-right: 23px;
 }
 .phone-icon::before,
 .mail-icon::before,
+.www-icon:before,
 .file-icon::before {
   content: "";
   position: absolute;
@@ -495,12 +646,22 @@ body {
   left: -23px;
   top: 3px;
 }
-.file-icon {
-  border-bottom: 1px solid #ff2a00;
-  cursor: pointer;
+.file-icon.white::before{
+  background: none;
+  border: solid 1px $rusline_red;
 }
+.file-icon.white::after{
+  background: url("../img/file-icon__red.svg") no-repeat;
+  background-size: cover;
+  width: 5px;
+  height: 6px;
+  top: 8px;
+  left: -18px;
+}
+
 .phone-icon::after,
 .mail-icon::after,
+.www-icon::after,
 .file-icon::after {
   content: "";
   position: absolute;
@@ -524,40 +685,84 @@ body {
   height: 6px;
   left: -19px;
 }
+.www-icon::after{
+  background: url("../img/www_icon.svg") no-repeat center;
+  width: 7px;
+  height: 7px;
+  left: -19px;
+  top:6px;
+}
 .file-icon:hover {
   border-bottom: none;
   color: $rusline_red !important;
   transition: ease-out 0.2s;
 }
-// -----------------------
-.number-list {
-  counter-reset: counter;
-  li {
-    position: relative;
+
+  .number-list, ol {
+    list-style: none;
+    counter-reset: li;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 8px;
-    margin-left: 30px;
     color: $gray2;
+      h3{
+      margin-bottom: 15px;
+      }
+      li{
+        position: relative;
+        left: 30px;
+        margin-bottom: 8px;
+      }
+      ol{
+        margin-top: 8px;
+        position: relative;
+        left: -30px;
+      }
+      li:before {
+        counter-increment: li;
+        content: counters(li,".") ". ";
+        color: $rusline_red;
+        position: absolute;
+        left: -30px;
+      }
+      .embed{
+        // margin-left: 30px;
+        counter-reset: p;
+        p:before{
+          counter-increment: p;
+          content: counters(p,".") ". ";
+
+        }
+        p{
+          position: relative;
+          left: 0;
+        }
+        p:before{
+          color: $rusline_red;
+        }
+      }
+      p {
+      margin-left: 30px;
+      color: $gray2;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+    h5{
+      margin-left: 30px;
+    }
+    hr{
+      margin-bottom: 8px;
+    }
+    .text-list{
+      margin-left: 15px;
+    }
   }
-  li::before {
-    content: counter(counter) ".";
-    counter-increment: counter;
-    margin: 0 10px;
-    position: absolute;
-    left: -30px;
-    color: $rusline_red;
-  }
-  p {
-    margin-left: 30px;
-    color: $gray2;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 8px;
-  }
-}
+
+
+
+
 // -------------------
 // info-tile
 .info_tile {
@@ -653,7 +858,7 @@ body {
 
 .modal-window {
   display: none;
-  position: relative;
+  // position: relative;
 }
 
 .modal-window.active {
@@ -667,25 +872,38 @@ body {
   z-index: 101;
   .modal-list {
     position: relative;
+    // margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .modal-wrapper{
+    position: relative;
+    margin: 0 auto;
+  }
+  .photo{
+    width: 1246px;
+  }
+  .food{
+    width: 714px;
+  } 
+  .hamburger-close {
+    position: absolute;
+    border: none;
+    right: 0;
+    top: 0;
+    z-index: 10;
   }
 
   // ---- food -------
   .modal_food-item.active {
     position: relative;
     margin: 0 auto;
-    width: 50%;
+    width: 100%;
     min-height: 378px;
     background: $white;
     border-radius: 2px;
     display: flex;
-    .hamburger-close {
-      position: absolute;
-      border: none;
-      right: 10px;
-      top: 10px;
-    }
+
     .food-item_img {
       flex: 1 0 40%;
       background: silver;
@@ -743,29 +961,31 @@ body {
 
       cursor: pointer;
 
-      h4 {
+      * {
         padding-left: 18px;
         color: $black;
         font-weight: 300;
         font-size: 20px;
         line-height: 25px;
       }
-      h4::before {
+      *::before {
         background: url("../img/array__red.svg") no-repeat center;
         content: "";
         position: absolute;
         width: 10px;
         height: 20px;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top:18px;
+        // top: 50%;
+        // transform: translateY(-50%);
       }
     }
     .item_title:hover {
-      h4 {
+      * {
         color: $rusline_red;
         transition: ease-out 0.2s;
       }
+
     }
     .item_content {
       position: relative;
@@ -813,7 +1033,7 @@ body {
   .dropdown-list_item.active {
     .item_title {
       border-bottom: none;
-      h4 {
+      * {
         color: $rusline_red;
       }
     }
@@ -830,13 +1050,27 @@ body {
       }
     }
   }
+
+}
+.title_list{
+  margin-left: 5px;
+  .item{
+    flex-wrap: wrap;
+    font-size: 16px;
+    width: 33%;
+    font-weight: 300;
+  }
 }
 
 // =================== table ======================
 
-.wrapper9 {
-  max-width: 75%;
+.tarifs{
+  border: solid 1px $rusline_red;
+  .red{
+    border: solid 1px $rusline_red !important; 
+  }
 }
+
 
 table {
   width: 100%;
@@ -846,15 +1080,45 @@ table {
     line-height: 20px;
     padding-right: 15px;
   }
+  .table_row{
+    padding: 8px 0;
+  }
   tr {
     th {
-      padding: 15px 0 15px 15px;
+      padding: 15px;
       border-bottom: 1px dashed $rusline_red;
+      vertical-align: middle;
       span {
         border-right: solid 1px $rusline_red;
         display: block;
         font-weight: 400;
+        line-height: 20px;
+        
       }
+    }
+    th.red{
+      background: $rusline_red;
+      border-right: solid 1px $white;
+      border-bottom: 1px solid $white;
+      line-height: 20px;
+      a{
+        color: $white;
+        font-weight: 600;
+      }
+      a:hover{
+        border-bottom: 1px solid $white;
+      }
+      color: $white;
+      
+    }
+    th.white{
+      line-height: 20px;
+      border-top: 1px dashed $rusline_red;
+      font-weight: 600;
+      border-right: 1px dashed $rusline_red;
+    }
+    th.white:last-child{
+      border-right: none !important;
     }
     th:last-child {
       span {
@@ -864,20 +1128,65 @@ table {
   }
   td {
     padding: 15px;
-    padding: 15px 0 15px 15px;
     border-bottom: 1px dashed $gray5;
+    border-right: dashed 1px $gray5;
+    line-height: 20px;
+    vertical-align: middle;
+    .wrapper{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      img{
+        margin-right: 5px;
+      }
+      span{
+        padding: 0;
+      }
+      
+    }
     span {
       font-weight: 300;
       color: $gray2;
-      border-right: solid 1px $gray5;
+      
     }
+    
   }
+
   td:last-child {
+    border-right: none;
     span {
       border-right: none;
     }
   }
+  .td_150{
+    width: 150px;
+  }
+  .td_250{
+    width: 250px;
+  }
 }
+
+
+
+.designation{
+  display: flex;
+  align-items: center;
+  div{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    img{
+      margin-right: 10px;
+    }
+  }
+}
+
+
+// -----------------
+
+
 
 // ====================== LogBook ============================
 
@@ -945,4 +1254,1185 @@ table {
   h4 {
     color: $rusline_red;
   }
+}
+
+// ----------- page timetable -----------------------------------------
+.form-timetable {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  .wrapper {
+    display: flex;
+    flex: 2;
+    border: 1px solid $gray5;
+    border-radius: 2px;
+
+    .period {
+      border-left: 1px solid $gray5;
+      position: relative;
+    }
+    .input-wrapper {
+      flex: 2;
+      position: relative;
+      input {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .period::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../img/date_icon.svg") no-repeat;
+  }
+
+  input {
+    flex: 2;
+    border: solid 1px $white;
+    padding: 0 15px;
+    background: $white;
+    position: relative;
+    z-index: 3;
+  }
+  ::placeholder {
+    color: $gray3;
+  }
+  :focus {
+    border: solid 1px $rusline_red;
+  }
+  button {
+    width: 80px;
+  }
+  .reverse {
+    width: 68px;
+    border: none;
+    border-left: 1px solid $gray5;
+    border-right: 1px solid $gray5;
+    background: url("../img/reverse_icon.svg") no-repeat center;
+  }
+  .reverse:hover {
+    border: solid 1px $rusline_red;
+  }
+
+  // add (js) elem timetable
+  .list-city {
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    overflow-y: scroll;
+    background: $white;
+    border-top: solid 1px $rusline_red;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    .city-item {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 32px;
+      padding-left: 15px;
+      div {
+        span {
+          display: block;
+          font-weight: 400;
+        }
+        .name {
+          font-size: 16px;
+          line-height: 20px;
+          line-height: 20px;
+          color: $gray3;
+        }
+        .country {
+          font-size: 12px;
+          line-height: 15px;
+          color: $gray3;
+        }
+      }
+      .airport {
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray4;
+      }
+    }
+    .city-item:hover {
+      cursor: pointer;
+      background: $gray6;
+      *span {
+        color: $black;
+      }
+    }
+  }
+
+  .calWrapper {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    background: $white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: solid 1px $rusline_red;
+
+    .calendar_title{
+      text-align: center;
+      span{
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray1;
+      }
+    }
+    .calendar_daysWeek{
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 34px;
+        width: calc(100% / 7);
+        font-size: 12px;
+        line-height: 15px;
+        color: $gray3;
+      }
+    }
+    
+    .calendar_nav {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: calc(100%-30px);
+      .calendar-nav_back,
+      .calendar-nav_next {
+        width: 37px;
+        height: 20px;
+        background: silver;
+      }
+      .calendar-nav_back{
+        background: url('../img/calendar_back_red.svg') no-repeat center;
+      }
+      .calendar-nav_next{
+        background: url('../img/calendar_next_red.svg') no-repeat center;
+      }
+    }
+
+    }
+    .days {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      :hover{
+        background: $gray6;
+      }
+
+      .day {
+        display: flex;
+        width: calc(100% / 7);
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        color: $gray3;
+      }
+      .gray{
+        color: $gray6;
+      }
+
+
+    }
+
+  
+}
+// ----------------------- Вывод результатов поиска рейсов -----------------------------
+
+
+
+.out{
+  margin-top: 60px;
+  .out_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .title{
+      flex: 1;
+      display: flex;
+      h2{
+        margin-right: 8px;
+        color: $black;
+      }
+      .out_title_from, .out_title_to, .arr{
+        color: $rusline_red;
+      }
+    }
+    .time_nav, .time_nav_time{
+      display: flex;
+    }
+    .time_nav{
+      justify-content: center;
+      flex: 1;
+    }
+    .prev, .next{
+      cursor: pointer;
+      svg{
+        fill: $rusline_red;
+      }
+    }
+    .prev:hover, .next:hover{
+      svg{
+        fill: $gray4;
+      }
+    }
+    .prev{
+      margin-right: 30px;
+    }
+    .next{
+      margin-left: 30px;
+    }
+    .time_nav_time{
+      .break{
+        margin: 0 8px;
+      }
+    }
+  }
+  .out_list{
+    .out-item:hover{
+      border: solid 1px $rusline_red;
+    }
+    .out-item:last-child{
+      margin-bottom: 0;
+    }
+    .out-item{
+      border: solid 1px $gray5;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .item_description{
+        width: 50%;
+        padding: 30px 30px;
+        border-right: solid 1px $gray5;
+        span{
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 100%;
+          color: $gray3;
+        }
+        .flight{
+          display: flex;
+          justify-content: space-between;
+          .flight_number{
+            display: flex;
+            flex-direction: column;
+            a{
+              border-bottom: solid 1px $rusline_red;
+              color: $rusline_red;
+              font-size: 20px;
+              line-height: 100%;
+              margin-top: 4px;
+            }
+            a:hover{
+              border-bottom: solid 1px $white;
+            }
+          }
+        }
+        .time{
+          display: flex;
+          justify-content: space-between;
+          margin: 27px 0;
+          .time_section{
+            display: flex;
+            align-items: center;
+            h2{
+              color: $black;
+            }
+          }
+          .departure{
+            h2{
+              margin-right: 10px;
+            }
+          }
+          .arrival{
+            h2{
+              margin-left: 10px;
+            }
+          }
+          .time_flight-time{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 2;
+            margin: 0 6px;
+            .flight-time_time{
+              width: 100%;
+              text-align: center;
+              border-bottom: 1px dashed $gray5;
+              color: $black;
+              padding-bottom: 2px;
+            }
+          }
+        }
+        .airplane{
+          display: flex;
+          justify-content: space-between;
+          .airplane_name{
+            display: flex;
+            flex-direction: column;
+            .number{
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 25px;
+              color: $black;
+            }
+
+          }
+        }
+      }
+      .item_time-tape{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        .time-tape_day{
+          flex: 1;
+          height: 100%;
+          border-right: solid 1px $gray5;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+            .icon{
+              width: 22px;
+              height: 22px;
+              background: none;
+              margin-bottom: 9px;
+            }
+            span{
+              display: block;
+              font-size: 16px;
+              line-height: 120%;
+              text-align: center;
+              color: $gray4;
+            }
+          }
+        }
+        .time-tape_day:last-child{
+          border-right: none;
+        }
+        .time-tape_day.active:hover{
+          background: $gray6;
+          cursor: pointer;
+        }
+        .time-tape_day.active{
+          a{
+            
+            .icon{
+              background: url('../img/timetable_icon.svg') no-repeat center;
+            }
+            span{
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .transfer{
+    .item_description{
+      .flight_number:last-child{
+        text-align: right;
+      }
+      .airplane_name:last-child{
+        text-align: right;
+      }
+      .transfer_airport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .airport_name{
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 25px;
+          color: $rusline_red;
+        }
+      }
+
+      .time{
+        margin: 10px 0 !important;
+        .time_section{
+          padding-top: 15px;
+        }
+        .time_flight-time{
+          .flight-time_time{
+            
+            border-bottom: none !important;
+            border-top: 1px dashed $gray5;
+          }
+          .transfer{
+            padding-bottom: 10px;
+          }
+        }
+      }
+
+    }
+  }
+}
+// - modal detals - 
+.modal-window{
+  .details{
+    background: $white;
+    width: 1032px;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 30px;
+    position: relative;
+    .details_title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed $gray5;
+      h2{
+        color: $rusline_red;
+      }
+      
+    }
+    .details_description{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray3;
+        font-weight: 300;
+      }
+      .flight{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+        justify-content: center;
+        .flight_name{
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding-bottom: 7px;
+          border-bottom: 1px dashed $gray5;
+          width: 100%;
+          h2{
+            color: $rusline_red;
+            margin-left: 8px;
+          }
+          
+        }
+      }
+      .departure, .arrival{
+        display: flex;
+        flex-direction: column;
+        .date{
+          color: $black;
+        }
+        h1{
+          padding: 15px 0;
+        }
+        h4{
+          font-weight: 300;
+        }
+      }
+      .details_note{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        h4{
+          font-weight: 300;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+// ====== end timetable
+
+
+// ----------- form in page "referens"
+
+.form-wrapper{
+  padding: 30px;
+  border: solid 1px $gray5;
+  .form-link{
+    text-align: center;
+    .button{
+      width: fit-content;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+  .hidden{
+    overflow: hidden;
+    height: 0 !important;
+
+  }
+}
+
+
+input[type='file'] {
+  display: none;
+}
+.input.file{
+  background: $gray6;
+  text-align: center;
+  display: flex;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: $gray1;
+  // justify-content: space-between;
+  align-items: center;
+}
+.input.file:hover{
+  background: $gray5;
+}
+.inputs_bilet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  .input{
+    width: 65%;
+  }
+  span{
+    font-weight: 400 !important;
+  }
+}
+
+.referens_help{
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: solid 1px $gray5;
+  h4{
+    font-weight: 300 !important;
+    line-height: 25px;
+  }
+}
+
+.form-referens.active{
+  height: auto;
+  .inputs_in-two{
+    display: flex;
+    justify-content: space-between;
+    .section{
+      width: calc((100% / 2)- 7.5px );
+    }
+
+  }
+  // .hiden{
+  //   display: none;
+  // }
+  
+  span{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: $gray2;
+  }
+  .title{
+    margin-top: 30px;
+    text-align: center;
+    border-top: solid 1px $gray5;
+    
+    h3{
+      margin-top: 30px;
+    }
+
+  }
+  .check-for-belonging{
+    display: flex;
+    label{
+      padding-right: 30px;
+    }
+  }
+  .wrapper-textarea{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    textarea{
+      width: 65%;
+      border: solid 1px $gray5;
+      padding: 15px;
+    }
+    textarea::placeholder{
+      font-size: 16px;
+      font-weight: 300;
+      color: $gray2;
+      overflow: auto;
+    }
+  }
+  .text{
+    margin-bottom: 30px;
+    display: block;
+  }
+  .payment_card{
+    .payment_props{
+      display: flex;
+      margin-bottom: 30px;
+      span{
+        width: 35%;
+      }
+
+    }
+    .inputs_in-two{
+      align-items: center;
+      span{
+        width: 35%;
+      }
+      div{
+        width: 65%;
+        label{
+          width: 100%;
+        }
+      }
+    }
+    .price{
+      display: flex;
+      width: 100%;
+      h3{
+        width: 120px;
+      }
+  }
+
+  }
+
+}
+.form-referens{
+  overflow: hidden;
+  height: 0;
+}
+.img-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_wrapper{
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+}
+// ---------------
+.select-middle{
+  width: 100%;
+  height: 44px;
+  border: 1px solid $gray5;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  border-radius: 2px;
+  .select-middle_placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: $gray3;
+    svg{
+      stroke: $rusline_red;
+      stroke-width: 1.5;
+      margin-left: 15px;
+
+    }
+  }
+  .active{
+    svg{
+      transform: scale(1, -1)
+    }
+  }
+  .hidden{
+    display: none;
+  }
+  .select-middle__drop{
+    position: absolute;
+    z-index: 10;
+    background: $white;
+    font-size: 14px;
+    font-weight: 300;
+    left: 0;
+    top: 44px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    li{
+      line-height: 100%;
+      padding: 8px 15px;
+      color: $gray3;
+      border-bottom: 1px solid $gray6;
+      
+    }
+    :hover{
+      background: $gray6;
+      cursor: pointer;
+      
+    }
+
+  }
+
+
+}
+.select-middle:hover{
+  border-color: $rusline_red;
+}
+.textarea-middle{
+  width: 100%;
+  border: 1px solid $gray5;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  color: $black;
+  border-radius: 2px;
+}
+.textarea-middle:hover{
+  border-color: $rusline_red;
+}
+.input-file{
+  span{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: $gray2;
+    margin-bottom: 8px;
+    display: block;
+  }
+}
+.captcha{
+  span{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: $gray2;
+  }
+  .captcha_img{
+    width: 100%;
+    height: 44px;
+    margin-top: 8px;
+    border: 1px solid $gray5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// drop-ul_item
+
+.drop-ul_item{
+  margin-bottom: 15px;
+  padding-left: 30px;
+  .drop-ul_item-description{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    opacity: 1;
+  
+    height: auto;
+  }
+  .drop-ul_item-description.hidden{
+    display: none;
+  }
+  .drop-ul_item-title{
+    position: relative;
+    cursor: pointer;
+  }
+  // .drop-ul_item-title.active{
+  //   color: $rusline_red;
+  // }
+  .drop-ul_item-title.active::before{
+
+    background: url('../img/-.svg') no-repeat center;
+  }
+  .drop-ul_item-title::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: url('../img/+.svg') no-repeat center;
+    left: -30px;
+    top: 4px;
+  }
+}
+.drop-ul_item:last-child{
+  margin-bottom: 0;
+  .drop-ul_item-description{
+    margin-bottom: 0;
+  }
+}
+
+// Фотогалерея
+
+$widthSlide: 1246px;
+
+.modal-item.active{
+  position: relative;
+  display: block;
+}
+.modal-item{
+  display: none;
+  max-width: $widthSlide;
+  margin: 0 auto;
+  .hamburger-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .modal-item_slide-img{
+    img{
+      max-width: 100%;
+    }
+  }
+  .modal-item_slide-signature{
+    background: $white;
+    display: flex;
+    padding: 8px 15px;
+    p{
+      flex: 1;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: $black;
+    }
+    p:last-child{
+      text-align: right;
+    }
+  }
+  .slide_frame{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+.modal-item_slide-footer{
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: $widthSlide;
+  position: relative;
+  .slide_share{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span{
+      font-weight: 300;
+      font-size: 14px;
+      color: $white;
+      margin-right: 15px;
+    }
+  }
+  .slide_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    .slide-nav_back, .slide-nav_next{
+      width: 50px;
+      height: 20px;
+      cursor: pointer;
+      img{
+        margin: 0 auto;
+      }
+    }
+    // .slide-nav_back:hover, .slide-nav_next:hover{
+    //   opacity: .8;
+    // }
+    .slide-nav_back{
+      background: url('../img/nav_arr_left_w.svg') no-repeat center;
+    }
+    .slide-nav_next{
+      background: url('../img/nav_arr_right_w.svg') no-repeat center;
+    }
+    .slide_counter{
+      display: flex;
+      align-items: center;
+      margin: 0 30px;
+      h4{
+        color: $white;
+        margin: 0 3px;
+      }
+    }
+  }
+}
+// -------------------- Фирменный стиль
+.media-col{
+  border-left: 1px dashed $gray5;
+  padding: 15px;
+  .media-col__section{
+    display: flex;
+    margin-bottom: 30px;
+    .brand-color_sample{
+      width: 72px;
+      height: 72px;
+      
+    }
+    .red_rusline{
+      background: $rusline_red;
+    }
+    .brown{
+      background: #D7B262;
+    }
+    .black{
+      background: #2B2B2A;
+    }
+    .brand-color_description{
+      display: flex;
+      span{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        color: $gray2;
+      }
+      span:first-child{
+        text-align: right;
+        margin: 0 15px;
+      }
+    }
+  }
+  .img-wrapper{
+    max-width: 400px;
+    margin-right: 30px;
+    img{
+      max-width: 100%;
+    }
+  }
+  .media-col__section:last-child{
+    margin-bottom: 0;
+  }
+}
+
+//  Пресс-релизы
+.press-filters{
+  display: flex;
+  padding: 15px 0;
+  border-top: 1px dashed $gray5;
+  border-bottom: 1px dashed $gray5;
+  .filter{
+    display: flex;
+    align-items: center;
+    p{
+      margin-right: 15px;
+    }
+  }
+}
+.select-mini{
+  height: 30px;
+  border: solid 1px $gray5;
+  border-radius: 2px;
+  padding: 0 15px;
+  position: relative;
+  margin-right: 15px;
+  .select-mini_placeholder{
+    height: 100%;
+    cursor: pointer;
+    span{
+      font-weight: 300;
+      font-size: 14px;
+      color: $gray2;
+    }
+    svg{
+      stroke-width: 1.5;
+      stroke: $rusline_red;
+      margin-left: 30px;
+    }
+  }
+  .select-mini__drop{
+    position: absolute;
+    width: calc(100% + 2px);
+    left: -1px;
+    top: 29px;
+    border: 1px solid $gray5;
+    display: none;
+    background: $white;
+    z-index: 100;
+  }
+  .select-mini__drop.active{
+    display: block;
+  }
+  li{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  li:hover{
+    background: $gray6;
+  }
+
+}
+.select-mini.data{
+  .select-mini_placeholder{
+    svg{
+      stroke: none;
+      fill:$gray4;
+    }
+  }
+}
+.select-mini.data.active{
+  .select-mini_placeholder{
+    svg{
+      stroke: none;
+      fill:$gray4;
+      transform: scale(1, 1);
+    }
+  }
+}
+.select-mini.active{
+  border-color: $rusline_red;
+  .select-mini_placeholder{
+    svg{
+      transform: scale(1, -1);
+    }
+  }
+  .select-mini__drop{
+    border-top: $rusline_red;
+    display: block;
+  }
+}
+.press-list{
+  padding-top: 15px;
+}
+.press-item{
+  padding: 15px 0;
+  margin-bottom: 8px;
+  time{
+    font-weight: 300;
+    font-size: 14px;
+    color: $rusline_red;
+  }
+  h3{
+    color: $black;
+  }
+}
+.press-item:hover{
+  h3{
+    color: $rusline_red;
+  }
+}
+.press-item:last-child{
+  margin-bottom: 0;
+}
+// пагинация
+
+.pagination-wrapper{
+  border-top:1px dashed $gray5;
+  margin-top: 60px;
+  padding: 15px 0;
+  .pagination{
+    height: 30px;
+    display: inline-flex;
+
+    .pagination-page-wrapper{
+      border: solid 1px $gray5;
+      display: flex;
+      border-radius: 2px;
+      *div{
+        
+        border-right: 1px solid $gray5;
+        font-weight: 300;
+        font-size: 16px;
+        color: $gray2;
+        text-align: center;
+        width: 30px;
+        cursor: pointer;
+        
+      }
+      *div:last-child{
+        border-right: none;
+      }
+      .pagination-page:hover{
+        background: $gray6;
+      }
+      .pagination-page.select{
+        background: $gray5;
+      }
+    }
+    .pagination-end-page,
+    .pagination-space{
+      padding: 0 7px;
+      // width: 30px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 16px;
+      color: $gray2;
+    }
+    .pagination-space{
+      cursor: text;
+    }
+    .pagination-end-page{
+      border: solid 1px $gray5;
+      border-radius: 2px;
+    }
+    .pagination-end-page:hover{
+      background: $gray6;
+    }
+    .pagination-prev, 
+    .pagination-next{
+      width: 30px;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pagination-prev svg, .pagination-next svg{
+      stroke: $gray4;
+    }
+    .pagination-prev.active svg,
+    .pagination-next.active svg{
+      stroke: $rusline_red;
+    }
+    .pagination-prev:hover,  
+    .pagination-next:hover{
+      border: solid 1px $rusline_red;
+      border-radius: 2px;
+    }
+
+  }
+ 
+}
+// Таблица в специальных предложениях
+.offers-table{
+  td{
+    border-bottom: none;
+    border-right: solid 1px $gray5;
+  }
+  tr:nth-child(2n){
+    background: $gray6;
+  }
+  b{
+    font-weight: 400;
+  }
+}
+
+// Компании-партнеры
+.partner-section{
+  padding-top: 30px;
+}
+.partner_description-list{
+  
+  .partner_description-item{
+    margin-top: 30px;
+  }
+}
+.partner_description-item.hidden{
+  display: none;
 }

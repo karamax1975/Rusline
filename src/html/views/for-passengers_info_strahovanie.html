@@ -1,0 +1,79 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9">
+          <h1>Страхование пассажиров</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">Пассажирам</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_booking-rules.html">Правила брониро ...</a></span>
+          </section>
+      </div>
+      <div class="row">
+        <div class="col-lg-9">
+          <p class="p1 mb30">
+            Гражданская ответственность АО АК «РусЛайн» застрахована по договору № 19AVK0258 обязательного страхования гражданской ответственности перевозчика перед пассажиром воздушного судна от 11.12.2019. Срок действия договора по 13.12.2020.
+          </p>
+          <h3 class="mb30">Подробнее об условиях договора можно узнать у сотрудников ОАО «СОГАЗ»:</h3>
+          <div class="row mb30">
+            <div class="col-lg-6">
+              <div>
+                <h4 class="mb8">Сивицкая Марина Валерьевна</h4>
+                <p class="p2 mb15">Начальник Управления страхования авиационных и космических рисков</p>
+                <p class="p2 mail-icon red mb8">Sivitskaya.Marina@sogaz.ru</p>
+                <p class="p2 phone-icon red mb8">(495) 739-21-40, доб. 2768</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div>
+                <h4 class="mb8">Сериков Андрей Александрович</h4>
+                <p class="p2 mb15">Начальник отдела страхования авиационных рисков</p>
+                <p class="p2 mail-icon red mb8">SerikovAA@sogaz.ru</p>
+                <p class="p2 phone-icon red mb8">(495) 739-21-40, доб. 2764</p>
+              </div>
+            </div>
+          </div>
+          <p class="p1 mb15">При наступлении события, имеющего признаки страхового случая, обращайтесь в Головной офис или в ближайшее представительство ОАО «СОГАЗ», адреса которых можно найти на сайте компании.</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <div>
+                <h4 class="mb8">Головной офис:</h4>
+                <p class="p2 mb15">107078, Москва, проспект Академика Сахарова, д.10</p>
+                <p class="p2 phone-icon red mb8">(495) 780-78-80, 739-21-40, 539-29-00</p>
+                <p class="p2 phone-icon red mb8">Факс: (495) 739-21-39</p>
+                <p class="p2 mail-icon red mb8">sogaz@sogaz.ru</p>
+                <p class="p2 www-icon red mb8"><a href="www.sogaz.ru" class="text-link">www.sogaz.ru</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <div class="back mt40">
+            <a href="for-passengers_info.html">
+              <div class="back_arrow"></div>
+              <span class="span_14">Вернуться назад</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

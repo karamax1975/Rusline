@@ -1,0 +1,104 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Обратная связь</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="about_feedback.html">Обратная связь</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-lg-9">
+        <h2 class="mb15">Уважаемые пассажиры!</h2>
+        <p class="p1 mb30">Данный сервис предназначен для оперативной коммуникации со службами АО АК "РусЛайн".
+          Заполните
+          форму, чтобы задать интересующий вас вопрос, отправить комментарии, замечания или предложения. Убедительно
+          просим вас заполнять форму максимально полно и корректно; это поможет нам отправить быстрый и качественный
+          ответ.
+        </p>
+        <ul class="text-list mb30">
+          <h3>Авиакомпания вправе не отвечать, если:</h3>
+          <li>сообщение нарушает законодательство РФ;</li>
+          <li>сообщение несет оскорбительный характер;</li>
+          <li>сообщения не относится к деятельности АО АК "РусЛайн".</li>
+          <li>претензия/жалоба поданы с нарушением правил подачи претензий.</li>
+        </ul>
+        <h3 class="mb15">Обращаем ваше внимание, что на сайте вы можете найти следующую информацию:</h3>
+        <div class="row">
+          <div class="col-lg-4">
+            <p class="p1"><a class="text-link" href="#">Контактная информация</a></p>
+            <p class="p1"><a class="text-link" href="#">Информация по расписанию</a></p>
+            <p class="p1"><a class="text-link" href="#">Информация по возврату билетов</a></p>
+          </div>
+          <div class="col-lg-4">
+            <p class="p1"><a class="text-link" href="#">Информация по обмену билетов</a></p>
+            <p class="p1"><a class="text-link" href="#">Правила перевозки</a></p>
+            <p class="p1"><a class="text-link" href="#">Работа в РусЛайн</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <span class="note mt40 "><b>*</b> - поля, обязательные к заполнению</span>
+        <form action="">
+          <input class="input middle mb15" type="text" placeholder="ФИО полностью *">
+          <input class="input middle mb15" type="text" placeholder="Электронная почта *">
+          <input class="input middle mb15" type="tel" placeholder="Контактный телефон">
+          <div class="select-middle mb15">
+            <div class="select-middle_placeholder">
+                <span>Тема</span>
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none">
+                  <path d="M1 1L4.5 5L8 1" stroke-linecap="round" />
+                </svg>
+            </div>
+            <ul class="select-middle__drop ">
+              <li>Расписание, тарифы, информация о скидках, бронирование билетов</li>
+              <li>Расписание, тарифы, информация о скидках, бронирование билетов</li>
+            </ul>
+          </div>
+          <textarea placeholder="Сообщение*" name="address" class="textarea-middle mb15"></textarea>
+          <div class="input-file mb15">
+            <span>Вложить файлы (в формате pdf, jpg, jpeg)</span>
+            <label class="input file middle" for="change-file">Выберите файлы
+              <input class="input-file middle" type='file' id="change-file" multiple>
+            </label>
+          </div>
+          <div class="captcha ">
+            <span>Защита от автоматических сообщений</span>
+            <div class="captcha_img mb15">
+              <img src="img/captcha.jpg" alt="">
+            </div>
+            <input type="text" class="input middle mb15" placeholder="Введите слово на картинке *">
+          </div>
+          <label class="checkbox red mb15" for="check">
+            <input type="checkbox" id="check"  value="check">
+            <span>Я ознакомлен и соглашаюсь с условиями использования персональных данных</span>
+          </label>
+          <button type="submit" class="button red big">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- скрипт для демки  -->
+<script src="js/select.js"></script>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

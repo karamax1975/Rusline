@@ -1,0 +1,52 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9">
+          <h1>Перевозка багажа на трансферных рейсах</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="#">Пассажирам</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+              />
+            </svg>
+            <span><a href="for-passengers_transportation-rules">Правила перевозки</a></span>
+          </section>
+      </div>
+      <div class="row">
+        <div class="col-lg-9">
+          <p class="p1 mb30">Информация для трансферных пассажиров, осуществляющих перелет авиакомпанией «РусЛайн» из городов/в города Российской Федерации, Зарубежья через аэропорт «Пулково» и «Внуково».</p>
+          <ul class="number-list mb30">
+            <h3>Вы можете зарегистрировать Ваш багаж до конечного пункта, при условии:</h3>
+            <li>В Вашем багаже не содержатся вещи и товары, подлежащие обязательному таможенному декларированию.</li>
+            <li>Оформление к перевозке багажа до конечного пункта не освобождает пассажира от ответственности за нахождение в нем товаров, подлежащих таможенному декларированию или запрещенных к ввозу/вывозу в соответствии с законодательством Таможенного союза и таможенного законодательства РФ и выявленных в процессе таможенного оформления в пункте трансфера.</li>
+            <li>В случае невозможности выполнения всех условий и требований транзитной перевозки багажа, Ваш багаж будет оформлен до первоначального пункта трансфера.</li>
+          </ul>
+          <div class="important">
+            <h3>ВНИМАНИЕ:</h3>
+            <p class="p1">ЗА НАРУШЕНИЕ ТАМОЖЕННЫХ ПРАВИЛ ФИЗИЧЕСКИЕ ЛИЦА НЕСУТ ОТВЕТСТВЕННОСТЬ В СООТВЕТСТВИИ С ЗАКОНОДАТЕЛЬСТВОМ РОССИЙСКОЙ ФЕДЕРАЦИИ!</p>
+          </div>
+          <p class="p1">С информацией о правилах декларирования товаров при пересечении границы РФ Вы можете ознакомиться на <a class="text-link" href="http://www.customs.ru/">www.customs.ru</a>  </p>
+        </div>
+      </div>
+      <div class="back mt40">
+        <a href="for-passengers_transportation-rules.html" class="back_arrow">
+          <span class="span_14">Вернуться назад</span>
+        </a>
+      </div> 
+    </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

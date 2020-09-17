@@ -1,0 +1,149 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="banner_top">
+    <img src="img/news_banner.jpg" alt="">
+  </div>
+<div class="container post">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <section class="bread-crumbs">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+          />
+        </svg>
+        <span><a href="about_rusline.html">Новости</a></span>
+      </section>
+    </div>
+  </div>
+
+<!--  -->
+  <div class="row">
+    <aside class="col-lg-2">
+      <div class="post_share">
+        <div class="share-icons">
+          <a href="">
+            <img src="img/vk.svg" alt="">
+          </a>
+          <a href="">
+            <img src="img/fb.svg" alt="">
+          </a>
+          <a href="">
+            <img src="img/ok.svg" alt="">
+          </a>
+        </div>
+        <p>Поделиться в соцсетях:</p>
+      </div>
+    </aside>
+    <article class="col-lg-8">
+      <time>03.02.2020</time>
+      <h1>Продление выполнения рейсов из Курска в Анапу и Симферополь</h1>
+      <h3>Авиакомпания «РусЛайн» объявила о продлении выполнения рейсов из Курска на отечественные курорты на черноморском побережье – в Анапу и Симферополь.</h3>
+      <p class="p1">Жители Курской области смогут воспользоваться рейсами компании и отдохнуть в Анапе и Симферополе до конца сентября. Кроме того, авиакомпания выполняет круглогодичные рейсы из Курска в Сочи.</p>
+      <p class="quote mb40">
+        «Полеты в Анапу и Симферополь пользуются большой популярностью у жителей Курской области. Учитывая востребованность этих направлений, мы приняли решение о продолжении выполнения рейсов на черноморские курорты осенью. Еще большее количество пассажиров сможет застать бархатный сезон на море и насладиться отдыхом в этих прекрасных городах», — комментирует коммерческий директор авиакомпании «РусЛайн» Александр Крутов.
+      </p>
+      <h3>Расписание (время местное):</h3>
+      <table>
+        <tr>
+          <th class="white" style="border-top: none;">Рейс</th>
+          <th class="white" style="border-top: none;">Маршрут</th>
+          <th class="white" style="border-top: none;">Дни вылета</th>
+          <th class="white" style="border-top: none;">Вылет</th>
+          <th class="white" style="border-top: none;">Прилет</th>
+          <th class="white" style="border-top: none;">Период выполнения</th>
+        </tr>
+        <tr>
+          <td>7R-119</td>
+          <td><a class="text-link" href="">Курск – Анапа</a></td>
+          <td>ВТ, СБ</td>
+          <td>11:00</td>
+          <td>13:00</td>
+          <td>01.09.20 - 19.09.20</td>
+        </tr>
+        <tr>
+          <td>7R-122</td>
+          <td><a class="text-link" href="">Анапа – Курск</a></td>
+          <td>ВТ, СБ</td>
+          <td>17:20</td>
+          <td>19:20</td>
+          <td>01.09.20 - 19.09.20</td>
+        </tr>
+        <tr>
+          <td>7R-421</td>
+          <td><a class="text-link" href="">Курск – Сочи</a></td>
+          <td>ПТ</td>
+          <td>10:50</td>
+          <td>12:55</td>
+          <td>04.09.20 - 21.10.20</td>
+        </tr>
+        <tr>
+          <td>7R-421</td>
+          <td><a class="text-link" href="">Курск – Сочи</a></td>
+          <td>ВС</td>
+          <td>11:00</td>
+          <td>13:10</td>
+          <td>06.09.20 - 18.10.20</td>
+        </tr>
+        <tr>
+          <td>7R-422</td>
+          <td><a class="text-link" href="">Сочи – Курск</a></td>
+          <td>ПТ</td>
+          <td>19:40</td>
+          <td>21:50</td>
+          <td>04.09.20 - 21.10.20</td>
+        </tr>
+        <tr>
+          <td>7R-422</td>
+          <td><a class="text-link" href="">Сочи – Курск</a></td>
+          <td>ВС</td>
+          <td>19:50</td>
+          <td>22:00</td>
+          <td>06.09.20 - 18.10.20</td>
+        </tr>
+        <tr>
+          <td>7R-951</td>
+          <td><a class="text-link" href="">Курск – Симферополь</a></td>
+          <td>ПН, СР</td>
+          <td>07:40</td>
+          <td>09:50</td>
+          <td>02.09.20 - 21.09.20</td>
+        </tr>
+        <tr>
+          <td>7R-952</td>
+          <td><a class="text-link" href="">Симферополь – Курск</a></td>
+          <td>ПН, СР</td>
+          <td>17:05</td>
+          <td>19:30</td>
+          <td>02.09.20 - 21.09.20</td>
+        </tr>
+      </table>
+      <div class="blog-nav">
+        <a href="news.html">
+          <button class="button_back"></button>
+          <span>Возврат к списку новостей</span>
+        </a>
+        <a href="news_new.html">
+          <span>Следующая новость</span>
+          <button class="button_next"></button>
+        </a>
+      </div>
+    </article>
+  </div>
+
+</div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

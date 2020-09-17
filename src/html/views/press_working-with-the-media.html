@@ -1,0 +1,62 @@
+<% var data = { title: "Дополнительные услуги" }; %> 
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %> 
+<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+<div class="container">
+  <div class="row page_top">
+    <div class="headline col-lg-9">
+      <h1>Порядок работы со СМИ</h1>
+    </div>
+    <section class="bread-crumbs col-lg-3">
+      <span><a href="./index.html">Главная</a></span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+        <path
+          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+        />
+      </svg>
+      <span><a href="#">Пресс-центр</a></span>
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+        <path
+          d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
+        />
+      </svg>
+      <span><a href="#">Порядок работы ...</a></span>
+    </section>
+  </div>
+<!--  -->
+  <div class="row">
+    <div class="col-lg-9">
+      <ul class="text-list">
+        <h3>В свободной форме оформляются запросы:</h3>
+        <li>На общую информацию об авиакомпании и парке ВС;</li>
+        <li>Фотографии из архива авиакомпании;</li>
+        <li>На информацию об открытии новых направлений.</li>
+      </ul>
+      <p class="p1 mb30">Остальные запросы оформляются на редакционном (фирменном) бланке на имя Генерального директора АО АК «РусЛайн» Городилова Александра Викторовича, за подписью редактора средства массовой информации</p>
+      <ul class="text-list">
+        <h3>Необходимые требования:</h3>
+        <li>Указать основную тему публикации;</li>
+        <li>Сформулировать список вопросов;</li>
+        <li>Предоставить контактные данные редакции и корреспондента.</li>
+      </ul>
+      <p class="p2 mb8">Срок ответа на запрос - до 3х рабочих дней.</p>
+      <p class="p2 mb30">Запросы принимаются по почте <a class="text-link" href="mailto:o.burdeyko@rusline.aero">o.burdeyko@rusline.aero</a></p>
+      <p class="p1 mb30">Ответы по запросам СМИ предоставляются в соответствии с действующим законодательством РФ (Федеральный Закон «О средствах массовой информации»). Авиакомпания оставляет за собой право отказать в предоставлении информации, если она содержит сведения, составляющие государственную, коммерческую или иную специально охраняемую законом тайну. Уведомление об отказе направляется представителю СМИ в двухдневный срок со дня получения письменного запроса информации.</p>
+      <h3 class="mb15">Если вы хотите подписаться на рассылку пресс-релизов АО АК "РусЛайн"</h3>
+      <p class="p1">Направьте заявку на <a class="text-link" href="mailto:pr@rusline.aero">pr@rusline.aero</a>. В заявке укажите СМИ, которое вы представляете, и ваши контактные данные.</p>
+
+    </div>
+    <div class="col-lg-3">
+      <h3 class="mb15">Внимание! Для вашего удобства на сайте доступны:</h3>
+      <p class="p2 file-icon mb8"><a class="text-link" href="#">Краткая информационная справка об авиакомпании</a> (pdf)  </p>
+      <p class="p2 no-icon"><a class="text-link" href="#">Фотогалерея</a></p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

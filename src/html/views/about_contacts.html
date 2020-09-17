@@ -1,0 +1,109 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Контакты</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">О нас</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Контакты</a></span>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="tabs-list">
+          <div class="tab active"><span>Пресс-служба</span></div>
+          <div class="tab"><span>Реквизиты и офисы</span></div>
+          <div class="tab"><span>Службы авиакомпании</span></div>
+        </div>
+        <div class="tabs-content-list">
+          <div class="content-item active">
+            <p class="p1 mb30">Служба общественных связей авиакомпании "РусЛайн" отвечает за взаимодействие со СМИ,
+              обеспечение информационно-рекламной политики, организацию мероприятий по продвижению бренда авиакомпании.
+              <br>Для упрощения работы просим перед обращением ознакомиться <a class="text-link" href="">с порядком работы со СМИ</a> .
+              <br><br>
+              Уважаемые партнёры! В виду большого потока информационных запросов и предложений рекламного характера, убедительная просьба не пытаться связаться со службой рекламы и общественных связей по телефону через секретарей. Все запросы рассматриваются исключительно посредством электронной почты.
+              <br><br>
+              Спасибо за понимание!
+            </p>
+            <h3 class="mb15">Контакты для предложений сотрудничества рекламного характера и запросов СМИ:</h3>
+            <p class="p2 mb8">Олеся Бурдейко, менеджер по рекламе и связям с общественностью.</p>
+            <p class="p2 mail-icon mb30"><a class="text-link" href="mailto:o.burdeyko@rusline.aero">o.burdeyko@rusline.aero</a></p>
+            
+          </div>
+          <div class="content-item">
+            <h3 class="mb15">Фактический адрес:</h3>
+            <p class="p2">121354, Россия, Москва, ул. Дорогобужская, д. 14, корпус 1, БЦ "Партнёр</p>
+            <p class="p2 mb8">Время работы: 09:30 – 18:30</p>
+            <p class="p2 mail-icon mb30"><a class="text-link" href="mailto:info@rusline.aero">info@rusline.aero</a></p>
+            <h3 class="mb15">Юридический адрес:</h3>
+            <p class="p2 mb30">248926, Калужская обл., г. Калуга, ул. Взлетная, д.46, оф. 204.</p>
+            <h3 class="mb15">Банковские реквизиты: </h3>
+            <p class="p1 mb8">Акционерное общество Авиационная компания «РусЛайн» (АО АК «РусЛайн»)</p>
+            <p class="p1"><b>ИНН</b> 7713141247</p>
+            <p class="p1"><b>КПП</b> 402901001</p>
+            <p class="p1"><b>ОГРН</b> 1027739314162</p>
+            <p class="p1"><b>Р/сч</b> 40702810302000052474</p>
+            <p class="p1"> Ярославский филиал ПАО «Промсвязьбанк»</p>
+            <p class="p1"><b>К/сч</b> 30101810300000000760</p>
+            <p class="p1"><b>БИК</b> 047888760</p>
+            <p class="p1 mb30"><b>Генеральный директор:</b> Городилов А. В.</p>
+            <p class="p1">Просьба корреспонденцию отправлять на фактический адрес.</p>
+          </div>
+          <div class="content-item">
+            <h3 class="mb15">Служба организации чартерных перевозок:</h3>
+            <p class="p2 mail-icon mb8"><a class="text-link" href="mailto:charter@rusline.aero">charter@rusline.aero</a></p>
+            <p class="p2 mb30"><a class="text-link" href="https://www.rusline.aero/services/charter_flights/">Оставить заявку на чартерный рейс</a></p>
+            <h3 class="mb15">Технологический отдел (для агентов):</h3>
+            <p class="p2 mail-icon mb8"><a class="text-link" href="mailto:to@rusline.aero">to@rusline.aero</a></p>
+            <p class="p2">Время работы: с 08:00 до 20:00.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mt60">
+        <h3 class="mb15">Телефоны контактного центра для бронирования и информации:</h3>
+        <p class="p2 phone-icon mb30">
+          <b>8-809-505-46-69</b>
+          <br>Стоимость звонка от 64 до 68 руб./мин. с учетом НДС, в зависимости от оператора связи, включая время
+          ожидания и разговора с оператором.
+        </p>
+        <h3 class="mb15">Для звонков за пределами РФ:</h3>
+        <p class="p2 phone-icon mb30">
+          <b>+7 (495) 933-23-33 </b>
+          <br>(тарифицируется оператором связи как международный звонок).
+        </p>
+        <h3 class="mb15">Для поддержки агентов:</h3>
+        <p class="p2 phone-icon">
+          <b>8-809-505-46-69</b>
+          <br>Стоимость звонка от 64 до 68 руб./мин. с учетом НДС, в зависимости от оператора связи, включая время
+          ожидания и разговора с менеджером.
+        </p>
+        <p class="p2 mail-icon mb30"><a class="text-link" href="mailto:5555@rusline.aero">5555@rusline.aero</a></p>
+        <p class="p2">График работы контактного центра — круглосуточно, без выходных.
+          <br><br>
+          Соединение с оператором контактного центра возможно при наличии доступа к платным линиям (в большинстве
+          случаев такой доступ отключен для служебных (корпоративных) телефонов, а также абонентам операторов YOTA и
+          TELE2).</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

@@ -1,0 +1,173 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="blog_top">
+      <div class="big-banner_wrapper">
+        <div class="big-banner">
+          <p>репортажи <br> и рассказы <br> о путешествиях</p>
+          <h3>для влюбленных <br> в путешествия</h3>
+          <h1>Блог «РусЛайн»</h1>
+        </div>
+      </div>
+      <div class="small-banner_wrapper">
+        <div class="small-banner">
+          <section class="bread-crumbs">
+            <span><a href="./index.html">Главная</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+            </svg>
+            <span><a href="#">О нас</a></span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+            </svg>
+            <span><a href="blog.html">Блог</a></span>
+          </section>
+          <a class="autor-link" href="#"><img src="img/autor.svg" alt="">
+            <p>Стать автором</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="blog_categories">
+      <a class="all-post" href="#">Все статьи</a>
+      <a class="categories-item" href="#">Урал</a>
+      <a class="categories-item" href="#">Item</a>
+      <a class="categories-item" href="#">Item</a>
+      <div class="categories-item__more" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="blog_tags">
+      <a href="">#Tag Item</a>
+      <a href="">#Tag Item</a>
+      <a href="">#Tag Item</a>
+      <a href="">#Tag Item</a>
+    </div>
+    <section class="cards-list">
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_1.jpg" alt="">
+            <h4>Где кататься в Красной Поляне. Роза Хутор, Альпика Сервис или Горки?</h4>
+            <div class="description red">
+              <h5>Итак, готовимся! Вы решили приехать в Красную Поляну и выбираете, где будете кататься.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_2.jpg" alt="">
+            <h4>Почему нужно побывать в отеле Valsana Hotel & Appartments в Швейцарии</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_3.jpg" alt="">
+            <h4>Куда поехать кроме Москвы и Санкт-Петербурга?</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_4.jpg" alt="">
+            <h4>Пять причин приехать в Калининград</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_5.jpg" alt="">
+            <h4>Где готовят лучшие завтраки: итоги фестиваля BreakFest</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_6.jpg" alt="">
+            <h4>Где остановиться и куда сходить в Венеции</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+          <div class="card-item promo">
+            <a href="blog_post.html">
+              <h3>Будь в курсе событий</h3>
+              <div>
+                <h4>Москва → Казань</h4>
+                <p>новый прямой рейс с 3 февраля по понедельникам и четвергам</p>
+                <h4>от 4 500 руб →</h4>
+              </div>
+            </a>
+          </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_7.jpg" alt="">
+            <h4>Солнечная долина: где покататься на горных лыжах этой зимой</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item white">
+          <a href="blog_post.html">
+            <img src="img/blog_8.jpg" alt="">
+            <h4>Рейтинг <br> чемоданов <br> для путешествий</h4>
+            <div class="description red">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="blog_post.html">
+            <img src="img/blog_9.jpg" alt="">
+            <h4>Чем заняться в Екатеринбурге на выходных?</h4>
+            <div class="description">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas fuga deleniti assumenda, earum facilis iure vitae.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

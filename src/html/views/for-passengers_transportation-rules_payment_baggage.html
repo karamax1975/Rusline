@@ -1,0 +1,634 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Платный (сверхнормативный) и негабаритный багаж</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Пассажирам</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="for-passengers_transportation-rules">Правила перевозки</a></span>
+      </section>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <p class="p1 mb30">
+          Если пассажиру дополнительно к указанной норме потребуется провезти с собой багаж в багажном отсеке, то
+          перевозка такого багажа будет осуществляться на платной основе по правилам перевозки сверхнормативного багажа.
+          Тарифы за провоз сверхнормативного багажа указаны в Таблице № 1,2.
+          <br><br>
+          Тяжеловесный багаж (превышающий вес одного места 30 кг) и негабаритный багаж (габариты которого по сумме трёх
+          измерений превышают 203 см), принимается к перевозке только по предварительному согласованию с авиакомпанией и
+          оплачивается по установленному тарифу.
+          <br><br>
+          Сверхнормативный багаж оплачивается по опубликованным тарифам авиакомпании, размещенным в системе бронирования
+          и на сайте www.rusline.aero.
+          <br><br>
+          Для багажа, соответствующего по весу и габаритам нормам, предусмотренным для дополнительной ручной клади, при
+          его перевозке в багажном отделении, могут применяться специальные сниженные тарифы.
+          <br><br>
+          При расчёте веса багажа к оплате неполные килограммы округляются до полных в большую сторону.
+        </p>
+        <ul class="text-list">
+          <h3>Оплатить сверхнормативный багаж вы можете:</h3>
+          <li>в аэропорту вылета при регистрации на рейс;</li>
+          <li>сразу при покупке билета онлайн на сайте авиакомпании;</li>
+          <li>при онлайн регистрации на рейс на сайте авиакомпании;</li>
+          <li>в Контакт Центре авиакомпании по телефону <b>8-809-505-46-69</b> (стоимость звонка от 64 до 68 руб./мин. с
+            учетом НДС, в зависимости от оператора связи, включая время ожидания и разговора с менеджером).</li>
+        </ul>
+        <h3 class="mb8">Таблица № 1.</h3>
+        <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК «РусЛайн».</h5>
+
+
+        <table class="mb15">
+          <tr>
+            <th class="white" rowspan="2">
+              Категория багажа
+            </th>
+            <th class="white" rowspan="2" style="text-align: center;">
+              Категория превышения
+            </th>
+            <th class="white" colspan="2" style="text-align: center;">
+              ВВЛ, руб
+            </th>
+            <th colspan="2" class="white" style="text-align: center;">
+              МВЛ, евро
+            </th>
+          </tr>
+          <tr>
+            <th class="white" style="text-align: center;">
+              Прямые<br>за 1 сегмент/на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Трансфер<br>за 2 сегмен./на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Прямые<br>за 1 сегмент/на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Трансфер<br>за 2 сегмен./на 1 чел.
+            </th>
+          </tr>
+          <td rowspan="2">Дополнительное место багажа</td>
+          <td style="text-align: center;"> весом до 20 кг </td>
+          <td style="text-align: center;">2500</td>
+          <td style="text-align: center;">4000</td>
+          <td style="text-align: center;">45</td>
+          <td style="text-align: center;">70</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">свыше 20 кг, но не более 30 кг</td>
+            <td style="text-align: center;">5000</td>
+            <td style="text-align: center;">8000</td>
+            <td style="text-align: center;">90</td>
+            <td style="text-align: center;">140</td>
+          </tr>
+          <!--  -->
+          </tr>
+          <td rowspan="2">Превышение веса одного места багажа</td>
+          <td style="text-align: center;">до 30 кг (с учетом бесплатной нормы 20 кг)</td>
+          <td style="text-align: center;">2500</td>
+          <td style="text-align: center;">4000</td>
+          <td style="text-align: center;">45</td>
+          <td style="text-align: center;">70</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">от 30 до 50 кг <b>*</b></td>
+            <td style="text-align: center;">5000</td>
+            <td style="text-align: center;">8000</td>
+            <td style="text-align: center;">85</td>
+            <td style="text-align: center;">135</td>
+          </tr>
+          </tr>
+          <td>Превышение размера багажа <b>*</b></td>
+          <td style="text-align: center;">Более 203 см в сумме 3 измерений</td>
+          <td style="text-align: center;">5000</td>
+          <td style="text-align: center;">8000</td>
+          <td style="text-align: center;">85</td>
+          <td style="text-align: center;">135</td>
+          </tr>
+        </table>
+        <span class="note mb8">
+          <b>*</b> только по согласованию с авиакомпанией.
+        </span>
+        <span class="note mb60">
+          <b>**</b>не более одного места. Данное место багажа оформляется в аэропорту вылета на стойке регистрации.
+        </span>
+        <h3 class="mb8">Таблица № 2.</h3>
+        <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК «РусЛайн» при оплате на
+          сайте или через Контактный центр авиакомпании<b>**</b></h5>
+        <table class="mb15">
+          <tr>
+            <th class="white" rowspan="2">
+              Категория багажа
+            </th>
+            <th class="white" rowspan="2" style="text-align: center;">
+              Категория превышения
+            </th>
+            <th class="white" colspan="2" style="text-align: center;">
+              ВВЛ, руб
+            </th>
+            <th colspan="2" class="white" style="text-align: center;">
+              МВЛ, евро
+            </th>
+          </tr>
+          <tr>
+            <th class="white" style="text-align: center;">
+              Прямые<br>за 1 сегмент/на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Трансфер<br>за 2 сегмен./на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Прямые<br>за 1 сегмент/на 1 чел.
+            </th>
+            <th class="white" style="text-align: center;">
+              Трансфер<br>за 2 сегмен./на 1 чел.
+            </th>
+          </tr>
+          <td rowspan="2">Дополнительное место багажа</td>
+          <td style="text-align: center;"> весом до 20 кг </td>
+          <td style="text-align: center;">2000</td>
+          <td style="text-align: center;">3500</td>
+          <td style="text-align: center;">35</td>
+          <td style="text-align: center;">60</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">свыше 20 кг, но не более 30 кг</td>
+            <td style="text-align: center;">4000</td>
+            <td style="text-align: center;">7000</td>
+            <td style="text-align: center;">70</td>
+            <td style="text-align: center;">120</td>
+          </tr>
+          <!--  -->
+          </tr>
+          <td rowspan="2">Превышение веса одного места багажа</td>
+          <td style="text-align: center;">до 30 кг (с учетом бесплатной нормы 20 кг)</td>
+          <td style="text-align: center;">2000</td>
+          <td style="text-align: center;">3500</td>
+          <td style="text-align: center;">35</td>
+          <td style="text-align: center;">60</td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">от 30 до 50 кг <b>*</b></td>
+            <td style="text-align: center;">4500</td>
+            <td style="text-align: center;">7500</td>
+            <td style="text-align: center;">75</td>
+            <td style="text-align: center;">125</td>
+          </tr>
+          </tr>
+          <td>Превышение размера багажа <b>*</b></td>
+          <td style="text-align: center;">Более 203 см в сумме 3 измерений</td>
+          <td style="text-align: center;">4500</td>
+          <td style="text-align: center;">7500</td>
+          <td style="text-align: center;">75</td>
+          <td style="text-align: center;">125</td>
+          </tr>
+        </table>
+        <span class="note mb8">
+          <b>*</b> по согласованию с АК;
+        </span>
+        <span class="note mb30">
+          <b>**</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место багажа
+        </span>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9">
+        <h3 class="mb15 red">Исключения составляют тарифы на провоз сверхнормативного багажа на следующих линиях:</h3>
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Екатеринбург - Белоярский
+              </div>
+              <div class="item">
+                Екатеринбург - Надым
+              </div>
+              <div class="item">
+                Екатеринбург - Нижневартовск
+              </div>
+              <div class="item">
+                Екатеринбург - Ноябрьск
+              </div>
+              <div class="item">
+                Екатеринбург - Нижнекамск
+              </div>
+              <div class="item">
+                Екатеринбург - Сыктывкар
+              </div>
+              <div class="item">
+                Екатеринбург - Томск
+              </div>
+              <div class="item">
+                Екатеринбург - Барнаул
+              </div>
+              <div class="item">
+                Екатеринбург - Новый Уренгой
+              </div>
+              <div class="item">
+                Екатеринбург - Горно-Алтайск
+              </div>
+              <div class="item">
+                и в обратных направлениях
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 3.</h3>
+            <!--  -->
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3500 ₽</td>
+                  <td style="text-align: center;">6500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mb8">Таблица № 4.</h3>
+            <h5 class="mb15">При оплате багажа на сайте или через Контактный центр
+              авиакомпании<b>*</b>.</h5>
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3000 ₽</td>
+                  <td style="text-align: center;">5500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb30">
+              <b>*</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место багажа.
+            </span>
+            <div class="important gray mb0">
+              <h3>Примечание:</h3>
+              <p class="p1">Оплата за дополнительное место багажа весом до 30 кг., за превышение нормы багажа по
+                весу или размеру берется согласно таблиц № 1, 2.</p>
+            </div>
+          </div>
+        </div>
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Воронеж - Симферополь
+              </div>
+              <div class="item">
+                Симферополь - Воронеж
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 5.</h3>
+            <table class="mb15">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br>за 1 сегмент/на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td rowspan="2">Дополнительно место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3000 ₽</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">свыше 20 кг, но не более 30 кг</td>
+                  <td style="text-align: center;">1500 ₽</td>
+                </tr>
+                <tr>
+                  <td rowspan="2">Превышение веса багажа</td>
+                  <td style="text-align: center;">от 20 до 30 кг</td>
+                  <td style="text-align: center;">1500 ₽</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">от 30 до 50 кг<b>**</b></td>
+                  <td style="text-align: center;">1500 ₽</td>
+                </tr>
+                <tr>
+                  <td>Превышение размера багажа</td>
+                  <td style="text-align: center;">Более 203 см в сумме измерений</td>
+                  <td style="text-align: center;">1500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb8"><b>*</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место
+              багажа.</span>
+            <span class="note mb0"><b>**</b>только по согласованию с авиакомпанией.</span>
+          </div>
+        </div>
+        <!--  -->
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Москва - Анапа
+              </div>
+              <div class="item">
+                Москва - Симферополь
+              </div>
+              <div class="item">
+                и в обратных направлениях
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 6.</h3>
+            <table class="mb15">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3000 ₽</td>
+                  <td style="text-align: center;">4000 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mb8">Таблица № 7.</h3>
+            <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК «РусЛайн»
+              при оплате на сайте или через Контактный центр авиакомпании<b>*</b></h5>
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">2500 ₽</td>
+                  <td style="text-align: center;">3500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb30">
+              <b>*</b>при оформлении в Контактном центре взимается сбор 350 рублей за 1 место багажа.
+            </span>
+            <div class="important gray mb0">
+              <h3>Примечание:</h3>
+              <p class="p1">Оплата за дополнительное место багажа весом до 30 кг., за превышение нормы багажа по
+                весу или размеру берется согласно таблиц № 1, 2.</p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Красноярск - Новый Уренгой
+              </div>
+              <div class="item">
+                Красноярск - Белоярский
+              </div>
+              <div class="item">
+                Красноярск - Ноябрьск
+              </div>
+              <div class="item">
+                Красноярск - Екатеринбург
+              </div>
+              <div class="item">
+                и в обратных направлениях
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 11</h3>
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые</b><br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3500 ₽</td>
+                  <td style="text-align: center;">6000 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mb8">Таблица № 12.</h3>
+            <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК
+              «РусЛайн» при оплате на сайте или через Контактный центр авиакомпании<b>*</b></h5>
+            <table class="mb15">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.
+                  </th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3000 ₽</td>
+                  <td style="text-align: center;">5000 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb30"><b>*</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место
+              багажа.
+            </span>
+            <div class="important gray mb0">
+              <h3>Примечание:</h3>
+              <p class="p1">Оплата за дополнительное место багажа весом до 30 кг., за превышение нормы багажа по
+                весу или размеру берется согласно таблиц № 1, 2.</p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Екатеринбург - Сочи
+              </div>
+              <div class="item">
+                Калуга - Симферополь
+              </div>
+              <div class="item">
+                и в обратных направлениях
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 13</h3>
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3000 ₽</td>
+                  <td style="text-align: center;">5500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mb8">Таблица № 14.</h3>
+            <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК
+              «РусЛайн» при оплате на сайте или через Контактный центр авиакомпании<b>*</b></h5>
+            <table class="mb15">
+              <tbody>
+                <tr>
+                  <th class="white">>Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                  <th class="white" style="text-align: center;">Трансфер<br> за 2 сегмен./на 1 чел.</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">2500 ₽</td>
+                  <td style="text-align: center;">4500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb30"><b>*</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место
+              багажа.
+            </span>
+            <div class="important gray mb0">
+              <h3>Примечание:</h3>
+              <p class="p1">Оплата за дополнительное место багажа весом до 30 кг., за превышение нормы багажа по
+                весу или размеру берется согласно таблиц № 1, 2.</p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="drop-ul_item">
+          <div class="drop-ul_item-title">
+            <div class="row title_list">
+              <div class="item">
+                Екатеринбург - Калуга
+              </div>
+              <div class="item">
+                Екатеринбург - Липецк
+              </div>
+              <div class="item">
+                Екатеринбург - Саранск
+              </div>
+              <div class="item">
+                Екатеринбург - Сочи
+              </div>
+              <div class="item">
+                Екатеринбург - Минеральные Воды
+              </div>
+              <div class="item">
+                Екатеринбург - Нарьян-Мар
+              </div>
+              <div class="item">
+                Екатеринбург - Нижнекамск
+              </div>
+              <div class="item">
+                Екатеринбург - Архангельск
+              </div>
+              <div class="item">
+                Челябинск - Нарьян-Мар<br>
+                при вылете из Екатеринбурга и Челябинска</span>
+              </div>
+            </div>
+          </div>
+          <div class="drop-ul_item-description">
+            <h3 class="mb15 mt40">Таблица № 15</h3>
+            <table class="mb30">
+              <tbody>
+                <tr>
+                  <th class="white">Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">3500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="mb8">Таблица № 16.</h3>
+            <h5 class="mb15">Тарифы на провоз сверхнормативного багажа на рейсах АО АК
+              «РусЛайн» при оплате на сайте или через Контактный центр авиакомпании<b>*</b></h5>
+            <table class="mb15">
+              <tbody>
+                <tr>
+                  <th class="white" >Категория багажа</th>
+                  <th class="white" style="text-align: center;">Категория превышения</th>
+                  <th class="white" style="text-align: center;">Прямые<br> за 1 сегмент/на 1 чел</th>
+                </tr>
+                <tr>
+                  <td>Дополнительное место багажа</td>
+                  <td style="text-align: center;">весом до 20 кг</td>
+                  <td style="text-align: center;">2500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+            <span class="note mb0"><b>*</b> при оформлении в Контактном центре взимается сбор 350 рублей за 1 место
+              багажа.
+            </span>
+          </div>
+        </div>
+
+        <div class="back mt40">
+          <a href="for-passengers_transportation-rules.html">
+            <div class="back_arrow"></div>
+            <span class="span_14">Вернуться назад</span>
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- 
+
+   Екатеринбург - Новый Уренгой; Екатеринбург - Горно-Алтайск и в обратных направлениях. 
+
+ -->
+
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

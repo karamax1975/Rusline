@@ -1,0 +1,102 @@
+<% var data = { title: "Дополнительные услуги" }; %>
+<%= _.template(require('./../includes/header_2.html').default)(data) %>
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
+<!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
+
+<section class="page-content">
+  <div class="container">
+    <div class="row page_top">
+      <div class="headline col-lg-9">
+        <h1>Специальные предложения</h1>
+      </div>
+      <section class="bread-crumbs col-lg-3">
+        <span><a href="./index.html">Главная</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="#">Специальные ...</a></span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+          <path
+            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+        </svg>
+        <span><a href="about_rusline.html">Специальные ...</a></span>
+      </section>
+    </div>
+    <!--  -->
+
+    <div class="cards-list">
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Лучшие предложения</h4>
+            <img src="./img/sp_1.jpg" alt="">
+            <div class="description red">
+              <h5>Лучшие предложения недели от авиакомпании «РусЛайн»</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Специальное предложение - бесплатный провоз лыж и сноуборда</h4>
+            <img src="./img/sp_2.jpg" alt="">
+            <div class="description red">
+              <h5>Авиакомпания «РусЛайн» предоставляет пассажирам возможность бесплатного провоза лыжного или сноубордического оборудования.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Дополнительная услуга «Бизнес-зал»</h4>
+            <img src="./img/sp_3.jpg" alt="">
+            <div class="description red">
+              <h5>Авиакомпания «РусЛайн» ввела дополнительную услугу «Бизнес-зал» в аэропорту Внуково.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper rectangle">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Онлайн-услуга «Выбор места в салоне при оформлении билета на сайте или web-регистрации на рейс»</h4>
+            <img src="./img/booking-bac.jpg" alt="">
+            <div class="description red">
+              <h5>Авиакомпания «РусЛайн» предлагает услугу, позволяющую во время бронирования билета или регистрации на рейс на сайте выбрать места в салоне воздушного судна.</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Услуги в аэропорту: «Выбор места в самолёте, свободное место рядом»</h4>
+            <img src="./img/sp_4.jpg" alt="">
+            <div class="description red">
+              <h5>Выбрать любимое место в салоне или забронировать соседнее место для гарантии свободного пространства рядом?</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card-item">
+          <a href="_offers.html">
+            <h4>Традиционная праздничная акция для ветеранов Великой Отечественной войны</h4>
+            <img src="./img/sp_5.jpg" alt="">
+            <div class="description red">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugiat accusamus et laudantium voluptates vero modi expedita?</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer_2.html').default)(data) %>

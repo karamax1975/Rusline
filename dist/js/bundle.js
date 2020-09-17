@@ -18162,6 +18162,307 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/_flying.js":
+/*!***************************!*\
+  !*** ./src/js/_flying.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _flying; });
+async function _flying() {
+  return [
+    {
+      id: 1,
+      from: "Москва",
+      ap_from: "VKO",
+      country_from: "Россия",
+      to: "Москва",
+      ap_to: "MOW",
+      country_to: "РФ",
+      date: "20-05-2020",
+      price: 5000,
+    },
+    {
+      id: 2,
+      from: "Архангельск",
+      ap_from: "ARH",
+      country_from: "Россия",
+      to: "Москва",
+      ap_to: "MOW",
+      country_to: "РФ",
+      date: "20-05-2020",
+      price: 5000,
+    },
+    {
+      id: 3,
+      from: "Воронеж",
+      ap_from: "VOZ",
+      country_from: "Россия",
+      to: "Москва",
+      ap_to: "MOW",
+      country_to: "РФ",
+      date: "20-05-2020",
+      price: 5000,
+    },
+    {
+      id: 4,
+      from: "Белоярский",
+      ap_from: "EYK",
+      country_from: "Россия",
+      to: "Москва",
+      ap_to: "MOW",
+      country_to: "РФ",
+      date: "20-05-2020",
+      price: 5000,
+    },
+    {
+      id: 5,
+      from: "Берлин, Тегель",
+      ap_from: "TXL",
+      country_from: "Германия",
+      to: "Москва",
+      ap_to: "MOW",
+      country_to: "РФ",
+      date: "20-05-2020",
+      price: 5000,
+    },
+  ];
+}
+
+
+/***/ }),
+
+/***/ "./src/js/calendar.js":
+/*!****************************!*\
+  !*** ./src/js/calendar.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ "./src/js/date.js");
+
+// -------------------------------------------------------
+
+
+
+function calendar(element) {
+  if (document.querySelector(`${element}`)) {
+    const $el = document.querySelector(`${element}`);
+
+    let state = {
+      flagOn: false,
+      year: new Date().getFullYear(),
+      mount: new Date().getMonth(),
+    };
+
+
+
+
+
+
+
+    let mount = Object(_date__WEBPACK_IMPORTED_MODULE_0__["default"])(state.year,state.mount);
+
+    const wrapper = document.createElement("div");
+
+    wrapper.className = "calWrapper";
+    const calendarNav = document.createElement("div");
+    calendarNav.classList = "calendar_nav";
+    const navBack = document.createElement("div");
+    navBack.onclick = mountDown;
+    navBack.classList = "calendar-nav_back";
+    const navNext = document.createElement("div");
+    navNext.onclick = mountUp;
+    navNext.classList = "calendar-nav_next";
+    const calendar = document.createElement("div");
+    calendar.innerHTML = renderCalendar();
+    
+
+
+    $el.addEventListener("click", (e) => {
+      state.flagOn=!state.flagOn;
+      if(state.flagOn){
+        $el.appendChild(wrapper);
+        wrapper.appendChild(calendarNav);
+        calendarNav.appendChild(navBack);
+        calendarNav.appendChild(navNext);
+        wrapper.appendChild(calendar);
+        
+      }
+      else if(e.target==navBack || e.target==navNext){
+        state.flagOn=true;
+      }
+
+
+      else {
+        if(e.target.className=='day'){
+          const input = $el.querySelector('input')
+          input.value=e.target.dataset.value
+        }
+        wrapper.remove();
+        state.flagOn=false;
+      }
+    });
+
+    const allClick = document.addEventListener('click', (e)=>{
+      if(!$el.contains(e.target)){
+        wrapper.remove();
+        state.flagOn=false;
+      }
+    })
+
+
+
+    function renderCalendar() {
+      const dayItem = mount.days.map((item) => {
+        let className = "day";
+        if (+item.slice(3, 5) - 1 !== state.mount) className+=' gray'
+        return `<span class="${className}" data-value="${item}">${+item.slice(0,2)}</span>`   
+      });
+
+      return `<div>
+                <div class="calendar_title">
+                  <span>${mount.mount}</span>
+                  <span>${mount.year}</span>
+                </div>
+                <div class="calendar_daysWeek">
+                  <span>пн</span>
+                  <span>вт</span>
+                  <span>ср</span>
+                  <span>чт</span>
+                  <span>пт</span>
+                  <span>сб</span>
+                  <span>вс</span>
+                </div>
+                <div class='days'>${dayItem.join("")}</div>
+              </div>`;
+    }
+
+    function mountDown() {
+      state.mount--;
+      if (state.mount < 0) {
+        state.year--;
+        state.mount = 11; 
+      }
+      mount = Object(_date__WEBPACK_IMPORTED_MODULE_0__["default"])(state.year,state.mount);
+      calendar.innerHTML = renderCalendar();
+    }
+
+    function mountUp() {
+      state.mount++;
+      
+      if (state.mount>11) {
+        state.mount=0;
+        state.year++;
+
+      }
+      mount = Object(_date__WEBPACK_IMPORTED_MODULE_0__["default"])(state.year,state.mount);
+      calendar.innerHTML = renderCalendar();
+      
+    }
+  }
+}
+
+calendar("#start");
+calendar("#end");
+
+
+/***/ }),
+
+/***/ "./src/js/date.js":
+/*!************************!*\
+  !*** ./src/js/date.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const getDate = (year, mount) => {
+  const arrMount = {
+    year:year,
+    mount,
+    days:[],
+  };
+
+  const lenghtMount = new Date(year, mount + 1, 0).getDate(); // Количество дней в текущем месяце.
+
+  const arrDay = [];
+  const emptyDayPrev = [];
+  const emptyDayNextMount = [];
+
+  let dayWeekFirstDayMount = new Date(year, mount, 1).getDay();
+  let dayWeekLastDayMount = new Date(year, mount+1, 0).getDay();
+  if(dayWeekLastDayMount===0) dayWeekLastDayMount=7;
+  if (dayWeekFirstDayMount === 0) dayWeekFirstDayMount = 7;
+
+  function getMountString(mount){
+    const mountArr = ["Январь", "Февраль", 'Март', "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+    return mountArr[mount];
+  }
+
+  arrMount.mount=getMountString(mount);
+
+  for(let i=dayWeekFirstDayMount-1; i>0; i-- ){ // находим последние дни предыдущего месяца текущей недели 
+    emptyDayPrev.push(new Date(year, mount, 1-i).toLocaleDateString());
+  }
+  for(let i=0; i<7-dayWeekLastDayMount; i++){ // находим первые дни следующего месяца до конца недели 
+    emptyDayNextMount.push(new Date(year, mount+1, 1+i).toLocaleDateString());
+  }
+
+  for (let i = 1; i <= lenghtMount; i++) { // массив существующего месяца
+    arrDay.push(new Date(year, mount, i).toLocaleDateString());
+  }
+  arrMount.days= [...emptyDayPrev, ...arrDay, ...emptyDayNextMount];
+  return arrMount;
+  
+};
+/* harmony default export */ __webpack_exports__["default"] = (getDate);
+
+/***/ }),
+
+/***/ "./src/js/drop-ul.js":
+/*!***************************!*\
+  !*** ./src/js/drop-ul.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function dropUl($arrDrop) {
+    if ($arrDrop) {
+        $arrDrop.forEach((item, index) => {
+            item.querySelector('.drop-ul_item-description').classList.add('hidden')
+            const title = item.querySelector('.drop-ul_item-title');
+            const dropElem = item.querySelector('.drop-ul_item-description');
+            item.addEventListener('click', (e) => {
+
+                    $arrDrop.forEach((elem, index2) => {
+                        // скрываю все активные
+                        if (index != index2) {
+                            elem.querySelector('.drop-ul_item-title').classList.remove('active');
+                            elem.querySelector('.drop-ul_item-description').classList.add('hidden');
+                        }
+                    })
+                    if (item.contains(e.target)) {
+                        title.classList.toggle('active');
+                        dropElem.classList.toggle('hidden')
+                    }
+
+            })
+        });
+    }
+
+}
+
+dropUl(document.querySelectorAll('.drop-ul_item'));
+
+/***/ }),
+
 /***/ "./src/js/flight-scoreboard.js":
 /*!*************************************!*\
   !*** ./src/js/flight-scoreboard.js ***!
@@ -18213,6 +18514,144 @@ flightBoard ();
 
 /***/ }),
 
+/***/ "./src/js/form_referens.js":
+/*!*********************************!*\
+  !*** ./src/js/form_referens.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return formReferens; });
+
+function formReferens(element){
+    if(document.querySelector(`.${element}`)){
+        const $el=document.querySelector(`.${element}`);
+        const buttonOnOf = $el.querySelector('.form-link .button ');
+        const $formReferens = $el.querySelector('.form-referens');
+        
+
+        const state={
+            flagOn:false
+        }
+
+        
+        const checks = $el.querySelectorAll('.checkbox input');
+
+        
+        checks.forEach(item=>{
+
+            item.addEventListener('click', (e)=>{
+
+                
+                switch (e.target.id){
+                    case 'entity':{
+                        const entity = document.createElement('div');
+                        entity.id='insert_entity';
+                        entity.innerHTML='<input class="input middle mb15" type="text" placeholder="НАЗВАНИЕ ОРГАНИЗАЦИИ *:">'
+                        const wrapper = $el.querySelector('.individual');
+                        wrapper.prepend(entity);
+                        break;
+                    }
+                    case 'individual':{
+                        if($el.querySelector('#insert_entity')){
+                            $el.querySelector('#insert_entity').remove();;
+                            
+                        }
+
+                        break;
+                    }
+                    case 'not-resident':{
+                        const notResident = document.createElement('div');
+                        notResident.id='insert_notResident';
+                        notResident.innerHTML='<input class="input middle mb15" type="text" placeholder="ГРАЖДАНСТВО *">'
+                        const nodeAfter = $el.querySelector('#pasport');
+                        nodeAfter.after(notResident);
+                        break
+                    }
+                    case 'resident':{
+                        if($el.querySelector('#insert_notResident')){
+                            $el.querySelector('#insert_notResident').remove();
+                        }
+                        break;
+                    }
+                    case 'payment_score':{
+                        const paymentBank = document.createElement('div');
+                        paymentBank.id='payment';
+                        paymentBank.innerHTML = `
+                            <div class="payment_props">
+                            <span>Информация для оплаты справок</span>
+                            <div>
+                                <p class="p2 mb15">
+                                Реквизиты для перечислений: 
+                                <br>АО АК "РусЛайн"
+                                <br>ИНН 7713141247
+                                <br>Р/сч 40702810938040101494
+                                <br>Московский банк Сбербанка России ПАО г.Москва
+                                <br>БИК 044525225
+                                <br>К/сч 30101810400000000225
+                                </p>
+                                <a href="#">
+                                <p class="p2 red file-icon">Скачать реквизиты</p>
+                                </a>
+                            </div>
+                            </div>
+        
+                            <div class="inputs_in-two mb30">
+                            <span>Вложить копию счета<br>
+                                (в формате pdf, jpg, jpeg):</span>
+                            <div>
+                                <label class="input file middle" for="change-file">Выберите файлы
+                                    <input class="input-file middle" type='file' id="change-file" multiple>
+                                </label>
+                            </div>
+                            </div>
+                        `;
+                        const wrapperPayment = $el.querySelector('.payment_card');
+                        wrapperPayment.prepend(paymentBank);
+                        break;
+                    }
+                    case 'payment_card':{
+                        if($el.querySelector('#payment')){
+                            $el.querySelector('#payment').remove();
+                        }
+                        break;
+                    }
+                    default:
+                        return 
+                }
+            })
+
+        })
+
+        
+
+
+
+        buttonOnOf.addEventListener('click', ()=>{
+            state.flagOn=!state.flagOn;
+            if(state.flagOn){
+                $formReferens.classList.add('active');
+                buttonOnOf.classList.remove('red');
+                buttonOnOf.classList.add('bright');
+                buttonOnOf.textContent='Отменить';
+            }
+            else {
+                $formReferens.classList.remove('active');
+                buttonOnOf.classList.remove('bright');
+                buttonOnOf.classList.add('red');
+                buttonOnOf.textContent='Перейти к заполнению';
+            }
+        })
+
+    }
+    
+    document.querySelector('.form-wrapper')
+}
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -18231,10 +18670,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _map_fly__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_map_fly__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _flight_scoreboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./flight-scoreboard */ "./src/js/flight-scoreboard.js");
 /* harmony import */ var _flight_scoreboard__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_flight_scoreboard__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tabs */ "./src/js/tabs.js");
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./calendar */ "./src/js/calendar.js");
+/* harmony import */ var _select_widget__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./select_widget */ "./src/js/select_widget.js");
+/* harmony import */ var _form_referens__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./form_referens */ "./src/js/form_referens.js");
+/* harmony import */ var _drop_ul__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./drop-ul */ "./src/js/drop-ul.js");
+/* harmony import */ var _drop_ul__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_drop_ul__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _slide_photo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./slide_photo */ "./src/js/slide_photo.js");
+/* harmony import */ var _slide_photo__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_slide_photo__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _partners__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./partners */ "./src/js/partners.js");
+/* harmony import */ var _partners__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_partners__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tabs */ "./src/js/tabs.js");
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_11__);
 
 
+
+
+
+
+
+
+
+ // слайд-шоу стр. "Фотогалерея"
+ // страница "Партнеры"
 
 
 
@@ -18368,15 +18825,15 @@ function additionalMenu() {
             closeAllSectionMenu(arrSectionMenu);
             arrSectionMenu[4].style.display = "flex";
             break;
-            case "Пресс-центр":
-              closeAllSectionMenu(arrSectionMenu);
-              arrSectionMenu[5].style.display = "flex";
-              break;
+          case "Пресс-центр":
+            closeAllSectionMenu(arrSectionMenu);
+            arrSectionMenu[5].style.display = "flex";
+            break;
           default:
             break;
         }
       }
-    // По любому клику внутри меню - оно закрывается
+      // По любому клику внутри меню - оно закрывается
     });
     dropMenu.addEventListener("click", (e) => {
       if (!e.target.classList.contains("add-menu__drop_menu"))
@@ -18385,70 +18842,7 @@ function additionalMenu() {
   }
 }
 
-// ===================== modal window ==============
 
-function modalWindow(target, modal) {
-  if (modal && target) {
-    // цель - массив элементов а не единичный элемент
-    if (target.length !== undefined) {
-      let modalElements = []; // список элементов в модальном окне
-
-      // ---- в модальном окне есть список элементов
-      modal.childNodes.forEach((item) => {
-        if (item.tagName == "DIV" && item.className == "modal-list") {
-          // получаю элементы в списке
-          item.childNodes.forEach((item) => {
-            if (item.tagName == "DIV") modalElements.push(item);
-          });
-        }
-      });
-
-      // -------------------------------
-
-      target.forEach((item, index) => {
-        item.addEventListener("click", () => {
-          const body = document.querySelector("body");
-
-          if (index < modalElements.length) {
-            // если длинна масива с целями меньше длинны массива элементов в модальном окне (на случай несовпадения количества)
-            modal.classList.add("active"); // модальное окно активно
-            body.style.overflow = "hidden";
-
-            modalElements[index].classList.add("active"); // элемент в модальном окне активен
-
-            // получаю кнопоку закрытия в активном модальном окне
-            const buttonClose = modalElements[index].querySelector(
-              ".hamburger-close"
-            );
-            buttonClose.addEventListener("click", () => {
-              modalElements[index].classList.remove("active");
-              modal.classList.remove("active");
-              body.style.overflow = "auto";
-            });
-
-            // ---------- закрытие окна при клике в фон модального окна
-            modal.addEventListener("click", (e) => {
-              if (e.target.contains(modalElements[index])) {
-                // клик не в элемент модального окна
-                modal.classList.remove("active");
-                body.style.overflow = "auto";
-                modalElements.forEach((item) => {
-                  // закрываю все элементы
-                  item.classList.remove("active");
-                });
-              }
-            });
-          }
-        });
-      });
-    } else console.log("Element"); // цель - единичный элемент
-  }
-}
-
-modalWindow(
-  document.querySelectorAll(".food-item"),
-  document.querySelector(".modal-window")
-);
 
 // ------------------dropdown-list_item---------------------
 
@@ -18513,6 +18907,9 @@ function magazineTabs(yearsList, previewsArr) {
   }
 }
 
+//------ note plaseholdrer
+
+
 magazineTabs(
   document.querySelector(".year-nav"),
   document.querySelectorAll(".magazine-list")
@@ -18522,6 +18919,7 @@ showTabWidget();
 showIndexDropDown();
 openHamburgerMenu();
 additionalMenu();
+Object(_form_referens__WEBPACK_IMPORTED_MODULE_7__["default"])('form-wrapper');
 
 
 /***/ }),
@@ -18623,6 +19021,301 @@ mapFly(document.querySelector('.header-map'))
 
 /***/ }),
 
+/***/ "./src/js/partners.js":
+/*!****************************!*\
+  !*** ./src/js/partners.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if(document.querySelector('.partner-section')){
+
+    function partnersShow($arrElem){
+
+        $arrElem.forEach(item => {
+            const arrTarget = item.querySelectorAll('.card-item');
+            const arrContent = item.querySelectorAll('.partner_description-item')
+
+            if(arrTarget.length==arrContent.length){
+
+                arrTarget.forEach((target,indexTarget)=>{
+                    arrContent[indexTarget].classList.add('hidden');
+                    target.addEventListener('click', (e)=>{
+                        if(e.target.tagName=="A"){
+                            e.preventDefault();
+                        }
+                        $arrElem.forEach(elem=>{
+                            elem.querySelectorAll('.partner_description-item').forEach(item=>{
+                                item.classList.add("hidden");
+                            })
+                        })
+                        arrContent[indexTarget].classList.remove('hidden')
+
+                    })
+                })
+            }
+        });
+        
+    }
+    partnersShow(document.querySelectorAll('.partner-section'))
+}
+
+/***/ }),
+
+/***/ "./src/js/select_widget.js":
+/*!*********************************!*\
+  !*** ./src/js/select_widget.js ***!
+  \*********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _flying__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_flying */ "./src/js/_flying.js");
+
+
+function selectWidget(name) {
+  if (document.querySelector(`#${name}`)) {
+    const $el = document.querySelector(`#${name}`);
+
+    let state = {
+      flagOn: false,
+      arrFly:[] // массив вылетов
+    };
+
+    Object(_flying__WEBPACK_IMPORTED_MODULE_0__["default"])().then((res) => {
+        res.forEach((element) => {
+          state.arrFly.push(element);
+        });
+      });
+
+    const listCity = document.createElement("div");
+    listCity.className = "list-city";
+
+    document.addEventListener("click", (e) => { // при клике не в элемент - выключает выпадайку
+      if (!$el.contains(e.target)) {
+        state.flagOn = false;
+        listCity.remove();
+      }
+    });
+
+
+    function render() {
+      if (state.flagOn) {
+        $el.appendChild(listCity);
+        const item = state.arrFly.map((item) => {
+          return `<div class='city-item' data-value=${item.id}>
+                            <div>
+                                <span class='name'>${item[name]}</span>
+                                <span class='country'>${
+                                  item[`country_${name}`]
+                                }</span>
+                            </div>
+                            <span class='airport'>${item[`ap_${name}`]}</span>
+                       </div>`;
+        });
+        listCity.innerHTML = item.join("");
+      } else listCity.remove();
+    }
+
+    $el.addEventListener("click", (e) => {
+      state.flagOn = !state.flagOn;
+      render();
+      
+
+      // записываю имя и страну из выбранного элемента списка в инпут 
+      const listItems = document.querySelectorAll('.city-item');
+      listItems.forEach((item, index)=>{
+        item.addEventListener('click', ()=>{
+            const element = state.arrFly[index];
+            const input = $el.querySelector('input');
+            input.value=`${element[name]}, ${element[`country_${name}`]}`
+        })
+      })
+
+    });
+  }
+}
+
+
+// для демонстрации - модальное окно
+function modal (element){
+  if(document.querySelectorAll(`.${element}`) && document.querySelector('.modal-window')){
+    if(document.querySelectorAll(`.${element}`).length>0){
+      const $arrEl = document.querySelectorAll(`.${element}`)
+
+      let flagOpen=false;
+      const modalWindow=document.querySelector('.modal-window');
+      const details=document.querySelector('.details');
+
+
+
+      function render(){
+        if(flagOpen){
+          modalWindow.classList.add('active');
+        }
+        else modalWindow.classList.remove('active')
+     
+      }
+      function close(){
+        const closeBtn = document.querySelector('.close');
+        closeBtn.addEventListener('click', ()=>{
+          modalWindow.classList.remove('active');
+          flagOpen=false
+        })
+      }
+
+
+
+
+      $arrEl.forEach(item=>{
+        item.addEventListener('click',(e)=>{
+          flagOpen=!flagOpen;
+          render();
+          close();
+        })
+      })
+
+
+
+      
+    }
+    
+  } 
+}
+
+
+selectWidget("from");
+selectWidget("to");
+
+modal('time-tape_day');
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/js/slide_photo.js":
+/*!*******************************!*\
+  !*** ./src/js/slide_photo.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function slidePhoto($, index) {
+    if ($.querySelectorAll('.modal-item') && $.querySelector('.modal-item_slide-footer')) {
+        const arrSlide = $.querySelectorAll('.modal-item');
+        const controlPanel = $.querySelector('.modal-item_slide-footer');
+
+        const buttonPrev = controlPanel.querySelector('.slide-nav_back');
+        const buttonNext = controlPanel.querySelector('.slide-nav_next');
+
+        let counter = index;
+
+        function runSlide(arr, counter) {
+            arr.forEach((item, index) => {
+                if (index !== counter) {
+                    item.classList.remove('active');
+                }
+                else item.classList.add('active');
+            })
+        }
+
+        // устанавливаю колличество слайдов в controlPanel
+        controlPanel.querySelector('.total-slide').textContent = arrSlide.length;
+        // устанавливаю номер выбранного слайда в controlPanel
+        controlPanel.querySelector('.number-slide').textContent = index + 1;
+
+        buttonPrev.addEventListener('click', () => {
+            counter <= 0 ? counter = arrSlide.length - 1 : counter--;
+            controlPanel.querySelector('.number-slide').textContent = counter + 1;
+            runSlide(arrSlide, counter)
+
+
+        })
+        buttonNext.addEventListener('click', () => {
+
+            counter >= arrSlide.length - 1 ? counter = 0 : counter++;
+            controlPanel.querySelector('.number-slide').textContent = counter + 1;
+            runSlide(arrSlide, counter)
+        })
+
+    }
+}
+
+// ===================== modal window ==============
+
+function modalWindow($target, $modal, $modalSection) {
+
+
+    if ($target && $modal) {
+        const targetList = []; // массив превью
+        const modalList = []; // массив слайдов
+        const body = document.querySelector("body");
+
+        const buttonCloseModal = $modal.querySelector('.hamburger-close');
+
+        function closeModal(index) {
+            $modalSection.classList.remove('active');
+            modalList[index].classList.remove('active');
+            body.style.overflow = "auto";
+            body.style.marginRight = '0';
+            modalList.forEach(item => {
+                item.classList.remove('active');
+            })
+        }
+
+        function getModalElem($, arr) {
+            $.childNodes.forEach(item => {
+                if (item.tagName == 'DIV')
+                    arr.push(item)
+            })
+        }
+
+
+        getModalElem($target, targetList);
+        getModalElem($modal, modalList);
+
+
+        if (targetList.length == modalList.length) {
+
+            targetList.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    $modalSection.classList.add('active');
+                    modalList[index].classList.add('active');
+                    body.style.overflow = "hidden";
+                    body.style.marginRight = '17px';
+
+                    slidePhoto($modal, index)
+
+                    // при клике по закрывашке
+                    buttonCloseModal.addEventListener('click', () => closeModal(index))
+                    // если клик не в слайд, закрываю модальное окно
+                    $modalSection.addEventListener("click", (e) => {
+                        if (e.target.contains(modalList[index])) {
+                            closeModal(index);
+                        }
+                    });
+                })
+            })
+
+
+        }
+
+    }
+
+}
+modalWindow(
+    document.querySelector('.cards-list'),
+    document.querySelector('.modal-wrapper'),
+    document.querySelector('.modal-window'),
+);
+
+
+
+/***/ }),
+
 /***/ "./src/js/tabs.js":
 /*!************************!*\
   !*** ./src/js/tabs.js ***!
@@ -18679,7 +19372,10 @@ function tabsServiceClasses (tabsArr, contentArr){
 
   }
 }
-tabsServiceClasses(document.querySelectorAll('.tab'), document.querySelectorAll('.class-content'))
+tabsServiceClasses(
+  document.querySelectorAll('.tab'), 
+  document.querySelectorAll('.class-content')
+  )
 
 /***/ }),
 
