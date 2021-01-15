@@ -4,6 +4,9 @@ header {
   padding: 24px 0;
   position: relative;
   z-index: 100;
+  @media screen and (max-width: $m) {
+    padding: 17px 0;
+  }
 
   .header_wrapper {
     display: flex;
@@ -14,11 +17,46 @@ header {
       display: block;
       width: 224px;
       height: 78px;
+      @media screen and (max-width: $m) {
+        width: 114px;
+        height: 40px;
+        background: url("../img/RusLine-logo.svg") no-repeat center;
+        background-size: cover;
+      }
     }
+
 
     nav {
       display: flex;
       align-items: center;
+      .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .desktop{
+          display: block;
+        }
+        .mobile{
+          display: none;
+        }
+        @media screen and (max-width: $m) {
+          padding: 0;
+          width: 40px;
+          height: 40px;
+          border: none;
+          span{
+            display: none;
+          }
+          .desktop{
+            display: none;
+          }
+          .mobile{
+            display: block;
+            margin-right: 0;
+          }
+        }
+    }
 
       *div {
         width: 30px;
@@ -29,11 +67,20 @@ header {
         align-items: center;
         border-radius: 2px;
         margin-left: 15px;
+        @media screen and (max-width: $m) {
+          margin-left: 0;
+          width: 40px;
+          height: 40px;
+        }
       }
 
       .account {
         margin-left: 30px;
+        @media screen and (max-width: $m) {
+          margin-left: 0;
+        }
       }
+      
       *div:hover {
         transition: ease-out 0.2s;
       }
@@ -44,13 +91,25 @@ header {
         flex-direction: column;
         justify-content: space-around;
         padding: 4px 0;
+        @media screen and (max-width: $m) {
+          margin-left: 0;
+          width: 40px !important;
+          height: 40px !important;
+          padding: 12px 10px;
+          justify-content: space-between;
+        }
 
         span {
           display: block;
           height: 2px;
           width: 30px;
           border-radius: 2px;
+          @media screen and (max-width: $m) {
+            width: 20px;
+            height: 1px;
+          }
         }
+
       }
       .hamburger:hover {
         span {
@@ -65,19 +124,45 @@ header {
 .header__index {
   .brandname {
     background: url("../img/RusLine-logo__white.svg") no-repeat center;
+    background-size: cover;
   }
 
   nav {
-    .account svg {
-      fill: $white;
+    .account{
+      .desktop{
+        fill: $white;
+        display: block;
+      }
+      .mobile{
+        display: none;
+      }
+      @media screen and (max-width: $m) {
+        .desktop{
+          display: none;
+        }
+        .mobile{
+          fill: $rusline_red;
+          display: block;
+        }
     }
+  }
 
     .language-selection svg {
       fill: $white;
+      @media screen and (max-width: $m) {
+        fill: $rusline_red;
+        height: 16px;
+        width: 21px !important;
+      }
     }
 
-    .sand-blind svg {
-      fill: $white;
+    .sand-blind{
+      svg{
+        fill: $white;
+      }
+      @media screen and (max-width: $m) {
+        display: none;
+      }
     }
 
     *div:hover {
@@ -87,6 +172,9 @@ header {
     .hamburger{
       .hamburger_white{
         background: $white;
+        @media screen and (max-width: $m) {
+          background: $rusline_red;
+        }
       }
     }
   }
@@ -99,6 +187,9 @@ header {
   form {
     display: flex;
     margin-right: 30px;
+    @media screen and (max-width: $m) {
+      display: none;
+    }
     .false-input{
         border: 1px solid $gray5;
         border-right: solid 1px $white;
@@ -145,12 +236,17 @@ header {
         }
     }
   }
+
+
   .button{
       width: 30px;
       border-color: $rusline_red;
       background: $white;
       svg{
           fill: $rusline_red;
+          @media screen and (max-width: $m) {
+            fill: none;
+          }
 
       }
   }
@@ -158,6 +254,22 @@ header {
     .hamburger {
       .hamburger_red {
         background: $rusline_red;
+      }
+    }
+  }
+
+  .language-selection svg {
+    fill: $white;
+    @media screen and (max-width: $m) {
+      fill: $rusline_red;
+      height: 16px;
+      width: 21px !important;
+    }
+  }
+  .account{
+    @media screen and (max-width: $m) {
+      svg{
+        fill: $rusline_red;
       }
     }
   }

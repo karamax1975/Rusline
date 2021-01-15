@@ -2,26 +2,53 @@
 
 
 .footer_index {
-    background: $white;
+  background: $white;
   position: fixed;
   left: 0;
   bottom: 0;
+  @media screen and (max-width: $m) {
+    position: static;
+    background: $gray1;
+    margin-top: 15px;
+    padding: 15px 0;
+
+  }
   .footer-wrapper {
     p {
       color: $black;
+      @media screen and (max-width: $m) {
+        order: 4;
+        font-size: 16px;
+        color: $white;
+        text-align: center;
+      }
     }
     .support {
+      @media screen and (max-width: $m) {
+        order: 3;
+        margin: 30px 0;
+        border: 1px solid $white;
+      }
       div {
         span {
           color: $gray2;
+          @media screen and (max-width: $m) {
+            color: $white;
+          }
         }
       }
       svg{
-        fill: $gray3 !important;
+        fill: $gray3;
+        @media screen and (max-width: $m) {
+          fill: $white;
+        }
       }
     }
     .support:hover{
         background: $gray6;
+        @media screen and (max-width: $m) {
+          background: $gray3;
+        }
     }
 
     form{
@@ -32,8 +59,14 @@
 
 
     .social {
+      @media screen and (max-width: $m) {
+        
+      }
       svg {
         fill: $gray3;
+        @media screen and (max-width: $m) {
+          fill: $gray1;
+        }
       }
       a:hover{
         border: none;
@@ -43,6 +76,9 @@
 
 
     .map-site {
+      @media screen and (max-width: $m) {
+        display: none;
+      }
       svg {
         fill: $gray3;
       }
@@ -60,6 +96,9 @@
         
     }
     .apps{
+      @media screen and (max-width: $m) {
+        
+      }
         a:hover{
             background: $gray6;
         }
@@ -76,12 +115,27 @@
   position: relative;
   bottom: 0;
   z-index: 100;
+
   .footer-wrapper {
+    @media screen and (max-width: $m) {
+      padding: 15px 0;
+      padding-bottom: 30px;
+    }
     p {
       color: $white;
+      @media screen and (max-width: $m) {
+        order: 5;
+        font-size: 16px;
+        font-weight: 400;
+      }
     }
+
     .support {
-        border: 1px solid $gray1;  
+        border: 1px solid $gray1;
+        @media screen and (max-width: $m) {
+          order: 4;
+          border: solid 1px $white;
+        }  
       svg {
         fill: $white;
       }
@@ -103,10 +157,16 @@
         }
       svg {
         fill: $white;
+        @media screen and (max-width: $m) {
+          fill: $gray1;
+        }
       }
     }
     .map-site{
         border: 1px solid $gray1;
+        @media screen and (max-width: $m) {
+          display: none;
+        }
         svg{
             fill: $white;
         }
@@ -133,15 +193,32 @@ footer {
   width: 100%;
   z-index: 9999;
 
+
   .footer-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    @media screen and (max-width: $m) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
     p {
       font-weight: 400;
       font-size: 14px;
       line-height: 100%;
+      @media screen and (max-width: $m) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    h4{
+      @media screen and (max-width: $m) {
+        order: 0;
+        color: $white;
+        text-align: left;
+        font-size: 16px;
+      }
     }
 
     .support {
@@ -150,6 +227,9 @@ footer {
       position: relative;
       padding: 8px 15px;
       border-radius: 2px;
+      @media screen and (max-width: $m) {
+        margin: 30px auto !important;
+      }
 
       div {
         span {
@@ -164,12 +244,19 @@ footer {
     .support svg {
       margin-top: 3px;
       margin-right: 15px;
+
     }
 
     form {
       padding: 24px 0;
       display: flex;
       align-items: center;
+      @media screen and (max-width: $m) {
+        width: 100%;
+        padding-top: 15px;
+        justify-content: space-between;
+        padding-bottom: 30px;
+      }
 
       input {
         font-weight: 400;
@@ -178,6 +265,11 @@ footer {
         width: 250px;
         padding: 5px 15px;
         border-radius: 2px 0px 0px 2px;
+        @media screen and (max-width: $m) {
+          height: 44px;
+          box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.1);
+          width: 100%;
+        }
       }
 
       input::placeholder {
@@ -190,8 +282,17 @@ footer {
       button {
         border-radius: 0px 2px 2px 0px;
         width: 30px;
+        @media screen and (max-width: $m) {
+          height: 44px !important;
+          width: 44px;
+          flex: 0 0 auto;
+        }
         svg{
             margin-top: -4px;
+            @media screen and (max-width: $m) {
+              margin: 0 auto;
+
+            }
         }
       }
     }
@@ -207,6 +308,10 @@ footer {
         justify-content: center;
         border-radius: 2px;
         margin-right: 8px;
+        @media screen and (max-width: $m) {
+          background: $white;
+          margin-right: 30px;
+        }
       }
 
       a:last-child {
@@ -227,6 +332,9 @@ footer {
     }
     .apps {
       display: flex;
+      @media screen and (max-width: $m) {
+        align-self: flex-end;
+      }
       a {
         width: 30px;
         height: 30px;
@@ -234,6 +342,10 @@ footer {
         text-align: center;
         border-radius: 2px;
         margin-right: 8px;
+        @media screen and (max-width: $m) {
+          background: $white;
+          margin-right: 30px;
+        }
 
       }
       a:hover {

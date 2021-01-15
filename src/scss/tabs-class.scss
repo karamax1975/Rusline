@@ -4,10 +4,13 @@
   position: relative;
   overflow: hidden;
   .plain-sxem {
-    position: absolute;
-    top: 525px;
+    // position: absolute;
+    // top: 525px;
     @media (min-width: 1216px) {
       left: calc((100% - 1216px) / 2);
+    }
+    @media screen and (max-width: $m){
+      position: relative;
     }
   }
 }
@@ -15,46 +18,80 @@
 .tabs-plain-class {
   position: relative;
   display: flex;
+  @media screen and (max-width: $m){
+    display: block;
+  }
   // height: 1200px;
   .title {
-    position: absolute;
+    // position: absolute;
     z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 30px;
-    padding: 0 30px;
-    // width: 100%;
     margin: 0 auto;
+    @media screen and (max-width: $m){
+      padding: 0;
+      position: static;
+    }
 
     img {
       margin: 0 auto;
       align-self: center;
-      width: 40%;
-      margin-top: 20px;
+      margin-top: 60px;
       margin-bottom: 40px;
+      @media screen and (max-width: $m){
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        object-fit: cover;
+      }
     }
     p {
-      width: 55%;
-      margin: 0 auto;
+      // width: 55%;
+      // margin: 0 auto;
+      // margin-top: 80px;
+      @media screen and (max-width: $m) {
+
+      }
     }
-    .tabs-list {
-      margin: 30px auto;
+    .tabs-list-m{
+      text-align: center;
+      .tabs-list {
+        margin: 30px auto;
+        display: inline-flex;
+
+        
+
+      }
     }
+
+
   }
+
+
+
   // ------------------------------- premium
   $top:517px;
-
+  @media screen and (max-width: $m) {
+    
+  }
   .premium-class {
     position: relative;
     padding-bottom: $top;
     flex: 1;
     padding-left: 30px;
+    @media screen and (max-width: $m) {
+      position: static;
+      padding: 0;
+    }
     .description{
       display: none;
       top: $top;
       position: relative;
       z-index: 120;
+      @media screen and (max-width: $m) {
+        position: static;
+      }
     }
 
   }
@@ -65,6 +102,9 @@
     top: 0;
     left: 100%;
     transition: ease-out 0.2s;
+    @media screen and (max-width: $m) {
+      position: static;
+    }
   }
 
   .premium-class.active {
@@ -74,6 +114,10 @@
       width: 400%;
       position: relative;
       left: 172px;
+      @media screen and (max-width: $m) {
+        width: auto;
+        position: static;
+      }
     }
     .places_group {
       span {
@@ -89,6 +133,9 @@
     height: 100%;
     transition: ease-out 0.2s;
     left: 0;
+    @media screen and (max-width: $m) {
+      content: none;
+    }
   }
   // ------------------------ econom -------------
   .econom-class {
@@ -130,6 +177,9 @@
     height: 100%;
     transition: ease-out 0.3s;
     left: 0;
+    @media screen and (max-width: $m) {
+      content: none;
+    }
   }
   // -----------------------------------------------
 
@@ -140,6 +190,9 @@
     position: relative;
     z-index: 10;
     top: 457px;
+    @media screen and (max-width: $m) {
+      position: static;
+    }
     .places_row,
     .places_group {
       display: flex;
@@ -159,6 +212,91 @@
     .places_row.left {
       margin-top: 74px;
       margin-bottom: 20px;
+    }
+  }
+}
+.interiorLayout-wrapper{
+  padding: 30px 0;
+  // position: relative;
+  @media screen and (max-width: $m){
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 0;
+  }
+  .interiorLayout{
+    width: 100%;
+    position: relative;
+    height: 300px;
+    @media screen and (max-width: $m){
+      overflow: auto;
+    }
+    .places-list{
+      height: 100%;
+      width: 800px;
+      right: 15px;
+      position: absolute;
+      justify-content: space-between;
+      padding: 40px 20px;
+      display: flex;
+      @media screen and (max-width: $m){
+        right: auto;
+        left: 0;
+        border-top: solid 1px $gray4;
+        border-bottom: solid 1px $gray4;
+        padding-top: 50px;
+      }
+    }
+    .places_group{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      .places-row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        padding-left: -10px;
+        padding-right: -10px;
+        flex: 1 1 auto;
+        margin-bottom: 45px;
+      }
+      .places-row:last-child{
+        margin-bottom:0;
+      }
+    }
+    .places_group:nth-child(1){
+      width: 100px;
+    }
+    .places_group:nth-child(2){
+      width: 270px;
+    }
+    .places_group:nth-child(3){
+      width: 300px;
+      .places-row:nth-child(1){
+        width: 270px;
+      }
+    }
+    .places_group.active{
+      span{
+        background: $gray4;
+      }
+    }
+      span{
+        width: 30px;
+        height: 30px;
+        background: $white;
+        border: solid 1px $gray4;
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  img{
+    position: absolute;
+    top: 0;
+    @media screen and (max-width: $m){
+      display: none;
     }
   }
 }

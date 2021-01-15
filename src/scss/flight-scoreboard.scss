@@ -1,11 +1,26 @@
 @import "./color.scss";
 
 .flight-board {
+  @media screen and (max-width: $m){
+    background: $gray6;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px;
+    padding-bottom: 15px;
+    margin-bottom: -30px;
+  }
   .flight-board-filters-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 50px;
+    @media screen and (max-width: $m){
+      border-radius: 2px;
+      overflow: hidden;
+      background: $white;
+      height: auto;
+    }
+
     .filter-item {
       flex: calc(100% / 3);
       // flex-grow:1;
@@ -14,16 +29,34 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 30px;
+      @media screen and (max-width: $m){
+        padding: 0;
+        border-color: $white;
+        border-radius: 2px;
+        .date{
+          display: none;
+        }
+      }
       cursor: pointer;
       span {
         align-items: center;
         font-size: 16px;
         font-weight: 400;
         color: $black;
+        @media screen and (max-width: $m){
+          padding: 15px 0;
+          margin: 0 auto;
+        }
       }
     }
     .active {
       border-color: $rusline-red;
+      @media screen and (max-width: $m){
+        border: solid 1px $rusline-red;
+        span{
+          color: $rusline-red;
+        }
+      }
     }
   }
 
@@ -31,6 +64,10 @@
     .form-item_tabs-list {
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: $m){
+        overflow-x: auto;
+        margin-bottom: 15px;
+      }
       .form-item_tab {
         flex: calc(100% / 3);
         border: solid 1px $gray5;
@@ -41,6 +78,14 @@
         color: $black;
         cursor: pointer;
         border-bottom: none;
+        @media screen and (max-width: $m){
+          padding: 15px 20px;
+          white-space: nowrap;
+          margin-right: 15px;
+          background: $white;
+          border: none;
+          border-radius: 5px;
+        }
       }
       .form-item_tab.active {
         background: $rusline-red;
@@ -54,6 +99,22 @@
         justify-content: space-between;
         border: solid 1px $rusline-red;
         display: flex;
+        @media screen and (max-width: $m){
+          display: block;
+          border: none;
+          position: relative;
+          height: auto;
+        }
+        input{
+          @media screen and (max-width: $m){
+            width: 100%;
+            height: 58px;
+            border-radius: 2px;
+            border: solid 1px $gray4 !important;
+            padding-left: 15px;
+            margin-bottom: 15px;
+          }
+        }
         .input-big{
             flex: 2;
             border: none;
@@ -63,6 +124,10 @@
             font-weight: 400;
             padding: 0 30px;
             display: none;
+            @media screen and (max-width: $m){
+              height: 58px;
+              padding: 0 15px;
+            }
             
         }
         .input-big::placeholder{
@@ -74,6 +139,17 @@
         .reset {
             border: none;
             background: url('./../img/reset_icon.svg') no-repeat center;
+            @media screen and (max-width: $m){
+              height: 58px;
+              width: 40px;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+        }
+        button:not(.reset ){
+          width: 100%;
+          border-radius: 2px !important;
         }
         button{
             width: 80px;

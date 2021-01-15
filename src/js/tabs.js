@@ -7,9 +7,20 @@ if (document.querySelector(".tabs-list")) {
         tabsArray.forEach((item, index) => {
           item.classList.remove("active");
           contentItem[index].classList.remove("active");
+          
         });
         item.classList.toggle("active");
         contentItem[index].classList.add("active");
+
+        /// ---------- для классов обслуживания!!!!!!!!!!!!!!!!!!!!
+        // на схеме салона
+        if(document.querySelector('.places-list')){
+          arrayGroup = document.querySelectorAll('.places_group');
+          arrayGroup.forEach(item=>{
+            item.classList.toggle('active')
+          })
+        }
+        // ------------------------------------------------
       });
     });
   }

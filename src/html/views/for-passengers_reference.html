@@ -104,17 +104,17 @@ _.template(require('./../includes/add_menu.html').default)() %>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 end">
           <div class="form-wrapper">
             <div class="form-link">
               <h3 class="mb30 ">ФОРМА ЗАКАЗА СПРАВКИ О ПЕРЕЛЕТЕ</h3>
-              <div class="button big red ">Перейти к заполнению</div>
+              <div class="button big red"><span class="">Перейти к заполнению</span></div>
             </div>
           
           <form class="form-referens">
             <div class="title mb30">
-              <h3>ФОРМА ЗАКАЗА СПРАВКИ О ПЕРЕЛЕТЕ</h3>
-              <span>Поля, обязательные к заполнению <b>*</b></span>
+              <!-- <h3>ФОРМА ЗАКАЗА СПРАВКИ О ПЕРЕЛЕТЕ</h3> -->
+              <span class="m-mt15">Поля, обязательные к заполнению <b>*</b></span>
             </div>
             <div class="check-for-belonging mb15">
               <label class="checkbox red" for="individual">
@@ -144,7 +144,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
               </label>
               <label class="checkbox red" for="not-resident">
                 <input type="radio" id="not-resident" name="citizenship" value="not-resident">
-                <span>Юридическое лицо</span>
+                <span>Не резидент РФ</span>
               </label>
             </div>
             <section class="resident mb30">
@@ -159,7 +159,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
                 </div>
               </div>
             </section>
-            <div class="mb30">
+            <div class="mb30 m-mt15">
               <h3 class="mb15">Информация о перелете:</h3>
               <div class="inputs_bilet">
                 <span class="span1">Номер билета *:</span>
@@ -183,7 +183,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
               </div>
             </div>
             <div>
-              <h3 class="mb15">Способ получения справки:</h3>
+              <h3 class="mb15 m-mt30">Способ получения справки:</h3>
               <div class="check-for-belonging mb15">
                 <label class="checkbox red" for="e-mail">
                   <input type="radio" id="e-mail" name="method" value="e-mail" checked>
@@ -197,7 +197,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
               <div class="wrapper-textarea mb30">
                 <textarea placeholder="Почтовый адрес:" name="address"></textarea>
               </div>
-              <h3 class="mb15">Дополнительно:</h3>
+              <h3 class="mb15 m-mt30">Дополнительно:</h3>
               <div class="check-for-belonging mb15">
                 <label class="checkbox red" for="true">
                   <input type="radio" id="true" name="urgency" value="true" checked>
@@ -220,7 +220,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
                   <span>банковский счет</span>
                 </label>
               </div>
-              <section class="payment_card">
+              <section class="payment_card m-mt30">
                 <div class="price mb30">
                   <h3>Стоимость справки:</h3>
                   <h1 class="red">500 руб.</h1>
@@ -229,7 +229,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
                   <input type="checkbox" id="check"  value="check">
                   <span>Я ознакомлен и соглашаюсь с условиями использования персональных данных</span>
                 </label>
-                <button type="submit" class="button red big">ОПЛАТИТЬ ЗАКАЗ</button>
+                <button type="submit" class="button red big m-mb30">ОПЛАТИТЬ ЗАКАЗ</button>
               </section>
               <section class="payment_score"></section>
             </div>
@@ -240,7 +240,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
               <div class="col-lg-5">
                 <div class="title_colum">
                   <h4 class="mb15">Справка о задержке/отмене рейса выдается без оплаты и только по запросу на электронной почте:</h4>
-                  <a href="#"><p class="p2 red file-icon">spravka@rusline.aero</p></a>
+                  <a href="#"><p class="p2 red file-icon m-mb15">spravka@rusline.aero</p></a>
                 </div>
               </div>
               <div class="col-lg-7">

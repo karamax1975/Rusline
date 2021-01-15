@@ -37,9 +37,9 @@
     </div>
   </div>
   <!-- history -->
-  <section class="timeline row mb60">
-    <div class="col-lg-2"><h3>История авиакомпании</h3></div>
-    <div class="timeline-wrapper col-lg-10">
+  <section class="timeline row mb60 m-mt30">
+    <div class="col-lg-2 m-mb15"><h3>История авиакомпании</h3></div>
+    <div class="timeline-wrapper col-lg-10 col">
       <!-- <div class="timeline_year"><h3>1997</h3></div> -->
       <div class="owl-carousel owl-theme timeline-list">
         <div class="timeline-year item"><span>1997</span></div>
@@ -64,7 +64,7 @@
     </div>
   </section>
   <section class="timeline_description row">
-    <div class="col-lg-2">
+    <div class="col-lg-2 time-year">
       <h3>1997</h3>
       <h3>2003</h3>
       <h3>2005</h3>
@@ -83,7 +83,7 @@
       <h3>2019</h3>
       <h3>2020</h3>
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-8 time-text">
       <div class="description-list">
         <ul class="description-item">
           <li>Создание авиакомпании-оператора чартерных рейсов;</li>
@@ -228,17 +228,17 @@
     navClass:['nav_prev', 'nav_next'],
     navText:["1997", "2020"],
     startPosition:11, /// стартовая позиция слайдов (2019)
-    margin:10,
     nav:true,
     responsive:{
         0:{
-            items:1
+            items:3,
         },
         600:{
             items:3
         },
         1000:{
-            items:6
+            items:6,
+            margin:10,
         }
     }
 })

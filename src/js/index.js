@@ -10,12 +10,24 @@ import dropUl from './drop-ul';
 import slide_photo from './slide_photo'; // слайд-шоу стр. "Фотогалерея"
 import partners from './partners'; // страница "Партнеры"
 
+// Mobile
+import mobileWiget from './mobileWiget';
 
+// Выбор города в категории Продукты на главной
+import mobil_products_selectCity from './mobil_products_selectCity' 
+// дополнительное меню (мобильное)
+import mobile_additional_menu from './mobile_additional-menu'
 
 
 import tabs from "./tabs";
 
+const screenWidth = document.querySelector('body').clientWidth;
+const mobileWidth = 500;
+
 function showTabWidget() {
+
+
+
   const widgetButton = document.querySelectorAll(".nav-widget button");
   const widgetContent = document.querySelectorAll(".offer");
   widgetButton.forEach((elem, index) => {

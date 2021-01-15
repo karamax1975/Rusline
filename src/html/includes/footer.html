@@ -18,12 +18,17 @@
           <span>поддержка</span>
         </div>
       </div>
+      <h4 class="mobile">Выгодные предложения:</h4>
       <form>
         <input type="text" placeholder="Подписка на спец. предложения">
         <button class="button small red icon">
-<svg width="18" height="12" viewBox="0 0 18 12" fill="none">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.7002 1H15.3002C15.373 1 15.444 1.00778 15.5124 1.02256L9.91864 5.80785C9.35727 6.28808 8.52984 6.28808 7.96847 5.80785L2.40139 1.04541C2.49575 1.0159 2.59612 1 2.7002 1ZM1.72404 1.78194C1.70843 1.85213 1.7002 1.92511 1.7002 2V10C1.7002 10.1037 1.71598 10.2037 1.74529 10.2978L5.94664 6.09645L6.65375 6.80355L2.48133 10.976C2.55177 10.9917 2.62501 11 2.7002 11H15.3002C15.4039 11 15.5039 10.9842 15.598 10.9549L11.4466 6.80355L12.1537 6.09645L16.2762 10.2189C16.2919 10.1484 16.3002 10.0752 16.3002 10V2C16.3002 1.89658 16.2845 1.79683 16.2554 1.703L10.5687 6.56774C9.63309 7.36812 8.25402 7.36812 7.31841 6.56774L1.72404 1.78194ZM0.700195 2C0.700195 0.895431 1.59563 0 2.7002 0H15.3002C16.4048 0 17.3002 0.895431 17.3002 2V10C17.3002 11.1046 16.4048 12 15.3002 12H2.7002C1.59563 12 0.700195 11.1046 0.700195 10V2Z"/>
-</svg>            
+          <svg class="desktop" width="18" height="12" viewBox="0 0 18 12" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2.7002 1H15.3002C15.373 1 15.444 1.00778 15.5124 1.02256L9.91864 5.80785C9.35727 6.28808 8.52984 6.28808 7.96847 5.80785L2.40139 1.04541C2.49575 1.0159 2.59612 1 2.7002 1ZM1.72404 1.78194C1.70843 1.85213 1.7002 1.92511 1.7002 2V10C1.7002 10.1037 1.71598 10.2037 1.74529 10.2978L5.94664 6.09645L6.65375 6.80355L2.48133 10.976C2.55177 10.9917 2.62501 11 2.7002 11H15.3002C15.4039 11 15.5039 10.9842 15.598 10.9549L11.4466 6.80355L12.1537 6.09645L16.2762 10.2189C16.2919 10.1484 16.3002 10.0752 16.3002 10V2C16.3002 1.89658 16.2845 1.79683 16.2554 1.703L10.5687 6.56774C9.63309 7.36812 8.25402 7.36812 7.31841 6.56774L1.72404 1.78194ZM0.700195 2C0.700195 0.895431 1.59563 0 2.7002 0H15.3002C16.4048 0 17.3002 0.895431 17.3002 2V10C17.3002 11.1046 16.4048 12 15.3002 12H2.7002C1.59563 12 0.700195 11.1046 0.700195 10V2Z" />
+          </svg>
+          <svg class="mobile" width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8004 4.58167L14.54 0.913697L15.2874 0.249333L19.2874 4.74933L19.5826 5.08151L19.2874 5.4137L15.2874 9.9137L14.54 9.24933L17.8001 5.58167L0.413675 5.58167L0.413675 4.58167L17.8004 4.58167Z" fill="white"/>
+            </svg>
         </button>
       </form>
       <div class="social">
@@ -68,27 +73,34 @@
 <!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<!-- <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script> -->
+
 <script src="js/bundle.js"></script>
 <script>
-  $('.owl-carousel').owlCarousel({
-    loop:true,
+  $('.owl-product').owlCarousel({
+    loop: true,
     animateOut: 'fadeOut',
-    nav:true,
-    dotsClass:'slide-show-index__dots',
+    nav: true,
+    dotsClass: 'slide-show-index__dots',
     // autoplay:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:1
-        }
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 1
+      }
     }
-})
+  });
+  $('.owl-tickets').owlCarousel({
+    items: 1,
+    dotClass: "tickets__dots",
+    nav: true,
+    navText: ''
+  })
+
 </script>
 </body>
 

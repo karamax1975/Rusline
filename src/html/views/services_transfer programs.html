@@ -1,430 +1,469 @@
-<% var data = { title: "Классы обслуживания" }; %> 
+<% var data = { title: "Классы обслуживания" }; %>
 
 <%= _.template(require('./../includes/header_2.html').default)(data) %>
-<%= _.template(require('./../includes/top_menu.html').default)() %> 
-<%= _.template(require('./../includes/add_menu.html').default)() %> 
+<%= _.template(require('./../includes/top_menu.html').default)() %>
+<%= _.template(require('./../includes/add_menu.html').default)() %>
 <!-- _.template(require('./../includes/add_menu_services.html').default)() %> -->
 
 <section class="page-content">
 
-<section>
-  <div class="container">
-    <div class="row page_top">
-      <div class="headline col-lg-9 mb50">
-        <h1>Трансферные программы</h1>
+  <section>
+    <div class="container">
+      <div class="row page_top">
+        <div class="headline col-lg-9 mb50">
+          <h1>Трансферные программы</h1>
+        </div>
+        <section class="bread-crumbs col-lg-3">
+          <span><a href="./index.html">Главная</a></span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path
+              d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+          </svg>
+          <span><a href="#">Сервисы</a></span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path
+              d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z" />
+          </svg>
+          <span><a href="./services_service classes.html">Трансферные программы</a></span>
+        </section>
       </div>
-      <section class="bread-crumbs col-lg-3">
-        <span><a href="./index.html">Главная</a></span>
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-          <path
-            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
-          />
-        </svg>
-        <span><a href="#">Сервисы</a></span>
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-          <path
-            d="M3.84 7.168L3.528 6.844L6.288 4.204H0.456V3.748H6.288L3.528 1.108L3.84 0.784L7.068 3.952V4L3.84 7.168Z"
-          />
-        </svg>
-        <span
-          ><a href="./services_service classes.html"
-            >Трансферные программы</a
-          ></span
-        >
-      </section>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="dropdown-list">
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Архангельск</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="dropdown-list">
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Архангельск</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Архангельск - Липецк</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Архангельск - Липецк</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Белгород</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Белгород</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белгород - Брянск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белгород - Тамбов</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белгород - Киров</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белгород - Ульяновск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белгород - Пенза</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белгород - Брянск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белгород - Тамбов</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белгород - Киров</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белгород - Ульяновск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белгород - Пенза</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Белоярский</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Белоярский</h4>
               </div>
-              <div class="ro">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Белоярский - Казань</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Белоярский - Казань</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Берлин</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Берлин</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Берлин (Тегель) - Пенза</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Берлин (Тегель) - Ульяновск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Берлин (Тегель) - Киров</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Берлин (Тегель) - Воронеж</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Берлин (Тегель) - Пенза</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Берлин (Тегель) - Ульяновск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Берлин (Тегель) - Киров</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Берлин (Тегель) - Воронеж</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Брянск</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Брянск</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Брянск - Ульяновск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Брянск - Пенза</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Брянск - Курск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Брянск - Воронеж</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Брянск - Белгород</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Брянск - Ульяновск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Брянск - Пенза</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Брянск - Курск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Брянск - Воронеж</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Брянск - Белгород</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Воронеж</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Воронеж</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Воронеж - Нарьян-Мар</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Воронеж - Тюмень</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Воронеж - Мурманск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Воронеж - Берлин</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Воронеж - Нарьян-Мар</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Воронеж - Тюмень</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Воронеж - Мурманск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Воронеж - Берлин</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Горно-Алтайск</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Горно-Алтайск</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Горно-Алтайск - Томск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Горно-Алтайск - Ноябрьск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Горно-Алтайск - Липецк</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Горно-Алтайск - Красноярск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Горно-Алтайск - Томск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Горно-Алтайск - Ноябрьск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Горно-Алтайск - Липецк</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Горно-Алтайск - Красноярск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Иваново</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Иваново</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Иваново - Курск</a></td>
-                      <td>Санкт-Петербург (Пулково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Иваново - Воронеж</a></td>
-                      <td>Санкт-Петербург (Пулково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Иваново - Курск</a></td>
+                            <td>Санкт-Петербург (Пулково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Иваново - Воронеж</a></td>
+                            <td>Санкт-Петербург (Пулково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Казань</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Казань</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Казань - Томск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Казань - Ноябрьск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Казань - Новый Уренгой</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Казань - Надым</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Казань - Белоярский</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Казань - Томск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Казань - Ноябрьск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Казань - Новый Уренгой</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Казань - Надым</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Казань - Белоярский</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Калининград</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Калининград</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калининград (Храброво) - Пенза</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калининград (Храброво) - Ульяновск</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калининград (Храброво) - Киров</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калининград (Храброво) - Воронеж</a></td>
-                      <td>Москва (Внуково)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калининград (Храброво) - Пенза</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калининград (Храброво) - Ульяновск</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калининград (Храброво) - Киров</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калининград (Храброво) - Воронеж</a></td>
+                            <td>Москва (Внуково)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown-list_item">
-            <div class="item_title">
-              <h4>Калуга</h4>
-            </div>
-            <div class="item_content">
-              <div class="content_shadow">
-                <div class="left"></div>
-                <div class="center"></div>
-                <div class="right"></div>
+            <div class="dropdown-list_item">
+              <div class="item_title">
+                <h4>Калуга</h4>
               </div>
-              <div class="row">
-                <div class="col">
-                  <table>
-                    <tr>
-                      <th class="white" style="border-top: none;">Направление</th>
-                      <th class="white" style="border-top: none;">Аэропорт пересадки</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калуга - Нарьян-Мар</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="text-link">Калуга - Красноярск</a></td>
-                      <td>Екатеринбург (Кольцово)</td>
-                    </tr>
-                  </table>
+              <div class="item_content">
+                <div class="content_shadow">
+                  <div class="left"></div>
+                  <div class="center"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="content">
+                  <div class="row">
+                    <div class="col">
+                      <div class="table-m">
+                        <table>
+                          <tr>
+                            <th class="white" style="border-top: none;">Направление</th>
+                            <th class="white" style="border-top: none;">Аэропорт пересадки</th>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калуга - Нарьян-Мар</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-link">Калуга - Красноярск</a></td>
+                            <td>Екатеринбург (Кольцово)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -432,8 +471,7 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </section>
 
 <%= _.template(require('./../includes/footer_2.html').default)(data) %>

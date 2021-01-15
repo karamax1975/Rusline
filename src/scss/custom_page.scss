@@ -1,17 +1,49 @@
 @import "color.scss";
 
+
+
+.end{
+  @media screen and (max-width: $m) {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background: $gray6;
+    position: relative;
+    margin-bottom: -30px;
+    
+  }
+}
+.end::before{
+  @media screen and (max-width: $m) {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 15px;
+  background: linear-gradient(180deg, #E0E0E0 0%, #F2F2F2 100%);
+  top: 0;
+  left: 0;
+  }
+}
 // online-booking
 .partition {
   padding-bottom: 15px;
   border-bottom: solid 1px $gray6;
   padding-top: 30px;
-
+  @media screen and (max-width: $m) {
+    padding-top: 15px;
+  }
   .wrapper-row {
     display: flex;
+    @media screen and (max-width: $m) {
+      flex-direction: column;
+    }
   }
 
   .wrapper-row.center {
     align-items: center;
+    @media screen and (max-width: $m) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .mr15 {
@@ -44,10 +76,20 @@
     border-right: solid 1px $rusline_red;
     border-bottom: solid 2px $rusline_red;
     margin-bottom: 15px;
+    @media screen and (max-width: $m) {
+      height: auto;
+      border: none;
+      margin-bottom: 0;
+    }
   }
 
   .one {
     flex: 551px;
+    @media screen and (max-width: $m) {
+      flex: auto;
+      padding: 8px 0;
+      border-top: dashed 1px $gray5;
+    }
 
     .top {
       border-left: solid 1px $rusline_red;
@@ -56,10 +98,20 @@
 
   .two {
     flex: 364px;
+    @media screen and (max-width: $m) {
+      flex: auto;
+      padding: 8px 0;
+      border-top: dashed 1px $gray5;
+    }
   }
 
   .three {
     flex: 282px;
+    @media screen and (max-width: $m) {
+      flex: auto;
+      padding: 8px 0;
+      border-top: dashed 1px $gray5;
+    }
   }
 }
 
@@ -68,11 +120,22 @@
   justify-content: space-between;
   padding-right: 72px;
   margin-bottom: 30px;
+  @media screen and (max-width: $m){
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
 
   .benefit-item {
     flex: 20%;
     padding: 0 33px;
     text-align: center;
+    @media screen and (max-width: $m){
+      flex: 50%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
 
     .benefit-item_img {
       height: 75px;
@@ -88,6 +151,9 @@ hr {
   margin-bottom: 30px;
   height: 1px;
   border: none;
+  @media screen and (max-width: $m) {
+    // margin-bottom: 15px;
+  }
 }
 
 // payment-by-credit-card
@@ -98,12 +164,15 @@ hr {
   margin-left: -3px;
   margin-right: -3px;
   margin-top: 15px;
+  @media screen and (max-width: $m) {
+    margin-top: 7px;
+  }
 
 
   .card-col {
     width: 50%;
     padding: 0 3px;
-
+    
     .card-item {
       border: solid 1px $gray6;
       height: 101px;
@@ -115,6 +184,9 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: $m) {
+          margin-top: 8px;
+        }
       }
     }
 
@@ -161,6 +233,18 @@ hr {
 // timeline ------------------------------
 .timeline {
   $buttonNav:72px;
+  h3{
+    @media screen and (max-width: $m) {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: $m) {
+    width:100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
   .timeline-wrapper {
     position: relative;
     display: flex;
@@ -168,19 +252,25 @@ hr {
     justify-content: space-between;
     padding-left: $buttonNav;
     padding-right: $buttonNav;
+    @media screen and (max-width: $m) {
 
+      // ------------
+      padding-left: 35px;
+      padding-right: 35px;
+    }
     .owl-dots {
       display: none;
     }
     .timeline-list{
       background: url('../img/line.png') 0 22px repeat-x;
       position: relative;
+      @media screen and (max-width: $m) {
+      }
       .timeline-year{
         position: relative;
         text-align: center;
         height: 44px;
         cursor: pointer;
-   
         span{
           position: absolute;
           top: 27px;
@@ -220,6 +310,11 @@ hr {
       display: flex;
       justify-content: space-between;
       left: -$buttonNav;
+      @media screen and (max-width: $m) {
+        width: 100%;
+        margin: 0 auto;
+        left: 0;
+      }
       .nav_prev,.nav_next{
         position: relative;
         background: none;
@@ -228,7 +323,22 @@ hr {
         font-size: 22px;
         font-weight: 300;
         color: $rusline_red;
+        @media screen and (max-width: $m) {
+          font-size: 19px;
+          // background: crimson;
+          width: 50px;
+        }
         
+      }
+      .nav_prev{
+        @media screen and (max-width: $m) {
+          left: -50px;
+        }
+      }
+      .nav_next{
+        @media screen and (max-width: $m) {
+          right: -50px;
+        }
       }
       .nav_prev::before, .nav_next::before{
         content: '';
@@ -237,10 +347,14 @@ hr {
         height: 11px;
         top: 50%;
         transform: translateY(-50%);
+
       }
       .nav_prev::before{
         background: url('../img/array_left_red.svg');
         left: 0;
+        @media screen and (max-width: $m) {
+          left: 0;
+        }
 
       }
       .nav_next::before{
@@ -255,11 +369,19 @@ hr {
       color: $rusline_red;
       text-align: end;
       margin-right: 30px;
+      @media screen and (max-width: $m) {
+        font-size: 18px;
+      }
     }
   .description-list{
     margin-left: -32px;
     padding-left: 32px;
     border-left: solid 1px $rusline_red;
+    @media screen and (max-width: $m) {
+      margin-left: -15px;
+      padding-left: 15px;
+      
+    }
     .description-item{
       li{
         position: relative;
@@ -280,7 +402,7 @@ hr {
         height: 11px;
         border: 1px solid $rusline_red;
         border-radius: 50%;
-        left: -32px;
+        left: -15px;
         top: 50%;
         background: $white;
         transform: translate(-50%, -50%);
@@ -288,7 +410,18 @@ hr {
     }
   }
 }
-
+.time-year{
+  @media screen and (max-width: $m) {
+    width: 15%;
+    text-align: center;
+  }
+  
+}
+.time-text{
+  @media screen and (max-width: $m) {
+    width: 85%;
+  }
+}
 // about_fleet
 
 .feet-slide-nav{
@@ -311,20 +444,36 @@ hr {
 .feet-slide_nav-wrapper{
   padding-right: 104px;
   text-align: center;
+  @media screen and (max-width: $m){
+    padding-right: 0;
+  }
   .feet-slide-nav{
     margin-bottom: 30px;
     margin-top: 90px;
+    @media screen and (max-width: $m){
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
   }
 }
 .feet-slide_image{
   display: flex;
   justify-content: center;
   overflow: hidden;
+  @media screen and (max-width: $m){
+    margin-top: 30px;
+    img{
+      max-width: 100%;
+    }
+  }
 }
 
 .feet-tabs{
   .tabs-list{
     justify-content: center;
+    @media screen and (max-width: $m){
+      justify-content: left;
+    }
   }
   table{
     th{
@@ -337,4 +486,61 @@ hr {
   }
 
 
+}
+// =================== food mobile
+.food-container{
+  @media screen and (max-width: $m) {
+    background: $gray6;
+    padding-top: 15px;
+    .card-item{
+      background: $white;
+      .food-img{
+        img{
+          z-index: 1 !important;
+        }
+        background: #000;
+      }
+      .price-wrapper{
+        z-index: 2;
+      }
+    }
+    .food-alert{
+      order: 1;
+    }
+  }
+}
+.card-item:hover .food{
+  @media screen and (max-width: $m) {
+    border: none;
+  }
+}
+.food-alert{
+  @media screen and (max-width: $m) {
+    background: $white;
+  }
+}
+.castom{
+  @media screen and (max-width: $m) {
+    .col-lg-9{
+      order: 2;
+    }
+    .col-lg-3{
+      order: 1;
+    }
+  }
+}
+.m_custom{
+  @media screen and (max-width: $m) {
+    display: flex;
+    flex-direction: column;
+    .note{
+      order: 2;
+      margin-bottom: 0;
+      margin-top: 30px;
+    }
+    form{
+      order: 1;
+      margin-top: 30px;
+    }
+  }
 }

@@ -25,6 +25,8 @@ _.template(require('./../includes/add_menu.html').default)() %>
         <span><a href="for-passengers_timetable.html">Расписание</a></span>
       </section>
     </div>
+  </div>
+  <div class="container gray-back">
     <div class="row">
       <div class="col">
         <form class="form-timetable">
@@ -43,21 +45,23 @@ _.template(require('./../includes/add_menu.html').default)() %>
               <input type="text" placeholder="Конец периода" />
             </div>
           </div>
-          <button class="button red" type="submit">
-            <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+          <button class="button red megabig m-mt15" type="submit">
+            <svg class="desktop" width="19" height="19" viewBox="0 0 19 19" fill="none">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM12.4983 14.6165C11.2165 15.4896 9.66786 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 9.66392 15.492 11.2092 14.6227 12.4892L18.4878 15.8711C19.1112 16.4167 19.1744 17.3643 18.6289 17.9878C18.0833 18.6112 17.1357 18.6744 16.5122 18.1289L12.5122 14.6289C12.5076 14.6248 12.5029 14.6206 12.4983 14.6165Z"
               />
             </svg>
+            <p>Найти</p>
           </button>
         </form>
       </div>
     </div>
+  </div>
     <!--  Вывод  -->
-
-    <section class="out">
+  
+    <section class="container out">
       <div class="row">
         <div class="col">
           <div class="out_title">
@@ -76,7 +80,7 @@ _.template(require('./../includes/add_menu.html').default)() %>
               <div class="time_nav_time">
                 <h2 class="start">02.03.2020</h2>
                 <h2 class="break"> — </h2>
-                <h2 class="end">02.03.2020</h2>
+                <h2 class="end_">02.03.2020</h2>
               </div>
               <div class="next">
                 <svg width="58" height="10" viewBox="0 0 58 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -259,7 +263,6 @@ _.template(require('./../includes/add_menu.html').default)() %>
         </div>
       </div>
     </section>
-  </div>
 </section>
 <section class="modal-window">
   <div class="container">

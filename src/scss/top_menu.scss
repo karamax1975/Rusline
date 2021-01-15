@@ -5,42 +5,193 @@
   position: relative;
   z-index: 99999;
   top: -126px;
+  @media screen and (max-width: $m) {
+    top: -75px;
+    left: 0;
+    width: 100%;
+    overflow: visible;
+    transition: ease-out 0.2s;
+  }
 
   .wrapper {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 600px;
     overflow: hidden;
-    transition: ease-out 0.2s;
+    transition: all 0.2s;
     z-index: 99;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: $m) {
+      background: $gray6;
+      transition: ease-out 0.2s;
+      height: auto!important;
+    }
 
+  }
+}
     .top_menu_head {
       padding: 24px 0;  
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
       padding-bottom: 25px;
+      @media screen and (max-width: $m) {
+        display: block;
+        padding: 15px 0;
+
+      }
 
       .brandname {
         display: block;
         width: 224px;
         height: 78px;
         background: url("../img/RusLine-logo.svg") no-repeat 50%;
+        @media screen and (max-width: $m) {
+          display: none;
+        }
       }
 
       .head-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: $m) {
+          display: block;
+        }
+
+        .support{
+          display: none;
+          align-items: center;
+          margin-bottom: 15px;
+          @media screen and (max-width: $m) {
+            display: flex;
+          }
+          button{
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            border: solid 1px $rusline_red;
+            position: relative;
+            svg{
+              position: absolute;
+              fill: $rusline_red;
+              // stroke: $rusline_red;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          span{
+            font-size: 14px;
+            color: $rusline_red;
+            display: block;
+            line-height: 100%;
+            margin-left: 8px;
+
+          }
+        }
 
         *div {
           cursor: pointer;
         }
         .button {
           margin-right: 30px;
+          @media screen and (max-width: $m) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px;
+            background: $rusline_red;
+            display: flex;
+            align-items: center;
+            height: 44px;
+            // svg{
+            //   fill: $white;
+            // }
+            span{
+              color: $white;
+            }
+          }
         }
-
+        #registration{
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: $m) {
+            padding: 0;
+          }
+          div{
+            @media screen and (max-width: $m) {
+              width: 44px;
+              height: 44px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+          svg{
+            width: 19px;
+            height: 14px;
+            @media screen and (max-width: $m) {
+              width: 26px;
+              height: 20px;
+              margin-right: 0;
+            }
+            path:first-child{
+              fill:$rusline_red;
+              @media screen and (max-width: $m) {
+                fill: $white;
+              }
+            }
+            path:last-child{
+              fill:$black;
+              @media screen and (max-width: $m) {
+                fill: $white;
+              }
+            }
+          }
+        }
+        #searchOrder{
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: $m) {
+            padding: 0;
+          }
+          div{
+            @media screen and (max-width: $m) {
+              width: 44px;
+              height: 44px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+          svg{
+            width:17px;
+            height:14px;
+            @media screen and (max-width: $m) {
+              width:26px;
+              height:24px;
+              margin-right: 0;
+            }
+            path:nth-child(1){
+              fill:$rusline_red;
+              @media screen and (max-width: $m) {
+                fill: $white;
+              }
+            }
+            path:nth-child(2){
+              fill:$rusline_red;
+              @media screen and (max-width: $m) {
+                fill: $white;
+              }
+            }
+            path:nth-child(3){
+              fill:$black;
+              @media screen and (max-width: $m) {
+                fill: $white;
+              }
+            }
+          }
+        }
         form {
           display: flex;
           align-items: center;
@@ -52,6 +203,12 @@
           height: 30px;
           background: $white;
           overflow: hidden;
+          @media screen and (max-width: $m) {
+            margin-right: 0;
+            width: 100%;
+            box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.1);
+            height: 44px;
+          }
 
           input {
             border: none;
@@ -61,39 +218,83 @@
             line-height: 100%;
             height: 100%;
             width: calc(100%-38px);
+            @media screen and (max-width: $m) {
+              background: none;
+              order: 2;
+              padding-left: 0;
+              
+            }
             :placeholder-shown {
               color: $gray3;
             }
           }
+
 
           button {
             background: $white;
             width: 30px;
             border: none;
             margin-right: 8px !important;
+            @media screen and (max-width: $m) {
+              background: none !important;
+              width: 44px !important;
+              margin: 0 !important;
+              order: 1;
+              flex: 0 0 auto;
+              
+            }
 
             svg {
               fill: $gray5;
               margin-left: 1px;
+              width: 15px;
+              height: 15px;
+              @media screen and (max-width: $m) {
+                fill: $rusline_red;
+                margin: 0 auto;
+                width: 18px;
+                height: 18px;
+              }
             }
           }
         }
       }
     }
+
     .top_menu_content {
       border-top: 1px solid $gray6;
       padding: 30px 0;
+      @media screen and (max-width: $m) {
+        background: $white;
+        border-top: none;
+        padding: 0;
+        padding-bottom: 30px;
+      }
       .section_nav {
           margin-left: 18px;
+          @media screen and (max-width: $m) {
+            margin-left: 0;
+          }
           ul{
               margin-bottom: 25px;
+              @media screen and (max-width: $m) {
+                margin-bottom: 0;
+                border-bottom: solid 1px $rusline_red;
+              }
               li{
                 height: 20px;
                 margin: 8px 0;
+                @media screen and (max-width: $m) {
+                  margin: 0;
+                  padding: 8px 0;
+                  padding-left: 18px;
+                  height: auto;
+                }
               }
           }
           ul:last-child{
               margin-bottom: 0;
+
           }
         .section_title {
           display: block;
@@ -102,6 +303,11 @@
           line-height: 100%;
           margin-bottom: 15px;
           color: $rusline_red;
+          @media screen and (max-width: $m) {
+            padding: 8px 0;
+            margin-bottom: 0;
+            padding-left: 18px;
+          }
         }
         a{
             text-decoration: none;
@@ -115,6 +321,9 @@
           font-size: 16px;
           line-height: 100%;
           color: $gray2;
+          @media screen and (max-width: $m) {
+            line-height: 20px;
+          }
         }
         a span:hover{
             color: $rusline_red;
@@ -146,17 +355,60 @@
             left: -18px
         }
       }
+      .col-lg-3:last-child{
+        ul:last-child{
+          @media screen and (max-width: $m) {
+            border-bottom: none;
+            a{
+              .section_title{
+                display: block;
+              }
+            }
+          }
+        }
+          
+      }
+    }
+  
+
+.top_menu {
+  @media screen and (max-width: $m) {
+    position: relative;
+    left: 100%;
+    top: -75px;
+    width: 0;
+    overflow: hidden;
+    transition: ease-out 0.2s;
+    .hamburger-close{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      span{
+        margin: 0;
+        left: 9px;
+        top: 18px;
+        height: 1px;
+        background: $rusline_red;
+      }
     }
   }
-}
-.top_menu {
   .wrapper {
-    
     position: absolute;
     height: 0;
-    z-index: -1;
+    z-index: 1000;
     background: $white;
     overflow: hidden;
+    @media screen and (max-width: $m) {
+      height: auto;
+      z-index: 99999;
+      width: 100%;
+      transition: ease-out 0.2s;
+      
+    }
   }
 
 }

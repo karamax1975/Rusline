@@ -4,29 +4,48 @@ b {
 }
 
 figure {
+  @media screen and (max-width: $m) {
+    margin-top: 15px;
+  }
   figcaption {
     font-weight: 300;
     font-size: 14px;
     line-height: 100%;
     color: $gray2;
     margin-top: 8px;
+
   }
   img {
     border: 1px solid $gray6;
     border-radius: 2px;
+    @media screen and (max-width: $m) {
+      max-width: 100%;
+    }
   }
 }
 
 .page_top {
   margin-top: 30px;
   align-items: flex-start;
+  @media screen and (max-width: $m) {
+    margin-top: 5px;
+  }
   .headline {
     color: $black;
     margin-bottom: 20px;
+    @media screen and (max-width: $m) {
+      order: 2;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
   }
 
   .bread-crumbs {
     margin-top: 18px;
+    @media screen and (max-width: $m) {
+      order: 1;
+      margin-top: 0;
+    }
     span {
       a {
         font-weight: 300;
@@ -258,14 +277,32 @@ figure {
 
 // ------------------------------------
 .banner_top {
+  @media screen and (max-width: $m) {
+    margin: 15px;
+    border-radius: 5px;
+    height: 200px;
+    overflow: hidden;
+  }
   img {
     max-width: 100%;
+    @media screen and (max-width: $m) {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 // ---------------------------------------
 .subtitle {
   margin-bottom: 30px;
   color: $gray2;
+  @media screen and (max-width: $m) {
+    font-size: 19px;
+    line-height: 120%;
+    br{
+      display: none;
+    }
+  }
+  
 }
 
 // ---------------------------------------
@@ -273,9 +310,16 @@ figure {
   padding-left: 15px;
   border-left: 1px solid $rusline_red;
   margin-bottom: 30px;
+  @media screen and (max-width: $m){
+    margin-bottom: 15px;
+  }
   h3 {
     color: $rusline_red;
     margin-bottom: 8px;
+    @media screen and (max-width: $m){
+      font-size: 19px;
+      color: $black;
+    }
     b {
       font-weight: 300;
     }
@@ -287,10 +331,32 @@ figure {
   }
 }
 // --------------------------------------------
+.tabs-list-m{
+  @media screen and (max-width: $m){
+    overflow: auto;
+    position: relative;
+  }
+  // .tabs-list-m::before{
+  //   content: '';
+  // }
+  .tabs-list{
+    @media screen and (max-width: $m){
+      margin-top: 45px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
 .tabs-list {
   margin-top: 60px;
   margin-bottom: 30px;
   display: flex;
+  @media screen and (max-width: $m){
+    max-width: 100%;
+    overflow-x: auto;
+    // white-space: nowrap;
+  }
   .tab {
     padding: 15px 30px;
     background: $white;
@@ -299,16 +365,35 @@ figure {
     cursor: pointer;
     margin: -1px -1px 0 0;
     line-height: 15px;
+    @media screen and (max-width: $m){
+      border-radius: 5px;
+      margin: 0;
+      margin-right: 15px;
+      border: solid 1px $gray4;
+      display: flex;
+      align-items: center;
+    }
 
     span {
       color: $black;
+      @media screen and (max-width: $m){
+        display: block;
+      }
     }
   }
   .tab:first-child {
     border-radius: 2px 0 0 2px;
+    @media screen and (max-width: $m){
+      border-radius: 5px;
+    }
+    
   }
   .tab:last-child {
     border-radius: 0 2px 2px 0;
+    @media screen and (max-width: $m){
+      margin-right: 0;
+      border-radius: 5px;
+    }
   }
   .active {
     background: $rusline_red;
@@ -329,6 +414,9 @@ figure {
     bottom: -3px;
     left: 50%;
     background: url("../img/tabs-activ_tr.svg") no-repeat center;
+    @media screen and (max-width: $m){
+      content: none;
+    }
   }
 }
 
@@ -337,6 +425,11 @@ figure {
   .content-item {
     overflow: hidden;
     height: 0;
+    img{
+      @media screen and (max-width: $m) {
+        max-width: 100%;
+      }
+    }
   }
   .content-item.active {
     height: auto;
@@ -353,6 +446,9 @@ figure {
 }
 .text-list {
   margin-bottom: 30px;
+  @media screen and (max-width: $m) {
+    margin-bottom: 15px;
+  }
   h3{
       margin-bottom: 15px;
   }
@@ -444,6 +540,9 @@ b {
 // }
 .back {
   position: relative;
+  @media screen and (max-width: $m) {
+    width: 45%;
+  }
   a {
     span {
       font-weight: 300;
@@ -451,6 +550,10 @@ b {
       line-height: 100%;
       color: $rusline_red;
       margin-left: 58px;
+      @media screen and (max-width: $m) {
+        display: block;
+        // width: 30%;
+      }
     }
   }
   span:before {
@@ -462,9 +565,15 @@ b {
     width: 50px;
     height: 10px;
     background: url("../img/back-arrow.svg") no-repeat center;
+    @media screen and (max-width: $m) {
+      top: 10px;
+    }
   }
   span:hover {
     border-bottom: 1px solid $rusline_red;
+    @media screen and (max-width: $m) {
+      border-bottom: none;
+    }
   }
 }
 // ------------------------------------------------------
@@ -500,11 +609,14 @@ b {
   .alert-icon {
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 8px;
-    margin-top: -5px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    img{
+      margin-right: 8px;
+      margin-top: -8px;
+    }
+
   }
   .text-red {
     color: $rusline_red;
@@ -528,9 +640,15 @@ body {
 
 .content-6col {
   margin-top: 60px;
+  @media screen and (max-width: $m) {
+    margin-top: 30px;
+  }
 
   .title {
     display: flex;
+    @media screen and (max-width: $m) {
+      margin-bottom: -15px;
+    }
     .col6_img {
       width: 61px;
       height: 60px;
@@ -538,34 +656,77 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: $m) {
+        height: 40px;
+        width: 52px;
+        margin-right: 15px;
+      }
+      img{
+        height: 100%;
+      } 
     }
     h2 {
       font-weight: 300;
       font-size: 30px;
       line-height: 100%;
       color: $black;
+      @media screen and (max-width: $m) {
+        font-size: 22px;
+      }
     }
   }
   .content {
     margin-left: 85px;
+    @media screen and (max-width: $m) {
+      margin-left: 0;
+    }
     h3 {
       margin-top: 15px;
+      @media screen and (max-width: $m) {
+        font-size: 19px;
+        margin-bottom: 15px;
+        margin-top: 30px;
+      }
     }
     .content-row {
       padding: 15px 0;
       border-bottom: 1px dashed $gray5;
       display: flex;
       align-items: center;
+      @media screen and (max-width: $m) {
+        border-top: 1px dashed $gray5;
+        border-bottom: none;
+        display: block;
+      }
       .p2 {
         color: $gray2;
       }
       .col-left {
         width: 297px;
         margin-right: 32px;
+        @media screen and (max-width: $m) {
+          width: auto;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+      .col-right{
+        @media screen and (max-width: $m) {
+          color: $gray2;
+          font-weight: 400;
+        }
+      }
+    }
+    .content-row:last-child{
+      @media screen and (max-width: $m) {
+        border-bottom: 1px dashed $gray5;
       }
     }
     .no-border-down {
       border-bottom: none;
+      @media screen and (max-width: $m) {
+        border-bottom: 1px dashed $gray5;
+      }
     }
   }
 }
@@ -620,6 +781,9 @@ body {
 .article {
   h3 {
     margin-bottom: 15px;
+    @media screen and (max-width: $m) {
+      margin-top: 15px;
+  }
   }
 }
 // --------------------------
@@ -712,6 +876,10 @@ body {
         position: relative;
         left: 30px;
         margin-bottom: 8px;
+        @media screen and (max-width: $m) {
+          margin-right: 20px;
+          left: 25px;
+        }
       }
       ol{
         margin-top: 8px;
@@ -724,6 +892,9 @@ body {
         color: $rusline_red;
         position: absolute;
         left: -30px;
+        @media screen and (max-width: $m) {
+          left: -25px;
+        }
       }
       .embed{
         // margin-left: 30px;
@@ -859,6 +1030,13 @@ body {
 .modal-window {
   display: none;
   // position: relative;
+  @media screen and (max-width: $m) {
+    .hamburger-close{
+      span{
+        background: $rusline_red;
+      }
+    }
+  }
 }
 
 .modal-window.active {
@@ -870,11 +1048,14 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: 101;
+
   .modal-list {
     position: relative;
-    // margin: 0 auto;
+    margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
+    @media screen and (max-width: $m) {
+    }
   }
   .modal-wrapper{
     position: relative;
@@ -882,9 +1063,17 @@ body {
   }
   .photo{
     width: 1246px;
+    @media screen and (max-width: $m) {
+      width: auto;
+    }
   }
   .food{
     width: 714px;
+    @media screen and (max-width: $m) {
+      width: auto;
+      margin: 0 15px;
+
+    }
   } 
   .hamburger-close {
     position: absolute;
@@ -903,17 +1092,26 @@ body {
     background: $white;
     border-radius: 2px;
     display: flex;
-
+    @media screen and (max-width: $m) {
+      flex-direction: column;
+      // min-height: auto;
+    }
     .food-item_img {
       flex: 1 0 40%;
-      background: silver;
       overflow: hidden;
       position: relative;
+      @media screen and (max-width: $m) {
+        min-height: 200px;
+      }
       img {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         height: 100%;
+        @media screen and (max-width: $m) {
+          object-fit: cover;
+          min-width: 100%;
+        }
       }
     }
   }
@@ -925,6 +1123,9 @@ body {
     padding: 50px 30px 30px 30px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: $m) {
+      padding: 15px;
+    }
     h2 {
       margin-bottom: 15px;
     }
@@ -959,6 +1160,7 @@ body {
       position: relative;
       padding: 14px 0;
 
+
       cursor: pointer;
 
       * {
@@ -976,8 +1178,7 @@ body {
         height: 20px;
         left: 0;
         top:18px;
-        // top: 50%;
-        // transform: translateY(-50%);
+
       }
     }
     .item_title:hover {
@@ -992,7 +1193,17 @@ body {
       overflow: hidden;
       height: 0;
       padding: 0 18px;
-      transition: ease-out 0.3s;
+      transition: height .1s, padding .2s linear;
+      @media screen and (max-width: $m) {
+        margin-left: -15px;
+        margin-right: -15px;
+        h2{
+          font-weight: 300;
+          font-size: 19px;
+          line-height: 100%;
+        }
+      }
+
       .content_shadow {
         position: absolute;
         height: 24px;
@@ -1001,10 +1212,12 @@ body {
         top: 0;
         display: flex;
         justify-content: space-between;
+
         .left {
           width: 23px;
           background: linear-gradient(151.56deg, #f2f2f2 8.38%, #ffffff 59.37%);
           transform: matrix(-1, 0, 0, 1, 0, 0);
+
         }
         .right {
           width: 23px;
@@ -1039,11 +1252,20 @@ body {
     }
     .item_content {
       padding: 30px 18px;
+      @media screen and (max-width: $m) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
       position: relative;
-      height: auto;
+      height: 100%;
       top: 0;
-      transition: ease-out 0.3s;
+      transition: height .1s, padding .2s linear;
+      overflow: hidden;
       .content {
+        @media screen and (max-width: $m) {
+          padding: 0 15px;
+          padding-top: 15px;
+        }
         img {
           max-width: 100%;
         }
@@ -1054,11 +1276,17 @@ body {
 }
 .title_list{
   margin-left: 5px;
+  @media screen and (max-width: $m) {
+    margin-right: 15px;
+  }
   .item{
     flex-wrap: wrap;
     font-size: 16px;
     width: 33%;
     font-weight: 300;
+    @media screen and (max-width: $m) {
+      width: 100%;
+    }
   }
 }
 
@@ -1071,9 +1299,21 @@ body {
   }
 }
 
+.table-m{
+  @media screen and (max-width: $m) {
+    overflow: auto;
+    position: relative;
+  }
+}
 
 table {
   width: 100%;
+  @media screen and (max-width: $m) {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
   span {
     display: block;
     font-size: 16px;
@@ -1173,10 +1413,16 @@ table {
 .designation{
   display: flex;
   align-items: center;
+  @media screen and (max-width: $m) {
+    display: block;
+  }
   div{
     display: flex;
     align-items: center;
     margin-left: 15px;
+    @media screen and (max-width: $m) {
+      margin-left: 0;
+    }
     img{
       margin-right: 10px;
     }
@@ -1194,6 +1440,12 @@ table {
   border-bottom: 1px dashed $gray5;
   padding-bottom: 15px;
   margin-bottom: 30px;
+  @media screen and (max-width: $m){
+    border-bottom: none;
+    border-top: 1px dashed $gray5;
+    padding-top: 15px;
+    margin-bottom: 0;
+  }
   span {
     font-weight: 300;
     font-size: 22px;
@@ -1201,6 +1453,9 @@ table {
     margin-right: 30px;
     color: $black;
     cursor: pointer;
+    @media screen and (max-width: $m){
+      font-size: 19px;
+    }
   }
   span:last-child {
     margin-right: 0;
@@ -1214,12 +1469,20 @@ table {
 }
 .magazine-list {
   display: none;
+  @media screen and (max-width: $m){
+    background: $gray6;
+    padding: 15px 0;
+    margin-bottom: -30px;
+  }
 }
 .magazine-list.active {
   display: flex;
 }
 .magazine-item {
   margin-bottom: 30px;
+  @media screen and (max-width: $m){
+    margin-bottom: 15px;
+  }
   .magazine-item_preview {
     border: 1px solid $gray6;
     border-radius: 2px;
@@ -1245,6 +1508,10 @@ table {
     line-height: 100%;
     color: $gray2;
     margin-top: 15px;
+    @media screen and (max-width: $m){
+      margin-top: 8px;
+      font-size: 16px;
+    }
   }
 }
 .magazine-item:hover {
@@ -1257,17 +1524,34 @@ table {
 }
 
 // ----------- page timetable -----------------------------------------
+.gray-back{
+  @media screen and (max-width: $m){
+    background: $gray6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}  
+
 .form-timetable {
   display: flex;
   height: 80px;
   justify-content: space-between;
   position: relative;
   z-index: 5;
+  @media screen and (max-width: $m){
+    display: block;
+    height: auto;
+  }
   .wrapper {
     display: flex;
     flex: 2;
     border: 1px solid $gray5;
     border-radius: 2px;
+    @media screen and (max-width: $m){
+      display: block;
+      border: none;
+      position: relative;
+    }
 
     .period {
       border-left: 1px solid $gray5;
@@ -1276,6 +1560,13 @@ table {
     .input-wrapper {
       flex: 2;
       position: relative;
+      @media screen and (max-width: $m){
+        height: 56px;
+        border: 1px solid $gray4;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-top: -1px;
+      }
       input {
         height: 100%;
         width: 100%;
@@ -1318,6 +1609,30 @@ table {
     border-left: 1px solid $gray5;
     border-right: 1px solid $gray5;
     background: url("../img/reverse_icon.svg") no-repeat center;
+    @media screen and (max-width: $m){
+      border: solid 1px $gray5;
+      border-radius: 2px;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 35px;
+      right: 15px;
+      z-index: 100;
+      background: $white;
+    }
+  }
+  .reverse::after{
+    @media screen and (max-width: $m){
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      left: 0;
+      background: url("../img/reverse_icon.svg") no-repeat center;
+      z-index: 99;
+      top: 0;
+      border-radius: 2px;
+    }
   }
   .reverse:hover {
     border: solid 1px $rusline_red;
@@ -1455,20 +1770,45 @@ table {
 
 .out{
   margin-top: 60px;
+  @media screen and (max-width: $m){
+    margin-top: 0;
+    padding-top: 15px;
+  }
   .out_title{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    @media screen and (max-width: $m){
+      display: block;
+      margin-bottom: 0;
+  }
     .title{
       flex: 1;
       display: flex;
+      @media screen and (max-width: $m){
+          display: block;
+          text-align: center;
+      }
+      h2:first-child{
+        @media screen and (max-width: $m){
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
       h2{
         margin-right: 8px;
         color: $black;
+        @media screen and (max-width: $m){
+          margin-right: 0;
+          
+        }
       }
       .out_title_from, .out_title_to, .arr{
         color: $rusline_red;
+        @media screen and (max-width: $m){
+          display: inline-block;
+        }
       }
     }
     .time_nav, .time_nav_time{
@@ -1477,11 +1817,23 @@ table {
     .time_nav{
       justify-content: center;
       flex: 1;
+      @media screen and (max-width: $m){
+        padding-top: 15px;
+        padding-bottom: 30px;
+        justify-content: space-between;
+        h2{
+          font-size: 20px;
+        }
+      }
     }
     .prev, .next{
       cursor: pointer;
       svg{
         fill: $rusline_red;
+        @media screen and (max-width: $m){
+          width: 40px;
+          margin-top: -4px;
+        }
       }
     }
     .prev:hover, .next:hover{
@@ -1491,9 +1843,15 @@ table {
     }
     .prev{
       margin-right: 30px;
+      @media screen and (max-width: $m){
+        margin-right: 0;
+      }
     }
     .next{
       margin-left: 30px;
+      @media screen and (max-width: $m){
+        margin-left: 0;
+      }
     }
     .time_nav_time{
       .break{
@@ -1514,10 +1872,18 @@ table {
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
+      @media screen and (max-width: $m){
+        display: block;
+      }
       .item_description{
         width: 50%;
-        padding: 30px 30px;
+        padding: 30px;
         border-right: solid 1px $gray5;
+        @media screen and (max-width: $m){
+          width: 100%;
+          border-right: none;
+          padding: 15px;
+        }
         span{
           font-weight: 300;
           font-size: 14px;
@@ -1530,12 +1896,14 @@ table {
           .flight_number{
             display: flex;
             flex-direction: column;
+
             a{
               border-bottom: solid 1px $rusline_red;
               color: $rusline_red;
               font-size: 20px;
               line-height: 100%;
               margin-top: 4px;
+
             }
             a:hover{
               border-bottom: solid 1px $white;
@@ -1551,6 +1919,10 @@ table {
             align-items: center;
             h2{
               color: $black;
+              @media screen and (max-width: $m){
+                font-size: 20px;
+              }
+              
             }
           }
           .departure{
@@ -1569,6 +1941,11 @@ table {
             align-items: center;
             flex: 2;
             margin: 0 6px;
+            svg{
+              @media screen and (max-width: $m){
+                height: 20px;
+              }
+            }
             .flight-time_time{
               width: 100%;
               text-align: center;
@@ -1598,6 +1975,10 @@ table {
         display: flex;
         width: 50%;
         justify-content: space-between;
+        @media screen and (max-width: $m){
+          border-top: solid 1px $gray5;
+          width: 100%;
+        }
         .time-tape_day{
           flex: 1;
           height: 100%;
@@ -1605,11 +1986,23 @@ table {
           display: flex;
           flex-direction: column;
           align-items: center;
+          @media screen and (max-width: $m){
+            width: calc(100% / 7);
+            height: 150px;
+            
+          }
+
           a{
             display: flex;
             flex-direction: column;
             align-items: center;
             padding-top: 60px;
+            @media screen and (max-width: $m){
+              padding-top: 0;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+            }
             .icon{
               width: 22px;
               height: 22px;
@@ -1622,11 +2015,15 @@ table {
               line-height: 120%;
               text-align: center;
               color: $gray4;
+              @media screen and (max-width: $m){
+                font-size: 12px;
+              }
             }
           }
         }
         .time-tape_day:last-child{
           border-right: none;
+
         }
         .time-tape_day.active:hover{
           background: $gray6;
@@ -1688,6 +2085,7 @@ table {
 }
 // - modal detals - 
 .modal-window{
+
   .details{
     background: $white;
     width: 1032px;
@@ -1695,12 +2093,21 @@ table {
     margin-top: 300px;
     padding: 30px;
     position: relative;
+    @media screen and (max-width: $m){
+      width: calc(100% - 30px);
+      padding: 15px;
+      margin-top: 30px;
+
+    }
     .details_title{
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-bottom: 15px;
       border-bottom: 1px dashed $gray5;
+      @media screen and (max-width: $m){
+        justify-content: center;
+      }
       h2{
         color: $rusline_red;
       }
@@ -1711,6 +2118,11 @@ table {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: $m){
+        margin-top: 15px;
+        // flex-direction: column;
+        display: block;
+      }
       span{
         font-size: 16px;
         line-height: 20px;
@@ -1724,6 +2136,14 @@ table {
         align-items: center;
         margin: 0 10px;
         justify-content: center;
+        @media screen and (max-width: $m){
+          margin: 15px 0;
+          background: $gray6;
+          margin-left: -15px;
+          margin-right: -15px;
+          padding: 15px 0;
+          margin-top: 15px;
+        }
         .flight_name{
           display: flex;
           align-items: flex-end;
@@ -1731,6 +2151,13 @@ table {
           padding-bottom: 7px;
           border-bottom: 1px dashed $gray5;
           width: 100%;
+          @media screen and (max-width: $m){
+            border-bottom: none;
+            padding-bottom: 0;
+            span{
+              color: $black;
+            }
+          }
           h2{
             color: $rusline_red;
             margin-left: 8px;
@@ -1741,23 +2168,57 @@ table {
       .departure, .arrival{
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: $m){
+          display: inline !important;
+          text-align: center;
+        }
+        span{
+          @media screen and (max-width: $m){
+            display: inline;
+          }
+        }
+        span:nth-child(2){
+          @media screen and (max-width: $m){
+            float: right;
+          }
+        }
         .date{
           color: $black;
         }
         h1{
-          padding: 15px 0;
+          padding-bottom: 15px;
+          padding-top: 0;
+          @media screen and (max-width: $m){
+            padding-bottom: 8px;
+          }
         }
         h4{
           font-weight: 300;
+          @media screen and (max-width: $m){
+            margin-bottom: 8px;
+            font-size: 30px;
+            br{
+              display: none;
+            }
+          }
         }
       }
       .details_note{
         flex: 1;
         display: flex;
         justify-content: center;
+        @media screen and (max-width: $m){
+          border-top: 1px dashed $gray5;
+          padding-top: 15px;
+        }
         h4{
           font-weight: 300;
           margin-bottom: 8px;
+          @media screen and (max-width: $m){
+            text-align: center;
+            font-size: 16px;
+            line-height: 120%;
+          }
         }
       }
     }
@@ -1771,18 +2232,87 @@ table {
 .form-wrapper{
   padding: 30px;
   border: solid 1px $gray5;
+  @media screen and (max-width: $m){
+    // background: $gray6;
+    margin-left: -15px;
+    margin-right: -15px;
+    border: none;
+    padding: 15px;
+    margin-bottom: -30px;
+    h3{
+      color: $black;
+    }
+    .input{
+      margin-bottom: 1px;
+      border: none !important;
+    }
+  }
   .form-link{
     text-align: center;
+    @media screen and (max-width: $m){
+      text-align: left;
+      position: relative;
+    }
     .button{
       width: fit-content;
       margin: 0 auto;
       cursor: pointer;
+      
+    }
+    @media screen and (max-width: $m){
+      .m-close{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 15px;
+      }
     }
   }
   .hidden{
     overflow: hidden;
     height: 0 !important;
 
+  }
+  .individual{
+    @media screen and (max-width: $m){
+      h3{
+        margin-top: 30px;
+      }
+      input:nth-child(4){
+        margin-bottom: 15px;
+      }
+      .inputs_in-two{
+        display: block !important;
+        input{
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  .resident{
+    @media screen and (max-width: $m){
+      .inputs_in-two{
+        display: block !important;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        span{
+          width: 100% !important;
+        }
+        .section{
+          width: 100% !important;
+          margin-top: 15px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          label{
+            order: 1;
+            background: $gray5;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1809,11 +2339,20 @@ input[type='file'] {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+  @media screen and (max-width: $m){
+    display: block;
+  }
   .input{
     width: 65%;
+    @media screen and (max-width: $m){
+      width: 100%;
+    }
   }
   span{
     font-weight: 400 !important;
+    @media screen and (max-width: $m){
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -1821,6 +2360,12 @@ input[type='file'] {
   padding-top: 30px;
   margin-top: 30px;
   border-top: solid 1px $gray5;
+  @media screen and (max-width: $m){
+    border-top: none;
+    padding-top: 15px;
+    margin-top: 0;
+    padding-bottom: 30px;
+  }
   h4{
     font-weight: 300 !important;
     line-height: 25px;
@@ -1832,6 +2377,9 @@ input[type='file'] {
   .inputs_in-two{
     display: flex;
     justify-content: space-between;
+    // @media screen and (max-width: $m){
+    //   display: block;
+    // }
     .section{
       width: calc((100% / 2)- 7.5px );
     }
@@ -1846,19 +2394,40 @@ input[type='file'] {
     font-size: 14px;
     line-height: 100%;
     color: $gray2;
+    @media screen and (max-width: $m){
+      display: block;
+    }
+
   }
   .title{
     margin-top: 30px;
     text-align: center;
     border-top: solid 1px $gray5;
+    @media screen and (max-width: $m){
+      margin-top: 0;
+      border-top: none;
+    }
     
     h3{
       margin-top: 30px;
+      @media screen and (max-width: $m){
+        margin-top: 15px;
+      }
     }
 
   }
   .check-for-belonging{
     display: flex;
+    @media screen and (max-width: $m){
+      display: block;
+      label{
+        display: block;
+        margin-bottom: 16px;
+      }
+      label:last-child{
+        margin-bottom: 0;
+      }
+    }
     label{
       padding-right: 30px;
     }
@@ -1871,6 +2440,9 @@ input[type='file'] {
       width: 65%;
       border: solid 1px $gray5;
       padding: 15px;
+      @media screen and (max-width: $m){
+        width: 100%;
+      }
     }
     textarea::placeholder{
       font-size: 16px;
@@ -1887,8 +2459,15 @@ input[type='file'] {
     .payment_props{
       display: flex;
       margin-bottom: 30px;
+      @media screen and (max-width: $m){
+        display: block;
+      }
       span{
         width: 35%;
+        @media screen and (max-width: $m){
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
 
     }
@@ -1901,14 +2480,30 @@ input[type='file'] {
         width: 65%;
         label{
           width: 100%;
+          @media screen and (max-width: $m){
+            background: $gray5;
+          }
         }
       }
     }
     .price{
       display: flex;
       width: 100%;
+      @media screen and (max-width: $m){
+        margin-top: 30px;
+        margin-bottom: 30px !important;
+        display: block;
+      }
       h3{
         width: 120px;
+        @media screen and (max-width: $m){
+          width: 100%;
+        }
+      }
+      h1{
+        @media screen and (max-width: $m){
+          font-size: 50px;
+        }
       }
   }
 
@@ -1923,10 +2518,19 @@ input[type='file'] {
   display: flex;
   align-items: center;
   justify-content: center;
+  img{
+    @media screen and (max-width: $m){
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
 }
 
 .img_wrapper{
   text-align: center;
+  @media screen and (max-width: $m){
+    margin: 15px 0;
+  }
   img{
     max-width: 100%;
   }
@@ -2037,6 +2641,9 @@ input[type='file'] {
 .drop-ul_item{
   margin-bottom: 15px;
   padding-left: 30px;
+  @media screen and (max-width: $m) {
+    padding-left: 18px;
+  }
   .drop-ul_item-description{
     margin-top: 15px;
     margin-bottom: 30px;
@@ -2050,6 +2657,9 @@ input[type='file'] {
   .drop-ul_item-title{
     position: relative;
     cursor: pointer;
+    @media screen and (max-width: $m) {
+      font-size: 20px;
+    }
   }
   // .drop-ul_item-title.active{
   //   color: $rusline_red;
@@ -2066,6 +2676,10 @@ input[type='file'] {
     background: url('../img/+.svg') no-repeat center;
     left: -30px;
     top: 4px;
+    @media screen and (max-width: $m) {
+      left: -20px;
+    }
+    
   }
 }
 .drop-ul_item:last-child{
@@ -2101,6 +2715,9 @@ $widthSlide: 1246px;
     background: $white;
     display: flex;
     padding: 8px 15px;
+    @media screen and (max-width: $m) {
+      flex-direction: column;
+    }
     p{
       flex: 1;
       font-weight: 300;
@@ -2110,6 +2727,10 @@ $widthSlide: 1246px;
     }
     p:last-child{
       text-align: right;
+      @media screen and (max-width: $m) {
+        text-align: left;
+        margin-top: 8px;
+      }
     }
   }
   .slide_frame{
@@ -2124,17 +2745,30 @@ $widthSlide: 1246px;
   justify-content: center;
   max-width: $widthSlide;
   position: relative;
+  @media screen and (max-width: $m) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
   .slide_share{
     position: absolute;
     right: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media screen and (max-width: $m) {
+      justify-content: center;
+      position: static;
+      order: 1;
+      align-items: center;
+    }
     span{
       font-weight: 300;
       font-size: 14px;
       color: $white;
       margin-right: 15px;
+      @media screen and (max-width: $m) {
+        display: none;
+      }
     }
   }
   .slide_nav{
@@ -2142,6 +2776,10 @@ $widthSlide: 1246px;
     justify-content: center;
     align-items: center;
     flex: 1;
+    @media screen and (max-width: $m) {
+      order: 2;
+      padding: 30px 0;
+    }
     .slide-nav_back, .slide-nav_next{
       width: 50px;
       height: 20px;
@@ -2174,12 +2812,25 @@ $widthSlide: 1246px;
 .media-col{
   border-left: 1px dashed $gray5;
   padding: 15px;
+  @media screen and (max-width: $m) {
+    border-left: none;
+    padding: 15px 0;
+    border-bottom: dashed 1px $gray5
+    
+  }
   .media-col__section{
     display: flex;
     margin-bottom: 30px;
+    @media screen and (max-width: $m) {
+      display: block;
+      margin-bottom: 15px;
+    }
     .brand-color_sample{
       width: 72px;
       height: 72px;
+      @media screen and (max-width: $m) {
+        float: left;
+      }
       
     }
     .red_rusline{
@@ -2208,12 +2859,27 @@ $widthSlide: 1246px;
   .img-wrapper{
     max-width: 400px;
     margin-right: 30px;
+    @media screen and (max-width: $m) {
+      max-width: 100%;
+      margin-right: 0;
+    }
     img{
       max-width: 100%;
     }
   }
   .media-col__section:last-child{
     margin-bottom: 0;
+  }
+  .brend-link{
+    @media screen and (max-width: $m) {
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      p{
+        margin-right: 40px;
+      }
+    }
   }
 }
 
@@ -2426,6 +3092,14 @@ $widthSlide: 1246px;
 // Компании-партнеры
 .partner-section{
   padding-top: 30px;
+  @media screen and (max-width: $m) {
+    padding-top: 15px;
+  }
+  .end{
+    @media screen and (max-width: $m) {
+      margin-bottom: 0;
+    }
+  }
 }
 .partner_description-list{
   
@@ -2436,3 +3110,8 @@ $widthSlide: 1246px;
 .partner_description-item.hidden{
   display: none;
 }
+// .m-gray{
+//   @media screen and (max-width: $m) {
+//     background: $gray6
+//   }
+// }

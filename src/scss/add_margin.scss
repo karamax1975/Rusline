@@ -1,41 +1,108 @@
-.mb0{
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+.mb70 {
+    margin-bottom: 70px !important;
+}
+
+.mb60 {
+    margin-bottom: 60px !important;
+    @media screen and (max-width: $m) {
+        margin-bottom: 30px !important;
+    }
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+    @media screen and (max-width: $m) {
+        margin-bottom: 30px !important;
+    }
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+    @media screen and (max-width: $m) {
+        margin-bottom: 15px !important;
+    }
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt60 {
+    margin-top: 60px;
+    @media screen and (max-width: $m) {
+        margin-top: 30px;
+    }
+}
+
+.mt8 {
+    margin-top: 8;
+}
+
+.m-mt15 {
+    @media screen and (max-width: $m) {
+        margin-top: 15px;
+    }
+}
+
+.m-mt30 {
+    @media screen and (max-width: $m) {
+        margin-top: 30px;
+    }
+}
+
+.m-mb15 {
+    @media screen and (max-width: $m) {
+        margin-bottom: 15px;
+    }
+}
+
+.m-mb30 {
+    @media screen and (max-width: $m) {
+        margin-bottom: 30px;
+    }
+}
+
+.m-m0 {
+    @media screen and (max-width: $m) {
+        margin: 0 !important;
+    }
+}
+.m-mb0 {
+  @media screen and (max-width: $m) {
     margin-bottom: 0 !important;
   }
+}
 
-  .mb70{
-    margin-bottom: 70px !important;
-  }
-  .mb60{
-    margin-bottom: 60px !important;
-  }
-  .mb50{
-    margin-bottom: 50px !important;
-  }
-  .mb40{
-    margin-bottom: 40px !important;
-  }
-  .mb30{
-    margin-bottom: 30px !important;
-  }
-  .mb20{
-    margin-bottom: 20px !important;
-  }
-  .mb15{
-    margin-bottom: 15px;
-  }
-  .mb8{
-    margin-bottom: 8px;
-  }
-
-  .mt40{
-    margin-top: 40px;
-  }
-  .mt50{
-    margin-top: 50px;
-  }
-  .mt60{
-    margin-top: 60px;
-  }
-  .mt8{
-    margin-top: 8;
-  }
+.m-mt-15 {
+    @media screen and (max-width: $m) {
+        margin-top: -15px;
+    }
+}

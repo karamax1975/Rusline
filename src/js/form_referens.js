@@ -2,7 +2,8 @@
 export default function formReferens(element){
     if(document.querySelector(`.${element}`)){
         const $el=document.querySelector(`.${element}`);
-        const buttonOnOf = $el.querySelector('.form-link .button ');
+
+        const buttonOnOf=$el.querySelector('.form-link .button ');
         const $formReferens = $el.querySelector('.form-referens');
         
 

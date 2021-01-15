@@ -18,31 +18,21 @@
 //
 @import "./tabs-class.scss"; // Сервисы / Классы обслуживания
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600&display=swap");
 
-// @font-face{
-//   font-family: 'Source Sans Pro', sans-serif;
-//   src: url('../fonts/SourceSansPro-Light.ttf');
-//   font-weight: 300;
-// }
-// @font-face{
-//   font-family: 'Source Sans Pro', sans-serif;
-//   src: url('../fonts/SourceSansPro-Regular.ttf');
-//   font-weight: 400;
-// }
-// @font-face{
-//   font-family: 'Source Sans Pro', sans-serif;
-//   src: url('../fonts/SourceSansPro-SemiBold.ttf');
-//   font-weight: 600;
-// }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
 
+
   .page-content {
     min-height: calc(100vh - 254px);
     padding-bottom: 60px;
+    @media screen and (max-width: $m) {
+      padding-bottom: 30px;
+      min-height: auto;
+    }
   }
 
   p {
@@ -87,6 +77,22 @@ body {
   .button.big {
     height: 44px;
     padding: 15px 30px;
+    @media screen and (max-width: $m){
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+  .button.megabig{
+    padding: 15px 30px;
+    height: 80px;
+    @media screen and (max-width: $m){
+      height: 58px;
+      width: 100%;
+      p{
+        font-size: 16px;
+        color: $white;
+      }
+    }
   }
 
   .button.index.white:hover {
@@ -171,6 +177,11 @@ body {
       font-weight: 300;
       line-height:100%;
       color: $gray2;
+      @media screen and (max-width: $m) {
+        padding-right: 0;
+        margin-right: 24px;
+        // width: calc(100% - 24px);
+      }
     }
     input:checked + span::before{
       content: '';
@@ -179,7 +190,7 @@ body {
       height: 8px;
       
       border-radius: 1px;
-      left: -20px;
+      left: -19px;
       top:4px;
       // top:50%;
       // transform: translateY(-50%);
@@ -196,11 +207,12 @@ body {
   .checkbox::before {
     position: absolute;
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 1px;
     left: 0;
-    top:0;
+    top:-1px;
+    background: $white;
     // top: 50%;
     // transform: translateY(-50%);
   }
@@ -270,11 +282,18 @@ body {
     font-size: 50px;
     line-height: 100%;
     color: $black;
+    @media screen and (max-width: $m) {
+      font-size: 30px;
+      line-height: 100%;
+    }
   }
   h2 {
     font-weight: 300;
     font-size: 30px;
     line-height: 100%;
+    @media screen and (max-width: $m){
+      font-size: 25px;
+    }
     a {
       color: $rusline_red;
       border-bottom: 1px solid $rusline_red;
@@ -300,6 +319,10 @@ body {
     margin-top: 30px;
     margin-bottom: 15px;
     color: $black;
+    @media screen and (max-width: $m){
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
   }
 
   h5{
@@ -322,6 +345,14 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
+    @media screen and (max-width: $m){
+      font-weight: 300;
+    }
+  }
+  .m-19{
+    @media screen and (max-width: $m){
+      font-size: 19px;
+    }
   }
   .gray2 {
     color: $gray2;
@@ -376,6 +407,10 @@ body {
     border: 1px solid $gray5;
     width: 100%;
     border-radius: 2px;
+    @media screen and (max-width: $m){
+      box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.1);
+      border: 1px solid $gray4;
+    }
     
     
   }

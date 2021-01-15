@@ -1,7 +1,14 @@
 .additional-menu {
   background: $gray6;
   position: relative;
-  z-index: 100;
+  z-index: 2;
+  @media screen and (max-width: $m) {
+    border-bottom: solid 1px $rusline_red;
+  }
+  .container{
+      position: relative;
+      z-index: 100;
+  }
   .additional-menu_list {
     margin: 0;
     padding: 15px 0;
@@ -9,6 +16,12 @@
     justify-content: space-between;
     align-items: center;
     color: $gray1;
+    position: relative;
+    @media screen and (max-width: $m) {
+        flex-direction: row;
+        height: 38px;
+        padding: 0;
+    }  
     a {
         display: block;
         font-weight: 300;
@@ -16,6 +29,15 @@
         line-height: 100%;
         color: $gray1;
         position: relative;
+        @media screen and (max-width: $m) {
+            position: absolute;
+            padding: 9px 0;
+            top: 0;
+            background: $gray6;
+            width: 100%;
+            display: none;
+            
+        }
     }
     a::before{
         content: '';
@@ -25,6 +47,9 @@
         background: $gray4;
         right: -55px;
         position: absolute;
+        @media screen and (max-width: $m) {
+            content: none;
+        }
     }
     a:last-child::before{
         content: none;
@@ -37,6 +62,9 @@
         background: $rusline_red;
         bottom: -4px;
         left: 0;
+        @media screen and (max-width: $m) {
+            background: none; 
+        }
     }
     a:hover {
         text-decoration: none;
@@ -46,5 +74,37 @@
     .activ{
         color: $rusline_red;
     }
+
+  }
+  .additional-menu_list.selected{
+    @media screen and (max-width: $m) {
+        position: relative;
+        border-bottom: none;
+        height: auto;
+        a{
+            position: relative;
+            background: $gray6;
+            display: block;
+            width: 100%;
+        }
+        .toggle{
+            transform: rotate(-180deg);
+        }
+
+    }
+      
+  }
+  .menu_back{
+      display: none;
+  }
+  .toggle{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 38px;
+      background: #000;
+      z-index: 102;
+      background: url('../img/arr_big_red_down.svg') no-repeat center;
   }
 }

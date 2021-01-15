@@ -1,5 +1,7 @@
 @import './color.scss';
 
+
+
 body {
 
     a:focus,
@@ -7,20 +9,156 @@ body {
         outline: none !important;
     }
 
+    @media screen and (max-width: $m) {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        .desktop{
+            display: none;
+        }    
+    }
+
 
 }
-
+    .mobile{
+        display: none;
+        @media screen and (max-width: $m) {
+            display: block;
+        }
+    }
 
 .index-widget {
     position: relative;
     z-index: 9999;
     margin-top: 74px;
+    @media screen and (max-width: $m) {
+        margin-top: 0;
+        background: url('../img/back_wiget-mobile.jpg') no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 15px 0;
+    }
 
     // ----------------------- button widget
     .widget-button {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: $m) {
+            display: block;
+            position: relative;
+            margin-bottom: 15px;
+            overflow: hidden;
+            height: 60px;
+            border-radius: 3px;
+            .nav-widget{
+                background: $gray6;
+            }
+            .hidden{
+                position: absolute !important;
+                z-index: -1 !important;
+            }
+            .selected{
+                z-index: 9;
+                position: relative;
+                background: linear-gradient(0deg, #D50413 0%, #FF0A12 53.12%, #FE5C01 100%) !important;
+                border-bottom: none;
+                span{
+                    color: $white;
+                }
 
+            }
+            .nav-widget{
+                position: relative;
+            }
+            .nav-widget::after{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 20px;
+                background: linear-gradient(180deg, #C7C7C7 0%, #F2F2F2 100%);
+                left: 0;
+                top: 60px;
+                z-index: 2;
+            }
+            
+        }
+        .widget_many-services{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 5px;
+            top:10px;
+            z-index: 10;
+            padding: 10px;
+            cursor: pointer;
+            
+            .many-services_icon{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                span{
+                    top: 50%;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    width: 3px;
+                    height: 3px;
+                    background: $white; 
+                    transition: ease-out .2s; 
+                }
+                span:nth-child(1){
+                    left: 0;
+                    opacity: 100;
+                }
+                span:nth-child(2), 
+                span:nth-child(3){
+                    left: 50%;
+                    transform: 
+                    translate(-50%, -50%);
+                }
+                span:nth-child(4){
+                   right: 0;
+                   opacity: 100;
+                }
+            }
+
+
+        }
+
+        // Мобильная Кнопка 
+
+        .widget_many-services.button-close{
+            span{
+                width: 100%;
+                height: 2px;
+                transition: ease-out .2s;
+            }
+            span:nth-child(1){
+                left:50%;
+                width: 2px;
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            span:nth-child(2){
+                transform-origin: center center;
+                transform:
+                translateX(50%)
+                rotate(45deg);
+                left: -50%;
+            }
+            span:nth-child(3){
+                transform-origin: center center;
+                transform:
+                translateX(-50%)
+                rotate(-45deg);
+                left: 50%;
+            }
+            span:nth-child(4){
+               left:50%;
+               width: 2px;
+               transform: translateX(-50%);
+               opacity: 0;
+            }
+        }
+        // ----------------------
         button {
             padding: 0;
             border: none;
@@ -29,41 +167,83 @@ body {
             padding: 7px 16px 16px 16px;
             background: none;
             outline: none;
+            @media screen and (max-width: $m) {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 15px;
+                border-radius: 0;
+                position: absolute;
+                z-index: 9;
+                // background: $white;
+                border-bottom: dashed 1px $gray5;
+                //---------------- 
+
+
+            }
 
             .button-wrapper {
                 position: relative;
                 height: 27px;
+                @media screen and (max-width: $m) {
+                    height: auto;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 30px;
+                }
 
             }
-
             span {
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 25px;
                 color: $white;
+                @media screen and (max-width: $m) {
+                    display: block;
+                    flex: 2;
+                    color: $black;
+                    font-size: 16px;
+                    line-height: 120%;
+                    font-weight: 500;
+                }
             }
         }
 
         button.active {
+
             .button-wrapper::after {
                 position: absolute;
-                content: '';
+                content: '';    
                 width: 100%;
                 height: 1px;
                 bottom: -4px;
                 left: 0;
                 background: $white;
+                @media screen and (max-width: $m) {
+                    content: none;
+
+                }
             }
+            
         }
 
         button:hover {
             background: rgba(51, 51, 51, 0.2);
             background-blend-mode: multiply;
             transition: ease-out .2s;
-        }
+            
 
+        }
+        
         button svg {
             margin-right: 8px;
+            @media screen and (max-width: $m) {
+                margin-right: 0;
+            }
         }
 
         .buy-ticket-button svg {
@@ -73,22 +253,66 @@ body {
         .check-in-button svg {
             fill: $white;
             margin-top: -5px;
+            @media screen and (max-width: $m) {
+                margin-top: 0;
+                fill: $rusline_red;
+            }
+        }
+        .check-in-button.selected{
+            svg{
+                @media screen and (max-width: $m) {
+                    fill: $white;
+                }
+            }
         }
 
         .order-search-button svg {
             fill: $white;
             margin-top: -5px;
+            @media screen and (max-width: $m) {
+                margin-top: 0;
+                fill: $rusline_red;
+            }
+        }
+        // --------------------------
+        .order-search-button.selected{
+            svg{
+                @media screen and (max-width: $m) {
+                    fill: $white;
+                } 
+            }
         }
 
     }
+    .widget-button.mobile-show{
+        @media screen and (max-width: $m) {
+            height: auto;
+            
+            button{
+                position: relative;
+                cursor: pointer;
+            }
 
+        }
+    }
+    .special-offers{
+        @media screen and (max-width: $m) {
+           background: $gray6;
+        }
+    }
     .special-offers button {
         display: flex;
-
+        @media screen and (max-width: $m) {
+            border-bottom: none !important;
+        }
         .icon {
             stroke: $white;
             margin-right: 8px;
             margin-top: 2px;
+            @media screen and (max-width: $m) {
+                margin-top: 0;
+                stroke: $rusline_red;
+            }
         }
 
         .drop-arrow {
@@ -96,6 +320,18 @@ body {
             margin-right: 0;
             margin-top: 11px;
             stroke: $white;
+            @media screen and (max-width: $m) {
+                display: none;
+            }
+        }
+    }
+    .special-offers button.selected{
+        @media screen and (max-width: $m) {
+            // border-bottom: none;
+            svg{
+                
+                stroke: $white !important; 
+            } 
         }
     }
 
@@ -103,7 +339,7 @@ body {
         transform: scaleY(-1);
     }
 
-    // ------------- inputs widget
+// ------------- inputs widget ------------------------------------
     .widget-content {
         .offer.hidden {
             display: none;
@@ -111,11 +347,22 @@ body {
 
         form {
             display: flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: $m) {
+                position: relative;
+                
+            }
         }
 
         .offer {
             display: block;
             justify-content: space-between;
+
+            *div{
+                @media screen and (max-width: $m) {
+                    flex-basis:100%;
+                }
+            }
 
             *.false-input,
             .exchange {
@@ -128,12 +375,15 @@ body {
                 margin-right: 1px;
                 padding: 0 15px;
                 cursor: pointer;
-
+                @media screen and (max-width: $m) {
+                    margin-top: 1px;
+                    height: 56px;
+                }
                 span {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 100%;
-                    color: $gray3;
+                    color: $gray2;
 
                 }
             }
@@ -147,12 +397,20 @@ body {
             .departure-city,
             .arrival-city {
                 width: 245px;
+
             }
 
             .exchange {
                 width: 64px;
                 justify-content: center;
-
+                @media screen and (max-width: $m) {
+                    width: 56px;
+                    height: 56px;
+                    position: absolute;
+                    right: 15px;
+                    top: 28px;
+                    border: 1px solid $gray4;
+                }
                 svg {
                     fill: $rusline_red;
                 }
@@ -165,13 +423,19 @@ body {
             }
 
             .data {
-
+                @media screen and (max-width: $m) {
+                    flex-basis: calc((100% /2) - 1px);
+                }
                 svg {
                     fill: $gray5;
                 }
             }
 
+
             .passengers {
+                @media screen and (max-width: $m) {
+                    width: 100%;
+                }
                 svg {
                     stroke: $rusline_red;
                     stroke-width: 1.5;
@@ -182,6 +446,21 @@ body {
                 fill: $white;
                 width: 80px;
                 height: 80px;
+                @media screen and (max-width: $m) {
+                    margin-top: 15px;
+                    width: 100% !important;
+                    height: 58px;
+                    
+                    svg{
+                        display: none;
+                    }
+                    span{
+                        font-weight: 400;
+                        font-size: 16px;
+                        text-align: center;
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -221,11 +500,19 @@ body {
 
 }
 
+// ---------------------------------------------------
+
 .slide-show-index {
     position: absolute;
     height: 100%;
     width: 100vw;
     top: 0;
+    @media screen and (max-width: $m) {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: auto;
+    }
 
     .item {
         position: relative;
@@ -283,7 +570,8 @@ body {
                     z-index: 100;
                     width: 100%;
                     margin-top: 7px;
-
+                    height: 100%;
+                    transition: all .4s;
                     .drop-down-item {
                         padding: 8px 0;
                         margin-left: 5px;
@@ -299,16 +587,27 @@ body {
                             margin-bottom: 0;
                         }
                     }
+                    &.hidden{
+                      display: none;
+                      // height: 0;
+                      // overflow: hidden;
+
+                    }
                 }
 
-                .drop-down-list.hidden {
-                    display: none;
-                }
+
 
             }
 
             .content-list {
                 color: $white;
+                height: 100%;
+                transition: all .1s;
+                &.hidden {
+                  display: none;
+                  // height: 0;
+                  // overflow: hidden;
+                }
                 a {
                     color: $white;
                 }
@@ -370,10 +669,6 @@ body {
                     background: rgba(51, 51, 51, 0.2);
                     background-blend-mode: multiply;
                 }
-            }
-
-            .content-list.hidden {
-                display: none;
             }
         }
     }
@@ -462,4 +757,217 @@ body {
             background: $white;
         }
     }
+}
+
+// ------------------------ Mobile Products
+
+.product-item{
+    padding: 15px 0;
+   .product-title{
+       padding-bottom: 15px;
+       margin: 0 15px;
+       border-bottom: solid 1px $rusline_red; 
+    }
+    .select-city{
+        .city-img{
+            margin: 15px;
+            border-radius: 2px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .select-city-title{
+            margin: 15px 15px;
+            position: relative;
+        }
+        .select-city-title::after{
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 8px;
+            background: url('../img/arr_big_red_down.svg') no-repeat center;
+            transition: linear .3s;
+        }
+        .select-city-title.active::after{
+            transform: 
+            translateY(-50%)
+            rotate(-180deg);
+            transition: linear .3s;
+        }
+        .list-cities.active{
+            position: relative;
+            background: $gray6;
+            // padding: 0 15px;
+            height: auto;
+            transition: ease-out .3s;
+           .city-item{
+                padding: 15px 0;
+                margin: 0 15px;
+                position: relative;
+                z-index: 10;
+                border-bottom: 1px dashed $gray5;
+                p{
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $gray3;
+                }
+           }
+           :last-child{
+               border-bottom: none;
+           }
+        }
+        .list-cities.active::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(180deg, #E0E0E0 0%, #F2F2F2 100%);
+            left: 0;
+            z-index: 2;
+        }
+        .list-cities{
+            height: 0;
+            overflow: hidden;
+            transition: ease-out .3s;
+            padding: 0 15px;
+        }
+        
+    }
+        .flights-list{
+            .flight-item:last-child{
+                border-bottom: dashed 1px $gray5; 
+            }
+            .flight-item{
+            padding: 15px 0;
+            border-top: dashed 1px $gray5;
+            a{
+                .p3{
+                    color: $gray1;
+                }
+                .p2{
+                    color: $gray2;
+                }
+            }
+        }
+     }
+    .owl-nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 15px;
+
+        button{
+            width: 50px;
+            height: 10px;
+            display: block;
+        }
+        .owl-prev{
+            background: url('../img/back-arrow.svg') no-repeat center !important;
+        }
+        .owl-prev.disabled{
+            background: url('../img/nav_arr_left_d.svg') no-repeat center !important;
+        }
+        .owl-next{
+            background: url('../img/nav_arr_right.svg') no-repeat center !important;
+        }
+        .owl-next.disabled{
+            background: url('../img/nav_arr_right_d.svg') no-repeat center !important;
+        }
+
+    }
+    .owl-dots{
+       display: flex;
+       justify-content: center;
+       position: absolute;
+       bottom: -10px;
+       left: 50%;
+       transform: translateX(-50%);
+
+       .tickets__dots.active{
+           span{
+               background: $rusline_red;
+           }
+       }
+       .tickets__dots{
+           background: none;
+           border: none;
+           padding: 8px;
+            span{
+                display: block;
+                width: 12px;
+                height: 12px;
+                background: $white;
+                border-radius: 50%;
+                border: solid 1px $rusline_red;
+            }
+       }
+    }
+}
+.services-list{
+    h3{
+        padding: 15px 0;
+    }
+    .service-item{
+        padding: 15px 0;
+        border-top: dashed 1px $gray5;
+        a{
+            display: flex;
+            align-items: center;
+            p{
+                color: $gray2;
+            }
+
+        }
+        .service-item__img{
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            flex: 0 0 auto;
+            margin-right: 20px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        img{
+            width: auto;
+            margin: 0 auto;
+        }
+        .bagage__img{
+            margin-right: 20px;
+            width: 90px;
+        }
+    }
+    .service-item:last-child{
+        border-bottom: dashed 1px $gray5;
+    }
+    .service-item__description{
+        hr{
+            margin: 5px 0 !important;
+        }
+    }
+    .service-item__name{
+        width: 40%;
+        margin-right: 20px;
+
+        h4{
+            color: $gray1;   
+        }
+        span{
+            font-size: 14px;
+            line-height: 100%;
+            display: block;
+            padding-top: 5px;
+            color: $gray2;
+        }
+
+    }
+    
 }
